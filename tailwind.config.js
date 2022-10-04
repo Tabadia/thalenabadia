@@ -1,5 +1,7 @@
 module.exports = {
-  content: [".\\public\\index.html"],
+  content: [
+    ".\\public_html\\**\\**"
+  ],
   darkMode: 'media', // or 'class'
   theme: {
     screens: {
@@ -8,6 +10,45 @@ module.exports = {
       lg: '1024px',
       xl: '1280px',
       '2xl': '1536px',
+    },
+    extend: {
+      'animation': {
+          'gradient-x':'gradient-x 15s ease infinite',
+          'gradient-y':'gradient-y 15s ease infinite',
+          'gradient-xy':'gradient-xy 15s ease infinite',
+      },
+      'keyframes': {
+          'gradient-y': {
+              '0%, 100%': {
+                  'background-size':'400% 400%',
+                  'background-position': 'center top'
+              },
+              '50%': {
+                  'background-size':'200% 200%',
+                  'background-position': 'center center'
+              }
+          },
+          'gradient-x': {
+              '0%, 100%': {
+                  'background-size':'200% 200%',
+                  'background-position': 'left center'
+              },
+              '50%': {
+                  'background-size':'200% 200%',
+                  'background-position': 'right center'
+              }
+          },
+          'gradient-xy': {
+              '0%, 100%': {
+                  'background-size':'400% 400%',
+                  'background-position': 'left center'
+              },
+              '50%': {
+                  'background-size':'200% 200%',
+                  'background-position': 'right center'
+              }
+          }
+      }
     },
     colors: ({ colors }) => ({
       inherit: colors.inherit,
@@ -37,6 +78,20 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
+      'bg': '#0D0014',
+      'txt': '#ffffff',
+      'accent': '#4B3458',
+      'btn': '#d74270',
+      'common': '#DDDDDD',
+      'uncommon': '#00CC00',
+      'rare': '#2087FF',
+      'epic': '#9537FF',
+      'legendary': '#FF8700',
+      'ctxt': '#626262',
+      'utxt': '#1B581B',
+      'rtxt': '#1351A1',
+      'etxt': '#2D1A7A',
+      'ltxt': '#AC5900',
     }),
     columns: {
       auto: 'auto',
@@ -105,6 +160,10 @@ module.exports = {
     },
     animation: {
       none: 'none',
+      fadeS: 'fadeS 0.5s 0s',
+      fadeL: 'fadeL 1s 0s',
+      slideL: 'slideL 1s 0s',
+      slideR: 'slideR 1s 0s',
       spin: 'spin 1s linear infinite',
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -342,6 +401,7 @@ module.exports = {
       DEFAULT: '1',
     },
     fontFamily: {
+      basic: ["basic"],
       sans: [
         'ui-sans-serif',
         'system-ui',
@@ -551,6 +611,42 @@ module.exports = {
       spin: {
         to: {
           transform: 'rotate(360deg)',
+        },
+      },
+      fadeS: {
+        '0%, 50%': {
+          opacity: '0',
+        },
+        '100%': {
+          opacity: '1',
+        },
+      },
+      fadeL: {
+        '0%, 50%': {
+          opacity: '0',
+        },
+        '100%': {
+          opacity: '1',
+        },
+      },
+      slideL: {
+        '0%': {
+          transform: 'translateX(-100%)',
+          animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
+        },
+        '100%': {
+          transform: 'translateX(0%)',
+          animationTimingFunction: 'cubic-bezier(0.8,0,1,1)',
+        },
+      },
+      slideR: {
+        '0%': {
+          transform: 'translateX(100%)',
+          animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
+        },
+        '100%': {
+          transform: 'translateX(0%)',
+          animationTimingFunction: 'cubic-bezier(0.8,0,1,1)',
         },
       },
       ping: {
@@ -905,6 +1001,7 @@ module.exports = {
       '9/12': '75%',
       '10/12': '83.333333%',
       '11/12': '91.666667%',
+      '355px': '355px',
       full: '100%',
       screen: '100vw',
       min: 'min-content',
