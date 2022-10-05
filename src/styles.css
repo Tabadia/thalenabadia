@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .link {
+        @apply text-purple-500 underline;
+    }
+    .paragraph {
+        @apply text-gray-600 mb-8 text-xl;
+    }
+    .pTitle {
+        @apply text-4xl text-purple-800 font-bold mb-3;
+    }
+    .project {
+        @apply sm:w-355px mx-10 w-full rounded overflow-hidden shadow-lg shadow-slate-500;
+    }
+    .projectImg {
+        @apply w-full h-64 object-cover;
+    }
+    .projectTitle {
+        @apply font-bold text-xl mb-2 text-purple-700;
+    }
+    .projectDesc {
+        @apply text-gray-700 text-base;
+    }
+}
