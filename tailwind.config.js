@@ -1,6 +1,6 @@
 module.exports = {
   content: [
-    ".\\public_html\\**\\**"
+    ".\\public_html\\**\\**\\**"
   ],
   darkMode: 'media', // or 'class'
   theme: {
@@ -402,6 +402,7 @@ module.exports = {
     },
     fontFamily: {
       basic: ["basic"],
+      code: ["Source Code Pro", "monospace"],
       sans: [
         'ui-sans-serif',
         'system-ui',
