@@ -9,8 +9,8 @@
     .paragraph {
         @apply text-gray-600 mb-8 text-xl;
     }
-    .pTitle {
-        @apply text-4xl text-neutral-800 font-bold mb-3;
+    .lTitle {
+        @apply text-3xl text-neutral-800 font-bold mb-3;
     }
     .project {
         @apply sm:w-355px mx-10 w-full rounded overflow-hidden shadow-lg shadow-slate-500;
@@ -18,7 +18,7 @@
     .projectImg {
         @apply w-full h-64 object-cover;
     }
-    .projectTitle {
+    .sTitle {
         @apply font-bold text-xl mb-2 text-neutral-700;
     }
     .projectDesc {
@@ -35,6 +35,23 @@
 html {
     scroll-behavior: smooth;
 }
+
+
+
+.parall{
+    position: relative;
+    background:transparent;
+    text-decoration:none;
+  }
+  
+  .parall::before{
+    position:absolute;
+    top:0px;right:0px;bottom:0px;left:0px;
+    transform:skewX(-30deg);
+    background:rgb(212 212 212);
+    z-index:-1;
+    content:'';
+  }
 
 .h-top {
     height: -o-calc(100vh - 66px); /* opera */

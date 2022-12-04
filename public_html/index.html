@@ -1,6 +1,6 @@
 <!--npx tailwindcss -i ./src/styles.css -o ./public/styles.css --watch-->
 <!DOCTYPE html>
-<html lang="en" class="bg-slate-50 appearence-none font-code">
+<html lang="en" class="bg-zinc-900 appearence-none font-helvetica">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,20 +10,22 @@
     <link rel="stylesheet" href=".\styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
 </head>
-<body class="text-neutral-600">
+<body class="text-white">
 
   <main class="">
-    <header class="font-bold font-code h-screen">
-      <h1 class="text-9xl py-5 py-24 text-neutral-800 text-center">Hi, I'm Thalen.</h1>
-      <h1 class="text-5xl text-neutral-600 px-0 text-center typewrite" data-period="2000" data-type='[ "Full Stack Web Developer", "High School Student", "Game Developer", "Python Programmer", "Java Programmer", "WordPress Designer" ]'></h1>
+    <header class="font-bold h-screen">
+      <h1 class="text-9xl py-5 py-24 text-center">Hi, I'm Thalen.</h1>
+      <h1 class="text-5xl text-gray-400 px-0 text-center typewrite" data-period="2000" data-type='[ "Full Stack Web Developer", "IB High School Student", "Game Developer", "Python Programmer", "Java Programmer", "WordPress Designer" ]'></h1>
       <div class="flex flex-col items-center mt-12">
-        <a href="#about" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out px-6 py-2 border-2 border-gray-800 text-gray-800 font-medium text-xl leading-tight uppercase rounded shadow-md group">
-          <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-y-full bg-neutral-800 group-hover:translate-y-0 ease">
+        <a href="#about" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out px-6 py-2 border-2 border-gray-400 text-gray-400 font-medium text-xl leading-tight uppercase rounded shadow-md group">
+          <span class="absolute inset-0 flex items-center justify-center w-full h-full duration-300 -translate-y-full bg-zinc-900 group-hover:translate-y-0 ease">
             ↓
           </span>
-          <span class="absolute flex items-center justify-center w-full h-full text-neutral-500 transition-all duration-300 transform group-hover:translate-y-full ease">View My Work</span>
+          <span class="absolute flex items-center justify-center w-full h-full text-gray-400 transition-all duration-300 transform group-hover:translate-y-full ease">View My Work</span>
           <span class="relative invisible">View My Work</span>
           </a>
       </div>
@@ -31,130 +33,237 @@
 
     
     <section class="w-screen m-0 p-0" id="about">
-      <nav class="bg-gray-100 border-b-2 w-screen sticky top-0">
+      <nav class="border-b-2 w-screen sticky top-0 bg-zinc-900">
         <div class="max-w-7xl mx-auto px-0 sm:px-6 lg:px-8">
           <div class="relative flex items-center justify-between h-16">
             <div class="flex-shrink flex items-center justify-start sm:items-stretch sm:justify-start">
               <div class="ml-6 block sm:ml-6">
                 <div class="flex sm:space-x-8 space-x-2 animate-slideL">
 
-                  <a href="#about" class="text-gray-800 hover:bg-neutral-600 hover:text-white px-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500">About</a>
+                  <a href="#about" class="text-white px-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500">About</a>
       
-                  <a href="#projects" class="text-gray-800 hover:bg-neutral-600 hover:text-white px-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500">Projects</a>
+                  <a href="#projects" class="text-white px-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500">Projects</a>
       
-                  <a href="#contact" class="text-gray-800 hover:bg-neutral-600 hover:text-white px-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500">Contact</a>
+                  <a href="#contact" class="text-white px-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500">Contact</a>
     
                 </div>
               </div>
           </div>
             <div class="animate-slideR absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <button class="bg-transparent px-4 py-2 font-semibold text-black inline-flex items-center space-x-2 rounded">
-                  <a href="https://github.com/Tabadia" target="_blank" rel="noopener noreferrer">
-                      <svg class="w-5 sm:w-5 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" sm:viewBox="0 0 24 24">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                      </svg>
+              <button class="bg-transparent px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+                  <a href="https://github.com/Tabadia" target="_blank" rel="noopener noreferrer"> 
+                    <i class="devicon-github-original"></i>
                   </a>
                   <a href="https://www.linkedin.com/in/thalenabadia/" target="_blank" rel="noopener noreferrer">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <i class="devicon-linkedin-plain"></i>
                   </a>
               </button>
-              <button onclick="location.href='./';" type="button" class="bg-neutral-800 text-white hover:text-white transition ease-in-out delay-10 hover:scale-110 px-4 py-2 font-bold rounded-md text-sm">
+              <button onclick="location.href='./';" type="button" class=" text-white transition ease-in-out delay-10 hover:scale-110 px-2 py-2 font-bold rounded-md text-sm">
               Thalen Abadia
               </button>
             </div>
           </div>
         </div>
       </nav>
-      <h4 class="text-8xl text-neutral-600 text-center font-bold">About</h4>
+      
+      <section class="">
+        <div class="text-8xl text-white text-center font-bold">Skills</div>
+
+        <div class="flex flex-wrap justify-center m-5 gap-x-16 gap-y-12">
+          <div class="w-full flex flex-row justify-center">
+            <div class="bg-neutral-900 border border-slate-600 rounded-lg p-5">
+              <span class="mr-2">
+                Experience Level:
+              </span>
+              <span>
+                <span class="text-yellow-500 mr-2">◉ Beginner</span>
+                <span class="text-amber-600 mr-2">◉ Intermediate</span>
+                <span class="text-red-500">◉ Advanced</span>
+              </span>
+            </div>
+          </div>
+          
+          <div class="bg-neutral-900 rounded-lg w-1/4 border border-slate-600">
+            <div class="bg-neutral-800 text-slate-300 w-full pt-5 px-5 pb-3 rounded-t-lg text-xl font-bold">
+              Languages
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120"><path fill="#262626" fill-opacity="1" d="M0,32L80,26.7C160,21,320,11,480,32C640,53,800,107,960,106.7C1120,107,1280,53,1360,26.7L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+            <div class="flex flex-wrap">
+              <div class="p-5 text-lg text-slate-400 w-1/2">
+                <ul>
+                  <li>
+                    <span class="devicon-html5-plain mr-2 "></span>HTML5 
+                  </li>
+                  <li>
+                    <span class="devicon-css3-plain mr-2 "></span>CSS3 
+                  </li>
+                  <li>
+                    <span class="devicon-javascript-plain mr-2 "></span>JavaScript 
+                  </li>
+                  <li>
+                    <span class="devicon-python-plain mr-2 "></span>Python 
+                  </li>
+                  <li>
+                    <span class="devicon-java-plain mr-2"></span>Java 
+                  </li>
+                  <li>
+                    <span class="devicon-csharp-plain mr-2"></span>C# 
+                  </li>
+                </ul>
+              </div>
+              <div class="p-5 text-lg text-right w-1/2">
+                <ul>
+                  <li>
+                    <span class="text-red-500 mr-2">◉</span> 
+                  </li>
+                  <li>
+                    <span class="text-red-500 mr-2">◉</span> 
+                  </li>
+                  <li>
+                    <span class="text-red-500 mr-2">◉</span>
+                  </li>
+                  <li>
+                    <span class="text-red-500 mr-2">◉</span>
+                  </li>
+                  <li>
+                    <span class="text-amber-600 mr-2">◉</span>
+                  </li>
+                  <li>
+                    <span class="text-amber-600 mr-2">◉</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="bg-neutral-900 rounded-lg w-1/4  border border-slate-600">
+            <div class="bg-neutral-800 text-slate-300 w-full pt-5 px-5 pb-3 rounded-t-lg text-xl font-bold">
+              Frameworks
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 75 1440 150"><path fill="#262626" fill-opacity="1" d="M0,96L48,96C96,96,192,96,288,112C384,128,480,160,576,165.3C672,171,768,149,864,149.3C960,149,1056,171,1152,170.7C1248,171,1344,149,1392,138.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+            <div class="flex flex-wrap">
+              <div class="p-5 text-lg text-slate-400 w-1/2">
+                <ul>
+                  <li>        
+                    <i class="devicon-tailwindcss-plain mr-2"></i>TailwindCSS 
+                  </li>
+                  <li>
+                    <i class="devicon-discordjs-plain mr-2"></i>Discord.(py/js)
+                  </li>
+                  <li>
+                    <i class="devicon-wordpress-plain mr-2"></i>WordPress 
+                  </li>
+                  <li>
+                    <i class="devicon-nodejs-plain mr-2"></i>Node JS 
+                  </li>
+                  <li>
+                    <i class="devicon-jquery-plain mr-2"></i>jQuery 
+                  </li>
+                  <li>
+                    <i class="devicon-react-original mr-2"></i>React JS 
+                  </li>
+                </ul>
+              </div>
+              <div class="p-5 text-lg text-right w-1/2">
+                <ul>
+                  <li>
+                    <span class="text-red-500 mr-2">◉</span>
+                  </li>
+                  <li>
+                    <span class="text-red-500 mr-2">◉</span>
+                  </li>
+                  <li>
+                    <span class="text-amber-600 mr-2">◉</span> 
+                  </li>
+                  <li>
+                    <span class="text-amber-600 mr-2">◉</span> 
+                  </li>
+                  <li>
+                    <span class="text-amber-600 mr-2">◉</span>
+                  </li>
+                  <li>
+                    <span class="text-yellow-500 mr-2">◉</span> 
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="bg-neutral-900 rounded-lg w-1/4 text-lg border border-slate-600">
+            <div class="bg-neutral-800 w-full pt-5 px-5 rounded-t-lg text-xl font-bold">
+              Tools
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 1440 150"><path fill="#262626" fill-opacity="1" d="M0,128L48,117.3C96,107,192,85,288,90.7C384,96,480,128,576,117.3C672,107,768,53,864,74.7C960,96,1056,192,1152,208C1248,224,1344,160,1392,128L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+            <div class="flex flex-wrap">
+              <div class="p-5 text-lg text-slate-400 w-1/2">
+                <ul>
+                  <li>
+                    <i class="devicon-github-original mr-2"></i>Github / Git 
+                  </li>
+                  <li>
+                    <i class="devicon-unity-original mr-2"></i>Unity 
+                  </li>
+                  <li>
+                    <i class="devicon-amazonwebservices-original mr-2"></i>AWS
+                  </li>
+                  <li>
+                    <i class="devicon-firebase-plain mr-2"></i>Google Firebase 
+                  </li>
+                  <li>
+                    <i class="devicon-heroku-plain mr-2"></i>Heroku 
+                  </li>
+                  <li>
+                    <i class="devicon-photoshop-plain mr-2"></i>Adobe Photoshop 
+                  </li>
+                  <li>
+                    <i class="devicon-premierepro-plain mr-2"></i>Adobe Premiere Pro 
+                  </li>
+                </ul>
+              </div>
+              <div class="p-5 text-lg text-right w-1/2">
+                <ul>
+                  <li>
+                    <span class="text-red-500 mr-2">◉</span>
+                  </li>
+                  <li>
+                    <span class="text-amber-600 mr-2">◉</span>
+                  </li>
+                  <li>
+                    <span class="text-amber-600 mr-2">◉</span>
+                  </li>
+                  <li>
+                    <span class="text-amber-600 mr-2">◉</span>
+                  </li>
+                  <li>
+                    <span class="text-amber-600 mr-2">◉</span>
+                  </li>
+                  <li>
+                    <span class="text-amber-600 mr-2">◉</span>
+                  </li>
+                  <li>
+                    <span class="text-yellow-500 mr-2">◉</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+        
+
+        <div class="mb-96"></div>
+
+        <h4 class="text-8xl text-neutral-600 text-center font-bold">About</h4>
         <div class="flex flex-row mt-20">
           <div class="w-2/3 pl-20 mt-20">
             <p class="paragraph text-xl">
               I am a 16 year old high school student who has developed a passion for computer science. Although I am a full stack developer with a passion for web development, I am also skilled in many other areas of the ever-expanding computer science field, including Java, Python, C#, and much more. While I have been programming for over 3 years, I also have experience in video and photo editing. If you'd like to contact me about freelancing work, you may do so <a href="#contact" class="link">here</a>.
             </p>
           </div>
-          <div class="w-full flex-col items-center inline-flex gap-10">
-            <div class="flex flex-row items-center gap-16">
-              <img src="img/unity.png" class="icon">
-              <img src="img/git.png" class="icon">
-              <img src="img/wp.png" class="icon">
-            </div>
-            <div class="flex flex-row items-center gap-18">
-              <img src="img/html.svg" class="icon">
-              <img src="img/css3.png" class="icon">
-              <img src="img/js.png" class="icon">
-            </div>
-            <div class="flex flex-row items-center gap-16">
-              <img src="img/java.png" class="icon">
-              <img src="img/python.webp" class="icon">
-              <img src="img/cs.svg" class="icon">
-            </div>
-            <div class="flex flex-row items-center gap-16">
-              <img src="img/tailwind.png" class="icon">
-              <img src="img/vscode.png" class="icon">
-              <img src="img/github.png" class="icon">
-            </div>
-            <div class="flex flex-row items-center gap-16">
-              <img src="img/aws.png" class="icon">
-              <img src="img/firebase.png" class="icon">
-              <img src="img/heroku.png" class="icon">
-            </div>
-            
-          </div>
         </div>
-        
-        
-        
-        
-        <div class=" md:flex items-center flex-wrap mb-20">
-            <div class="w-full md:w-1/2 pl-10">
-              <h4 class="pTitle">Skills</h4>
-              <div>
-                Languages:
-                HTML
-                CSS (Tailwind)
-                JavaScript (Node.js)
-                Java
-                Python
-                C#
-                Git
-              </div>
-              
-              <div>
-                Tools:
-                Visual Studio Code
-                Unity
-                Github
-                Photoshop
-                Premier Pro
-                Excel
-                AWS 
-                Firebase
-                Heroku
-                WordPress
-                Discord (.py and .js)
-              </div>
-              
-              <div>
-                Skills:
-                Web Development
-                Front-end
-                Back-end
-                Full-stack
-              </div>
 
-            </div>
-          </div>
-          
-          <div class="flex items-center flex-wrap mb-20">
-            <div class="w-full md:w-1/2">
-              <h4 class="pTitle">Experience</h4>
-
-              <div>
-
-              </div>
-              
-            </div>
-          </div>
+        
     </section>
 
       
