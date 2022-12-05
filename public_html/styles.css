@@ -672,12 +672,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: auto;
 }
 
-.m-0 {
-  margin: 0px;
-}
-
 .m-5 {
   margin: 1.25rem;
+}
+
+.m-0 {
+  margin: 0px;
 }
 
 .m-10 {
@@ -1013,8 +1013,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100vw;
 }
 
-.w-1\/5 {
-  width: 20%;
+.w-1\/4 {
+  width: 25%;
 }
 
 .w-14 {
@@ -1063,10 +1063,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-2 {
   width: 0.5rem;
-}
-
-.w-1\/4 {
-  width: 25%;
 }
 
 .min-w-0 {
@@ -1666,12 +1662,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 1rem;
 }
 
-.p-0 {
-  padding: 0px;
-}
-
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-0 {
+  padding: 0px;
 }
 
 .p-10 {
