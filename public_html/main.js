@@ -48,7 +48,6 @@ window.onload = function() {
           new typing(elements[i], JSON.parse(toRotate), period);
         }
     }
-    // INJECT CSS
     var css = document.createElement("style");
     css.type = "text/css";
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #D1D5DB}";
