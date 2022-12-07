@@ -312,8 +312,8 @@
       <section class="w-screen m-0 p-0" id="projects">
         <h1 class="title">Projects</h1>
 
-        <div class="flex flex-wrap justify-center space-x-6 w-full">
-          <div class="item w-1/4 border border-slate-600 text-black bg-white rounded p-2">
+        <div class="grid grid-cols-3 grid-rows-3 px-3 space-x-3 w-full">
+          <div class="w-full border border-slate-600 text-black bg-white rounded p-2">
             <div class="flex flex-row">
               <div class="item flex-auto p-3">
                 <h1 class="text-xl">Twitter Account Sentiment Analysis</h1>
@@ -329,7 +329,7 @@
             </div>
           </div>
 
-          <div class="item w-1/4 border border-slate-600 text-black bg-white rounded p-2">
+          <div class="w-full border border-slate-600 text-black bg-white rounded p-2 flex-col">
             <div class="flex flex-row">
               <div class="item flex-auto p-3">
                 <h1 class="text-xl">Carbon Calculator</h1>
@@ -337,16 +337,14 @@
               </div>
               <img src="img/carboncalc.png" class="item w-20 h-20 object-cover rounded-xl">
             </div>
-            <div class="px-3 pb-3 flex-col h-fit">
-              <div class="text-sm">A website to calculate your carbon footprint and carbon offset through different actions using APIs and calculations.</div>
-              <div class="flex flex-row space-x-1 pt-auto">
-                <div class="rounded-lg bg-red-400 px-2 w-fit">HTML</div>
-                <div class="rounded-lg bg-yellow-400 px-2 w-fit">JavaScript</div>
-                <div class="rounded-lg bg-orange-400 px-2 w-fit">CSS</div>
-              </div>
+            <p class="px-3 text-sm">A website to calculate your carbon footprint and carbon offset through different actions using APIs and calculations.</p>
+            <div class="px-3 flex mt-auto">
+              <div class="rounded-lg bg-red-400 px-2 w-fit">HTML</div>
+              <div class="rounded-lg bg-yellow-400 px-2 w-fit">JavaScript</div>
+              <div class="rounded-lg bg-orange-400 px-2 w-fit">CSS</div>
             </div>
-
           </div>
+
         </div>
         
       </section>
