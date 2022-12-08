@@ -66,7 +66,7 @@ html {
     height: calc(100vh - 66px);
 }
 
-.icon {
+.icon1 {
     animation: floating 8s ease-in-out infinite;
     object-fit: none;
 }

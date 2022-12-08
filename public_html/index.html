@@ -312,44 +312,72 @@
       <section class="w-screen m-0 p-0" id="projects">
         <h1 class="title">Projects</h1>
 
-        <div class="grid grid-cols-3 grid-rows-3 px-3 space-x-3 w-full">
-          <div class="w-full border border-slate-600 text-black bg-white rounded p-2">
-            <div class="flex flex-row">
-              <div class="item flex-auto p-3">
-                <h1 class="text-xl">Twitter Account Sentiment Analysis</h1>
-                <a href="https://github.com/Tabadia/twitter-account-sentiment-analysis" class="text-xl"><span class="devicon-github-plain"></span></a>
+          <div class="p-4 flex flex-wrap space-x-2">
+            <div class="w-1/4 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div class="bg-white flex justify-center">
+                <img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/twitter.webp">
               </div>
-              <img src="img/twitter.webp" class="item w-20 h-20  object-cover">
+              
+              <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                  MACHINE LEARNING
+                </h2>
+                <h1 class="title-font text-lg font-semibold mb-3">
+                  Twitter Account Sentiment Analysis
+                </h1>
+                <p class="text-base mb-3">
+                  This python program uses nltk machine learning Sentiment Analysis to see the sentiment in a users past 500 tweets. It will average the sentiment and return a percentage of positive, negative, and neutral tweets.
+                </p>
+                <div class="flex items-center flex-wrap">
+                  <div class="rounded-lg bg-purple-400 px-2 w-fit">Python</div>
+                  <span class="text-gray-400 mr-2 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-2 py-1">
+                  <a href="https://github.com/Tabadia/twitter-account-sentiment-analysis" target="_blank" class="text-xl">
+                    <span class="devicon-github-plain"></span>
+                  </a>
+                  </span>
+                  <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                    <a href="https://tabadia.github.io/CarbonCalculator/public/"class="text-xl" target="_blank">
+                      <svg class="h-6 w-6" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3" />  <line x1="8" y1="12" x2="16" y2="12" /></svg>
+                    </a>
+                  </span>
+                </div>
+              </div>
             </div>
-            <div class="px-3 pb-3">
-              <div class="text-sm">Twitter Account Sentiment Analysis uses nltk Sentiment Analysis to see the sentiment in a users past 500 tweets.</div>
-              <div class="flex flex-row space-x-1 my-2">
-                <div class="rounded-lg bg-purple-400 px-2 w-fit">Python</div>
+
+            <div class="w-1/4 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden">
+              <img class="lg:h-36 md:h-24 w-full object-cover object-center" src="img/carboncalc.png">
+              <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                  WEB DEVELOPMENT
+                </h2>
+                <h1 class="title-font text-lg font-semibold mb-3">
+                  Carbon Calculator
+                </h1>
+                <p class="text-base mb-3">
+                  This website was created in under 24hrs and was chosen as the winner for the Best Overall Program in the Project Enviro hackathon. The website calculates your carbon footprint and carbon offset using APIs and calculations.
+                </p>
+                <div class="flex items-center flex-wrap">
+                  <div class="rounded-lg bg-red-400 px-2 mr-1 w-fit">HTML</div>
+                  <div class="rounded-lg bg-yellow-400 px-2 mr-1 w-fit">JS</div>
+                  <div class="rounded-lg bg-orange-400 px-2 mr-1 w-fit">CSS</div>
+                  <span class="text-gray-400 mr-2 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-2 py-1">
+                  <a href="https://github.com/Tabadia/CarbonCalculator"class="text-xl" target="_blank">
+                    <span class="devicon-github-plain"></span>
+                  </a>
+                  </span>
+                  <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                    <a href="https://tabadia.github.io/CarbonCalculator/public/"class="text-xl" target="_blank">
+                      <svg class="h-6 w-6" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3" />  <line x1="8" y1="12" x2="16" y2="12" /></svg>
+                    </a>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="w-full border border-slate-600 text-black bg-white rounded p-2 flex-col">
-            <div class="flex flex-row">
-              <div class="item flex-auto p-3">
-                <h1 class="text-xl">Carbon Calculator</h1>
-                <a href="https://github.com/Tabadia/CarbonCalculator" class="text-xl"><span class="devicon-github-plain"></span></a>
-              </div>
-              <img src="img/carboncalc.png" class="item w-20 h-20 object-cover rounded-xl">
-            </div>
-            <p class="px-3 text-sm">A website to calculate your carbon footprint and carbon offset through different actions using APIs and calculations.</p>
-            <div class="px-3 flex mt-auto">
-              <div class="rounded-lg bg-red-400 px-2 w-fit">HTML</div>
-              <div class="rounded-lg bg-yellow-400 px-2 w-fit">JavaScript</div>
-              <div class="rounded-lg bg-orange-400 px-2 w-fit">CSS</div>
-            </div>
-          </div>
-
         </div>
-        
       </section>
       <div class="rounded-lg bg-red-400 px-2 w-fit">HTML</div>
-      <div class="rounded-lg bg-yellow-400 px-2 w-fit">JavaScript</div>
+      <div class="rounded-lg bg-yellow-400 px-2 w-fit">JS</div>
       <div class="rounded-lg bg-orange-400 px-2 w-fit">CSS</div>
       <div class="rounded-lg bg-purple-400 px-2 w-fit">Python</div>
       <section class="w-screen m-0 p-0" id="about">
