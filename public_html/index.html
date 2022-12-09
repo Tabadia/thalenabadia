@@ -17,7 +17,7 @@
 <body class="text-white">
 
   <main class="">
-    <header class="font-bold h-screen">
+    <header class="font-bold h-screen" id="top">
       <h1 class="text-9xl py-5 py-24 text-center">Hi, I'm Thalen.</h1>
       <h1 class="text-5xl text-gray-300 px-0 text-center typewrite" data-period="2000" data-type='[ "Full Stack Web Developer", "IB High School Student", "Game Developer", "Python Programmer", "Java Programmer", "WordPress Designer" ]'></h1>
       <div class="flex flex-col items-center mt-12">
@@ -33,54 +33,33 @@
 
     
     
-    <section id="main">
-      <nav class="border-b-2 w-screen sticky top-0 bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-0 sm:px-6 lg:px-8">
-          <div class="relative flex items-center justify-between h-16">
-            <div class="flex-shrink flex items-center justify-start sm:items-stretch sm:justify-start">
-              <div class="ml-6 block sm:ml-6">
-                <div class="flex sm:space-x-8 space-x-2 animate-slideL">
-
-                  <a href="#about" class="text-white px-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500">About</a>
-      
-                  <a href="#projects" class="text-white px-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500">Projects</a>
-      
-                  <a href="#contact" class="text-white px-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500">Contact</a>
-    
-                </div>
-              </div>
-          </div>
-            <div class="animate-slideR absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <button class="bg-transparent px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
-                  <a href="https://github.com/Tabadia" target="_blank" rel="noopener noreferrer"> 
-                    <i class="devicon-github-original"></i>
-                  </a>
-                  <a href="https://www.linkedin.com/in/thalenabadia/" target="_blank" rel="noopener noreferrer">
-                    <i class="devicon-linkedin-plain"></i>
-                  </a>
-              </button>
-              <button onclick="location.href='./';" type="button" class=" text-white transition ease-in-out delay-10 hover:scale-110 px-2 py-2 font-bold rounded-md text-sm">
-              Thalen Abadia
-              </button>
-            </div>
-          </div>
+    <section id="main"> 
+      <nav class="border-b-2 w-screen sticky top-0 bg-zinc-900 max-w-7xl mx-auto px-0 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+        <div class="flex-shrink items-center justify-start sm:items-stretch sm:justify-start ml-6 block sm:ml-6 sm:space-x-8 space-x-2 animate-slideL">
+          <a href="#main" class="text-white px-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500 underline decoration-2">Skills</a>
+          <a href="#projects" class="text-white px-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500">Projects</a>
+          <a href="#about" class="text-white px-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500">About</a>
+          <a href="#contact" class="text-white px-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500">Contact</a>
+        </div>
+        <div class="animate-slideR absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <button class="bg-transparent px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+              <a href="https://github.com/Tabadia" target="_blank" rel="noopener noreferrer"><i class="devicon-github-original"></i></a>
+              <a href="https://www.linkedin.com/in/thalenabadia/" target="_blank" rel="noopener noreferrer"><i class="devicon-linkedin-plain"></i></a>
+          </button>
+          <a href="#top" type="button" class=" text-white transition ease-in-out delay-10 hover:scale-110 px-2 py-2 font-bold rounded-md text-sm">Thalen Abadia</a>
         </div>
       </nav>
       <section class="w-screen m-0 p-0" id="skills">
-       
         <h1 class="title">Skills</h1>
-
         <div class="flex flex-wrap justify-center m-5 gap-x-16 gap-y-12">
           <div class="w-full flex flex-row justify-center">
             <div class="bg-neutral-900 border border-slate-600 rounded-lg p-5">
               <span class="mr-2 text-slate-400  ">
                 Experience Level:
               </span>
-              <span>
-                <span class="text-yellow-500 mr-2">◉ Beginner</span>
-                <span class="text-amber-600 mr-2">◉ Intermediate</span>
-                <span class="text-red-500">◉ Advanced</span>
-              </span>
+              <span class="text-yellow-500 mr-2">◉ Beginner</span>
+              <span class="text-amber-600 mr-2">◉ Intermediate</span>
+              <span class="text-red-500">◉ Advanced</span>
             </div>
           </div>
           
@@ -90,55 +69,41 @@
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120"><path fill="#262626" fill-opacity="1" d="M0,32L80,26.7C160,21,320,11,480,32C640,53,800,107,960,106.7C1120,107,1280,53,1360,26.7L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
             <div class="p-5 text-lg text-slate-400 w-full">
-              <div>
-                <div class="flex justify-center w-full">
-                  <div class="item flex-auto">
-                    <span class="devicon-html5-plain mr-2 flex-auto"></span>HTML5 
-                  </div>
-                  <div class="item">
-                    <span class="text-red-500 mr-2">◉</span> 
-                  </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
+                  <span class="devicon-html5-plain mr-2 flex-auto"></span>HTML5 
                 </div>
-                <div class="flex justify-center w-full">
-                  <div class="item flex-auto">
-                    <span class="devicon-css3-plain mr-2 flex-auto"></span>CSS3  
-                  </div>
-                  <div class="item">
-                    <span class="text-red-500 mr-2">◉</span> 
-                  </div>
+                <div class="item text-red-500 mr-2">◉</div> 
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
+                  <span class="devicon-css3-plain mr-2 flex-auto"></span>CSS3  
                 </div>
-                <div class="flex justify-center w-full">
-                  <div class="item flex-auto">
-                    <span class="devicon-javascript-plain mr-2 flex-auto"></span>JavaScript  
-                  </div>
-                  <div class="item">
-                    <span class="text-red-500 mr-2">◉</span> 
-                  </div>
+                <div class="item text-red-500 mr-2">◉</div>
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
+                  <span class="devicon-javascript-plain mr-2 flex-auto"></span>JavaScript  
                 </div>
-                <div class="flex justify-center w-full">
-                  <div class="item flex-auto">
-                    <span class="devicon-python-plain mr-2 flex-auto"></span>Python  
-                  </div>
-                  <div class="item">
-                    <span class="text-red-500 mr-2">◉</span> 
-                  </div>
+                <div class="item text-red-500 mr-2">◉</div>
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
+                  <span class="devicon-python-plain mr-2 flex-auto"></span>Python  
                 </div>
-                <div class="flex justify-center w-full">
-                  <div class="item flex-auto">
-                    <span class="devicon-java-plain mr-2 flex-auto"></span>Java  
-                  </div>
-                  <div class="item">
-                    <span class="text-amber-600 mr-2">◉</span> 
-                  </div>
+                <div class="item text-red-500 mr-2">◉</div>
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
+                  <span class="devicon-java-plain mr-2 flex-auto"></span>Java  
                 </div>
-                <div class="flex justify-center w-full">
-                  <div class="item flex-auto">
-                    <span class="devicon-csharp-plain mr-2 flex-auto"></span>C#  
-                  </div>
-                  <div class="item">
-                    <span class="text-amber-600 mr-2">◉</span> 
-                  </div>
+                <div class="item text-amber-600 mr-2">◉</div>
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
+                  <span class="devicon-csharp-plain mr-2 flex-auto"></span>C#  
                 </div>
+                <div class="item text-amber-600 mr-2">◉</div>
               </div>
             </div>
           </div>
@@ -149,55 +114,41 @@
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 75 1440 150"><path fill="#262626" fill-opacity="1" d="M0,96L48,96C96,96,192,96,288,112C384,128,480,160,576,165.3C672,171,768,149,864,149.3C960,149,1056,171,1152,170.7C1248,171,1344,149,1392,138.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
             <div class="p-5 text-lg text-slate-400 w-full">
-              <div>
-                <div class="flex justify-center w-full">
-                  <div class="item flex-auto">
-                    <span class="devicon-tailwindcss-plain mr-2 flex-auto"></span>TailwindCSS 
-                  </div>
-                  <div class="item">
-                    <span class="text-red-500 mr-2">◉</span> 
-                  </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
+                  <span class="devicon-tailwindcss-plain mr-2 flex-auto"></span>TailwindCSS 
                 </div>
-                <div class="flex justify-center w-full">
-                  <div class="item flex-auto">
-                    <span class="devicon-discordjs-plain mr-2 flex-auto"></span>Discord.py/.js  
-                  </div>
-                  <div class="item">
-                    <span class="text-red-500 mr-2">◉</span> 
-                  </div>
+                <div class="item text-red-500 mr-2">◉</div>
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
+                  <span class="devicon-discordjs-plain mr-2 flex-auto"></span>Discord.py/.js  
                 </div>
-                <div class="flex justify-center w-full">
-                  <div class="item flex-auto">
-                    <span class="devicon-wordpress-plain mr-2 flex-auto"></span>WordPress  
-                  </div>
-                  <div class="item">
-                    <span class="text-amber-600 mr-2">◉</span> 
-                  </div>
+                <div class="item text-red-500 mr-2">◉</div>
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
+                  <span class="devicon-wordpress-plain mr-2 flex-auto"></span>WordPress  
                 </div>
-                <div class="flex justify-center w-full">
-                  <div class="item flex-auto">
-                    <span class="devicon-nodejs-plain mr-2 flex-auto"></span>Node JS  
-                  </div>
-                  <div class="item">
-                    <span class="text-amber-600 mr-2">◉</span> 
-                  </div>
+                <div class="item text-amber-600 mr-2">◉</div>
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
+                  <span class="devicon-nodejs-plain mr-2 flex-auto"></span>Node JS  
                 </div>
-                <div class="flex justify-center w-full">
-                  <div class="item flex-auto">
-                    <span class="devicon-jquery-plain mr-2 flex-auto"></span>jQuery  
-                  </div>
-                  <div class="item">
-                    <span class="text-amber-600 mr-2">◉</span> 
-                  </div>
+                <div class="item text-amber-600 mr-2">◉</div>
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
+                  <span class="devicon-jquery-plain mr-2 flex-auto"></span>jQuery  
                 </div>
-                <div class="flex justify-center w-full">
-                  <div class="item flex-auto">
-                    <span class="devicon-react-plain mr-2 flex-auto"></span>React JS  
-                  </div>
-                  <div class="item">
-                    <span class="text-yellow-500 mr-2">◉</span> 
-                  </div>
+                <div class="item text-amber-600 mr-2">◉</div>
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
+                  <span class="devicon-react-plain mr-2 flex-auto"></span>React JS  
                 </div>
+                <div class="item text-yellow-500 mr-2">◉</div>
               </div>
             </div>
           </div>
@@ -208,69 +159,54 @@
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 1440 150"><path fill="#262626" fill-opacity="1" d="M0,128L48,117.3C96,107,192,85,288,90.7C384,96,480,128,576,117.3C672,107,768,53,864,74.7C960,96,1056,192,1152,208C1248,224,1344,160,1392,128L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
             <div class="p-5 text-lg text-slate-400 w-full">
-              <div>
-                <div class="flex justify-center w-full">
-                  <div class="item flex-auto">
-                    <span class="devicon-github-plain mr-2 flex-auto"></span>GitHub/Git 
-                  </div>
-                  <div class="item">
-                    <span class="text-red-500 mr-2">◉</span> 
-                  </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
+                  <span class="devicon-github-plain mr-2 flex-auto"></span>GitHub/Git 
                 </div>
-                <div class="flex justify-center w-full">
-                  <div class="item flex-auto">
-                    <span class="devicon-unity-original mr-2 flex-auto"></span>Unity  
-                  </div>
-                  <div class="item">
-                    <span class="text-amber-600 mr-2">◉</span> 
-                  </div>
+                <div class="item text-red-500 mr-2">◉</div>
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
+                  <span class="devicon-unity-original mr-2 flex-auto"></span>Unity  
                 </div>
-                <div class="flex justify-center w-full">
-                  <div class="item flex-auto">
-                    <span class="devicon-amazonwebservices-original mr-2 flex-auto"></span>AWS  
-                  </div>
-                  <div class="item">
-                    <span class="text-amber-600 mr-2">◉</span> 
-                  </div>
+                <div class="item text-amber-600 mr-2">◉</div>
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
+                  <span class="devicon-amazonwebservices-original mr-2 flex-auto"></span>AWS  
                 </div>
-                <div class="flex justify-center w-full">
-                  <div class="item flex-auto">
-                    <span class="devicon-firebase-plain mr-2 flex-auto"></span>Firebase  
-                  </div>
-                  <div class="item">
-                    <span class="text-amber-600 mr-2">◉</span> 
-                  </div>
+                <div class="item text-amber-600 mr-2">◉</div>
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
+                  <span class="devicon-firebase-plain mr-2 flex-auto"></span>Firebase  
                 </div>
-                <div class="flex justify-center w-full">
-                  <div class="item flex-auto">
-                    <span class="devicon-heroku-plain mr-2 flex-auto"></span>Heroku  
-                  </div>
-                  <div class="item">
-                    <span class="text-amber-600 mr-2">◉</span> 
-                  </div>
+                <div class="item text-amber-600 mr-2">◉</div>
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
+                  <span class="devicon-heroku-plain mr-2 flex-auto"></span>Heroku  
                 </div>
-                <div class="flex justify-center w-full">
-                  <div class="item flex-auto">
-                    <span class="devicon-photoshop-plain mr-2 flex-auto"></span>Photoshop  
-                  </div>
-                  <div class="item">
-                    <span class="text-amber-600 mr-2">◉</span> 
-                  </div>
+                <div class="item text-amber-600 mr-2">◉</div>
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
+                  <span class="devicon-photoshop-plain mr-2 flex-auto"></span>Photoshop  
                 </div>
-                <div class="flex justify-center w-full">
-                  <div class="item flex-auto">
-                    <span class="devicon-photoshop-plain mr-2 flex-auto"></span>Premiere Pro  
-                  </div>
-                  <div class="item">
-                    <span class="text-yellow-500 mr-2">◉</span> 
-                  </div>
+                <div class="item text-amber-600 mr-2">◉</div>
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
+                  <span class="devicon-photoshop-plain mr-2 flex-auto"></span>Premiere Pro  
                 </div>
+                <div class="item text-yellow-500 mr-2">◉</div>
               </div>
             </div>
           </div>
         </div>
-
+        <h1 class="mt-20 mb-8 text-4xl font-bold text-center">Soft Skills</h1>
         <div class="flex flex-wrap justify-center m-5 gap-x-16 gap-y-12">
+          
           <div class="bg-neutral-900 rounded-lg w-1/4 border border-slate-600">
             <div class="w-full flex flex-row text-2xl font-bold text-slate-300 pt-5 items-center">
               <svg class="svgItem item h-14 w-14 text-red-500 border-2 border-red-500 rounded-full p-2 ml-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="5" y="11" width="14" height="10" rx="2" />  <circle cx="12" cy="16" r="1" />  <path d="M8 11v-5a4 4 0 0 1 8 0" />
