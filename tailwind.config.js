@@ -81,6 +81,7 @@ module.exports = {
       'bg': '#0D0014',
       'txt': '#ffffff',
       'happier': '#DB0E60',
+      'genics': '#1A1A1A',
     }),
     columns: {
       auto: 'auto',

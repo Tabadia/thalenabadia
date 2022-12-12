@@ -837,6 +837,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: auto;
 }
 
+.mt-52 {
+  margin-top: 13rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -967,10 +971,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-60 {
   margin-top: 15rem;
-}
-
-.mt-52 {
-  margin-top: 13rem;
 }
 
 .block {
@@ -1389,13 +1389,13 @@ Ensure the default browser behavior of the `hidden` attribute.
        column-gap: 0.5rem;
 }
 
+.gap-y-2 {
+  row-gap: 0.5rem;
+}
+
 .gap-x-3 {
   -moz-column-gap: 0.75rem;
        column-gap: 0.75rem;
-}
-
-.gap-y-2 {
-  row-gap: 0.5rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1631,9 +1631,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
+.bg-blue-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+}
+
 .bg-yellow-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(250 204 21 / var(--tw-bg-opacity));
+}
+
+.bg-happier {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 14 96 / var(--tw-bg-opacity));
 }
 
 .bg-orange-400 {
@@ -1641,9 +1651,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(251 146 60 / var(--tw-bg-opacity));
 }
 
-.bg-happier {
+.bg-green-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(219 14 96 / var(--tw-bg-opacity));
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+}
+
+.bg-genics {
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 26 26 / var(--tw-bg-opacity));
 }
 
 .bg-black {
@@ -1741,11 +1756,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 
-.bg-blue-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
-}
-
 .bg-pink-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(244 114 182 / var(--tw-bg-opacity));
@@ -1764,11 +1774,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-green-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
-}
-
-.bg-green-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {
