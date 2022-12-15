@@ -12,16 +12,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body class="text-white">
 
   <main class="">
-    <header class="font-bold h-screen" id="top">
-      <h1 class="text-9xl py-5 py-24 text-center">Hi, I'm Thalen.</h1>
-      <h1 class="text-5xl text-gray-300 px-0 text-center typewrite" data-period="2000" data-type='[ "Full Stack Web Developer", "IB High School Student", "Game Developer", "Python Programmer", "Java Programmer", "WordPress Designer" ]'></h1>
+    <header class="font-bold min-h-screen sm:h-screen" id="top">
+      <h1 class="text-7xl sm:text-9xl py-12 sm:py-24 text-center">Hi, I'm Thalen.</h1>
+      <h1 class="text-3xl sm:text-5xl text-gray-300 px-0 text-center typewrite" data-period="2000" data-type='[ "Full Stack Web Developer", "IB High School Student", "Game Developer", "Python Programmer", "Java Programmer", "WordPress Designer" ]'></h1>
       <div class="flex flex-col items-center mt-12">
-        <a href="#main" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out px-6 py-2 border-2 border-gray-400 text-gray-400 font-medium text-xl leading-tight uppercase rounded shadow-md group">
+        <a href="#main" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-gray-400 text-gray-400 text-md sm:text-xl leading-tight uppercase rounded shadow-md group">
           <span class="absolute inset-0 flex items-center justify-center w-full h-full duration-300 -translate-y-full bg-zinc-900 group-hover:translate-y-0 ease">
             <svg class="h-8 w-8"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <line x1="12" y1="5" x2="12" y2="19" />  <polyline points="19 12 12 19 5 12" /></svg>
           </span>
@@ -32,36 +32,37 @@
     </header>
     
     <section id="main"> 
-      <nav class="border-b-2 w-full sticky top-0 bg-zinc-900 flex items-center justify-between h-16">
-        <div class="flex-shrink items-center justify-start sm:items-stretch sm:justify-start ml-6 block sm:ml-6 sm:space-x-8 space-x-2 animate-slideL">
-          <a href="#main" class="text-white px-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500 underline decoration-2">Skills</a>
-          <a href="#projects" class="text-white px-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500">Projects</a>
-          <a href="#about" class="text-white px-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500">About</a>
-          <a href="#contact" class="text-white px-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500">Contact</a>
+      <nav class="border-b-2 w-full sticky top-0 bg-zinc-900 flex items-center justify-between h-16 z-40">
+        <div class="flex-shrink items-center justify-start block ml-2 sm:ml-6 sm:space-x-8">
+          <a href="#main" id="skillsNav" class="text-white pr-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500 decoration-2">Skills</a>
+          <a href="#projects" id="projectsNav" class="text-white pr-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500 decoration-2">Projects</a>
+          <a href="#about" id="aboutNav" class="text-white pr-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500 decoration-2">About</a>
+          <a href="#contact" id="contactNav" class="text-white sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500 decoration-2">Contact</a>
         </div>
-        <div class="animate-slideR absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-          <button class="bg-transparent px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+        <div class="absolute inset-y-0 right-0 flex items-center sm:pr-2 inset-auto">
+          <button class="bg-transparent sm:pr-4 font-semibold text-white inline-flex items-center sm:space-x-2 space-x-1 rounded">
               <a href="https://github.com/Tabadia" target="_blank" rel="noopener noreferrer"><i class="devicon-github-original"></i></a>
               <a href="https://www.linkedin.com/in/thalenabadia/" target="_blank" rel="noopener noreferrer"><i class="devicon-linkedin-plain"></i></a>
           </button>
           <a href="#top" type="button" class=" text-white transition ease-in-out delay-10 hover:scale-110 px-2 py-2 font-bold rounded-md text-sm">Thalen Abadia</a>
         </div>
       </nav>
-      <section class="w-full m-0 p-0" id="skills">
+      <section class="w-full m-0 p-0 z-0" id="skills">
         <h1 class="title">Skills</h1>
         <div class="flex flex-wrap justify-center m-5 gap-x-16 gap-y-12">
           <div class="w-full flex flex-row justify-center">
             <div class="bg-neutral-900 border border-slate-600 rounded-lg p-5">
-              <span class="mr-2 text-slate-400  ">
+              <span class="mr-2 text-slate-400">
                 Experience Level:
               </span>
-              <span class="text-yellow-500 mr-2">◉ Beginner</span>
-              <span class="text-amber-600 mr-2">◉ Intermediate</span>
+              <br class="sm:hidden">
+              <span class="text-yellow-500 mr-1 sm:mr-2">◉ Beginner</span>
+              <span class="text-amber-600 mr-1 sm:mr-2">◉ Intermediate</span>
               <span class="text-red-500">◉ Advanced</span>
             </div>
           </div>
           
-          <div class="bg-neutral-900 rounded-lg w-1/4 border border-slate-600">
+          <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600">
             <div class="bg-neutral-800 text-slate-300 w-full pt-5 px-5 pb-3 rounded-t-lg text-xl font-bold">
               Languages
             </div>
@@ -106,7 +107,7 @@
             </div>
           </div>
   
-          <div class="bg-neutral-900 rounded-lg w-1/4  border border-slate-600">
+          <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600">
             <div class="bg-neutral-800 text-slate-300 w-full pt-5 px-5 pb-3 rounded-t-lg text-xl font-bold">
               Frameworks
             </div>
@@ -144,14 +145,32 @@
               </div>
               <div class="flex justify-center w-full">
                 <div class="item flex-auto">
+                  <span class="devicon-angularjs-plain mr-2 flex-auto"></span>Angular  
+                </div>
+                <div class="item text-amber-600 mr-2">◉</div>
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
+                  <span class="devicon-mongodb-plain mr-2 flex-auto"></span>MongoDB  
+                </div>
+                <div class="item text-amber-600 mr-2">◉</div>
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
                   <span class="devicon-react-plain mr-2 flex-auto"></span>React JS  
+                </div>
+                <div class="item text-yellow-500 mr-2">◉</div>
+              </div>
+              <div class="flex justify-center w-full">
+                <div class="item flex-auto">
+                  <span class="devicon-sass-plain mr-2 flex-auto"></span>Sass
                 </div>
                 <div class="item text-yellow-500 mr-2">◉</div>
               </div>
             </div>
           </div>
   
-          <div class="bg-neutral-900 rounded-lg w-1/4 text-lg border border-slate-600">
+          <div class="bg-neutral-900 rounded-lg w-80 text-lg border border-slate-600">
             <div class="bg-neutral-800 w-full pt-5 px-5 rounded-t-lg text-xl font-bold">
               Tools
             </div>
@@ -203,9 +222,9 @@
           </div>
         </div>
         
-        <h1 class="mt-20 mb-8 text-4xl font-bold text-center">Soft Skills</h1>
+        <h1 class="mt-11 sm:mt-20 mb-8 text-4xl font-bold text-center">Soft Skills</h1>
         <div class="flex flex-wrap justify-center m-5 gap-x-16 gap-y-12">
-          <div class="bg-neutral-900 rounded-lg w-1/4 border border-slate-600">
+          <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600">
             <div class="h-14 mb-4">
               <svg class="svgItem h-14 w-14 text-red-500 border-2 border-red-500 rounded-full p-2 m-4 absolute"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="5" y="11" width="14" height="10" rx="2"/><circle cx="12" cy="16" r="1"/><path d="M8 11v-5a4 4 0 0 1 8 0"/></svg>
               <div class="flex justify-center h-20">
@@ -217,7 +236,7 @@
             </p>
           </div>
 
-          <div class="bg-neutral-900 rounded-lg w-1/4 border border-slate-600">
+          <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600">
             <div class="h-14 mb-4">
                 <svg class="svgItem h-14 w-14 text-red-500 border-2 border-red-500 rounded-full p-2 m-4 absolute" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15" /></svg>
                 <div class="flex justify-center h-20">
@@ -229,7 +248,7 @@
               </p>
             </div>
 
-            <div class="bg-neutral-900 rounded-lg w-1/4 border border-slate-600">
+            <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600">
               <div class="h-14 mb-4">
               <svg class="svgItem h-14 w-14 text-red-500 border-2 border-red-500 rounded-full p-2 m-4 absolute" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="6" r="2"/><path d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3" /><path d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3"/></svg>
               <div class="flex justify-center h-20">
@@ -245,12 +264,12 @@
 
       </section>
         
-      <section class="w-full m-0 p-0 mt-52" id="projects">
+      <section class="w-full m-0 p-0 mt-24 sm:mt-52" id="projects">
         <h1 class="title">Projects</h1>
 
           <div class="p-4 flex flex-wrap justify-center gap-x-2 gap-y-4">
             
-            <div class="w-1/5 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
+            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
               <!--<div class="bg-white flex justify-center">
                 <img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/twitter.webp">
               </div>-->
@@ -276,7 +295,7 @@
               
             </div>
 
-            <div class="w-1/5 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
+            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
               <!--<img class="lg:h-36 md:h-24 w-full object-cover object-center" src="img/carboncalc.png">-->
               <div class="px-5 pt-5">
                 <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
@@ -304,7 +323,7 @@
               </div>
             </div>
 
-            <div class="w-1/5 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
+            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
               <!--<div class="bg-happier flex justify-center">
                 <img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/happierbot.png">
               </div>-->
@@ -329,7 +348,7 @@
               </div>
             </div>
 
-            <div class="w-1/5 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
+            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
               <!--<img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/recycleAid.jpg">-->
               <div class="px-5 pt-5">
                 <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
@@ -354,7 +373,7 @@
               </div>
             </div>
             
-            <div class="w-1/5 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
+            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
               <!--<img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/openai.webp">-->
               <div class="px-5 pt-5">
                 <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
@@ -379,7 +398,7 @@
               </div>
             </div>
 
-            <div class="w-1/5 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
+            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
               <!--<div class="bg-genics flex justify-center">
                 <img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/genicsblog.webp">
               </div>
@@ -407,7 +426,7 @@
               </div>
             </div>
 
-            <div class="w-1/5 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
+            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
               <!--<div class="bg-white flex justify-center">
                 <img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/mp3chapter.png">
               </div>-->
@@ -432,7 +451,7 @@
               </div>
             </div>
 
-            <div class="w-1/5 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
+            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
               <!--<div class="bg-white flex justify-center">
                 <img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/mp3chapter.png">
               </div>-->
@@ -461,6 +480,7 @@
           </div>
         </div>
       </section>
+      <!--
       <div class="text-sm rounded-md bg-red-400 px-1 mr-1 w-fit">HTML</div>
       <div class="text-sm rounded-md bg-yellow-400 px-1 mr-1 w-fit">JS</div>
       <div class="text-sm rounded-md bg-orange-400 px-1 mr-1 w-fit">CSS</div>
@@ -468,7 +488,7 @@
       <div class="text-sm rounded-md bg-blue-400 px-1 mr-1 w-fit">Tailwind</div>
       <div class="text-sm rounded-md bg-green-500 px-1 mr-1 w-fit">Node.js</div>
       <div class="text-sm rounded-md bg-pink-400 px-1 mr-1 w-fit">Java</div>
-      
+      -->
       <section class="w-full m-0 p-0" id="about">
         <h4 class="title">About</h4>
         <div class="flex flex-row mt-20">

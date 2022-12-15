@@ -1,4 +1,7 @@
-var typing = function(el, toRotate, period) {
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+var typing = function (el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
     this.loopNum = 0;
@@ -53,3 +56,31 @@ window.onload = function() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #D1D5DB}";
     document.body.appendChild(css);
 };
+
+$("section[id^='skills']:visible").mouseover(function () {
+    $("a[id^='skillsNav'").addClass("underline");
+    $("a[id^='projectsNav'").removeClass("underline");
+    $("a[id^='aboutNav'").removeClass("underline");
+    $("a[id^='contactNav'").removeClass("underline");
+});
+
+$("section[id^='projects']:visible").mouseover(function () {
+    $("a[id^='skillsNav'").removeClass("underline");
+    $("a[id^='projectsNav'").addClass("underline");
+    $("a[id^='aboutNav'").removeClass("underline");
+    $("a[id^='contactNav'").removeClass("underline");
+});
+
+$("section[id^='about']:visible").mouseover(function () {
+    $("a[id^='skillsNav'").removeClass("underline");
+    $("a[id^='projectsNav'").removeClass("underline");
+    $("a[id^='aboutNav'").addClass("underline");
+    $("a[id^='contactNav'").removeClass("underline");
+});
+
+$("section[id^='contact']:visible").mouseover(function () {
+    $("a[id^='skillsNav'").removeClass("underline");
+    $("a[id^='projectsNav'").removeClass("underline");
+    $("a[id^='aboutNav'").removeClass("underline");
+    $("a[id^='contactNav'").addClass("underline");
+});

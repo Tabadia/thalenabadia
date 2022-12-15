@@ -31,7 +31,7 @@
         @apply w-20 h-20 inline-block mx-auto rounded;
     }
     .title{
-        @apply text-8xl text-white text-center font-bold mt-16 mb-10;
+        @apply sm:text-8xl text-6xl text-white text-center font-bold mt-16 mb-10;
     }
 }
 
@@ -43,6 +43,10 @@ html {
     box-shadow: 0 0 10px 1px red;
 }
 
+#top {
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
+  }
 
 .parall{
     position: relative;
