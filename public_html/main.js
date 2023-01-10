@@ -60,27 +60,17 @@ window.onload = function() {
 $("section[id^='skills']:visible").mouseover(function () {
     $("a[id^='skillsNav'").addClass("underline");
     $("a[id^='projectsNav'").removeClass("underline");
-    $("a[id^='aboutNav'").removeClass("underline");
     $("a[id^='contactNav'").removeClass("underline");
 });
 
 $("section[id^='projects']:visible").mouseover(function () {
     $("a[id^='skillsNav'").removeClass("underline");
     $("a[id^='projectsNav'").addClass("underline");
-    $("a[id^='aboutNav'").removeClass("underline");
-    $("a[id^='contactNav'").removeClass("underline");
-});
-
-$("section[id^='about']:visible").mouseover(function () {
-    $("a[id^='skillsNav'").removeClass("underline");
-    $("a[id^='projectsNav'").removeClass("underline");
-    $("a[id^='aboutNav'").addClass("underline");
     $("a[id^='contactNav'").removeClass("underline");
 });
 
 $("section[id^='contact']:visible").mouseover(function () {
     $("a[id^='skillsNav'").removeClass("underline");
     $("a[id^='projectsNav'").removeClass("underline");
-    $("a[id^='aboutNav'").removeClass("underline");
     $("a[id^='contactNav'").addClass("underline");
 });

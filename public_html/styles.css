@@ -887,6 +887,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 5rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -931,20 +939,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 9rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
 .mr-auto {
   margin-right: auto;
 }
 
 .-mr-1 {
   margin-right: -0.25rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
 }
 
 .mt-2 {
@@ -1163,12 +1163,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 66.666667%;
 }
 
-.w-96 {
-  width: 24rem;
-}
-
 .w-1\/2 {
   width: 50%;
+}
+
+.w-96 {
+  width: 24rem;
 }
 
 .w-9 {
@@ -2076,6 +2076,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 2.5rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .pr-2 {
   padding-right: 0.5rem;
 }
@@ -2122,6 +2127,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pl-5 {
   padding-left: 1.25rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
 }
 
 .text-left {
@@ -2635,6 +2644,10 @@ html {
 
 .focus\:ring-opacity-50:focus {
   --tw-ring-opacity: 0.5;
+}
+
+.focus\:ring-opacity-0:focus {
+  --tw-ring-opacity: 0;
 }
 
 .group:hover .group-hover\:translate-y-0 {
