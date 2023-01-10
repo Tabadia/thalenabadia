@@ -33,10 +33,10 @@
     
     <section id="main"> 
       <nav class="border-b-2 w-full sticky top-0 bg-zinc-900 flex items-center justify-between h-16 z-40">
-        <div class="flex-shrink items-center justify-start block ml-2 sm:ml-6 sm:space-x-8">
-          <a href="#main" id="skillsNav" class="text-white pr-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500 decoration-2">Skills</a>
-          <a href="#projects" id="projectsNav" class="text-white pr-1 sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500 decoration-2">Projects</a>
-          <a href="#contact" id="contactNav" class="text-white sm:px-3 py-2 rounded-md text-sm font-bold transition ease-in-out duration-500 decoration-2">Contact</a>
+        <div class="flex-shrink items-center justify-start block ml-2 sm:ml-6 sm:space-x-8 space-x-4 py-2">
+          <a href="#main" id="skillsNav" class="text-white sm:px-3 text-sm font-bold decoration-2">Skills</a>
+          <a href="#projects" id="projectsNav" class="text-white sm:px-3 text-sm font-bold decoration-2">Projects</a>
+          <a href="#contact" id="contactNav" class="text-white sm:px-3 text-sm font-bold decoration-2">Contact</a>
         </div>
         <div class="absolute inset-y-0 right-0 flex items-center sm:pr-2 inset-auto">
           <button class="bg-transparent sm:pr-4 font-semibold text-white inline-flex items-center sm:space-x-2 space-x-1 rounded">
@@ -46,10 +46,11 @@
           <a href="#top" type="button" class=" text-white transition ease-in-out delay-10 hover:scale-110 px-2 py-2 font-bold rounded-md text-sm">Thalen Abadia</a>
         </div>
       </nav>
+
       <section class="w-full m-0 p-0 z-0" id="skills">
         <h1 class="title">Skills</h1>
         <div class="flex flex-wrap justify-center m-5 gap-x-16 gap-y-12">
-          <div class="w-full flex flex-row justify-center">
+          <div class="w-full flex flex-row justify-center reveal">
             <div class="bg-neutral-900 border border-slate-600 rounded-lg p-5">
               <span class="mr-2 text-slate-400">
                 Experience Level:
@@ -61,7 +62,7 @@
             </div>
           </div>
           
-          <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600">
+          <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600 reveal">
             <div class="bg-neutral-800 text-slate-300 w-full pt-5 px-5 pb-3 rounded-t-lg text-xl font-bold">
               Languages
             </div>
@@ -106,7 +107,7 @@
             </div>
           </div>
   
-          <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600">
+          <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600 reveal">
             <div class="bg-neutral-800 text-slate-300 w-full pt-5 px-5 pb-3 rounded-t-lg text-xl font-bold">
               Frameworks
             </div>
@@ -169,7 +170,7 @@
             </div>
           </div>
   
-          <div class="bg-neutral-900 rounded-lg w-80 text-lg border border-slate-600">
+          <div class="bg-neutral-900 rounded-lg w-80 text-lg border border-slate-600 reveal">
             <div class="bg-neutral-800 w-full pt-5 px-5 rounded-t-lg text-xl font-bold">
               Tools
             </div>
@@ -221,8 +222,8 @@
           </div>
         </div>
         
-        <h1 class="mt-11 sm:mt-20 mb-8 text-4xl font-bold text-center">Soft Skills</h1>
-        <div class="flex flex-wrap justify-center m-5 gap-x-16 gap-y-12">
+        <h1 class="mt-11 sm:mt-20 mb-8 text-4xl font-bold text-center reveal">Soft Skills</h1>
+        <div class="flex flex-wrap justify-center m-5 gap-x-16 gap-y-12 reveal">
           <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600">
             <div class="h-14 mb-4">
               <svg class="svgItem h-14 w-14 text-red-500 border-2 border-red-500 rounded-full p-2 m-4 absolute"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="5" y="11" width="14" height="10" rx="2"/><circle cx="12" cy="16" r="1"/><path d="M8 11v-5a4 4 0 0 1 8 0"/></svg>
@@ -263,12 +264,12 @@
 
       </section>
         
-      <section class="w-full m-0 p-0 mt-24 sm:mt-52" id="projects">
-        <h1 class="title">Projects</h1>
+      <section class="w-full m-0 p-0 mt-24 md:mt-30" id="projects">
+        <h1 class="title reveal">Projects</h1>
 
-          <div class="p-4 flex flex-wrap justify-center gap-x-2 gap-y-4">
+          <div class="p-4 flex flex-wrap m-auto justify-center gap-x-2 gap-y-4">
             
-            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
+            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
               <!--<div class="bg-white flex justify-center">
                 <img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/twitter.webp">
               </div>-->
@@ -294,7 +295,7 @@
               
             </div>
 
-            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
+            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
               <!--<img class="lg:h-36 md:h-24 w-full object-cover object-center" src="img/carboncalc.png">-->
               <div class="px-5 pt-5">
                 <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
@@ -322,7 +323,7 @@
               </div>
             </div>
 
-            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
+            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
               <!--<div class="bg-happier flex justify-center">
                 <img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/happierbot.png">
               </div>-->
@@ -347,7 +348,7 @@
               </div>
             </div>
 
-            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
+            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
               <!--<img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/recycleAid.jpg">-->
               <div class="px-5 pt-5">
                 <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
@@ -372,7 +373,7 @@
               </div>
             </div>
             
-            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
+            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
               <!--<img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/openai.webp">-->
               <div class="px-5 pt-5">
                 <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
@@ -397,7 +398,7 @@
               </div>
             </div>
 
-            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
+            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
               <!--<div class="bg-genics flex justify-center">
                 <img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/genicsblog.webp">
               </div>
@@ -425,7 +426,7 @@
               </div>
             </div>
 
-            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
+            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
               <!--<div class="bg-white flex justify-center">
                 <img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/mp3chapter.png">
               </div>-->
@@ -450,7 +451,7 @@
               </div>
             </div>
 
-            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
+            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
               <!--<div class="bg-white flex justify-center">
                 <img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/mp3chapter.png">
               </div>-->
@@ -479,6 +480,7 @@
           </div>
         </div>
       </section>
+
       <!--
       <div class="text-sm rounded-md bg-red-400 px-1 mr-1 w-fit">HTML</div>
       <div class="text-sm rounded-md bg-yellow-400 px-1 mr-1 w-fit">JS</div>
@@ -498,34 +500,36 @@
           </div>
         </div>
       </section> -->
-
     </section>
 
-    <footer class="w-full m-0 p-6 mt-24 sm:mt-52 bg-neutral-800" id="contact">
-      <div class="flex flex-row w-full">
-        <div class="flex flex-col justify-start w-1/2">
-          <h1 class="font-bold text-5xl">Contact</h1>
-          <div class="pt-6">
-            <a href="https://www.linkedin.com/in/thalenabadia/" target="_blank">
-              <span class="text-xl devicon-linkedin-plain"></span>
-              <span class="text-xl font-bold">@<span class="underline">thalenabadia</span></span>
-            </a>
+    <footer class="w-full m-0 p-6 mt-24 sm:mt-52 bg-zinc-800" id="contact">
+      <div class="flex flex-row w-full ">
+        
+        <div class="flex sm:flex-col w-full">
+          <div class="flex flex-col justify-start w-1/2">
+            <h1 class="font-bold sm:text-5xl text-4xl">Contact</h1>
+            <div class="pt-6">
+              <a href="https://www.linkedin.com/in/thalenabadia/" target="_blank" class="sm:text-2xl text-lg">
+                <span class="devicon-linkedin-plain"></span>
+                <span class="">@<span class="underline">thalenabadia</span></span>
+              </a>
+            </div>
+            <div>
+              <a href="https://www.github.com/Tabadia" target="_blank" class="sm:text-2xl text-lg">
+                <span class="devicon-github-plain"></span>
+                <span class="">@<span class="underline">Tabadia</span></span>
+              </a>
+            </div>   
           </div>
-          <div>
-            <a href="https://www.github.com/Tabadia" target="_blank">
-              <span class="text-xl devicon-github-plain"></span>
-              <span class="text-xl font-bold">@<span class="underline">Tabadia</span></span>
-            </a>
-          </div>
-          <div class="w-full mt-10 flex-shrink items-center justify-center block sm:space-x-8">
-            <a href="#main" class="text-white pr-1 sm:px-3 py-2 rounded-md text-lg font-bold transition ease-in-out duration-500 decoration-2 underline">Skills</a>
-            <a href="#projects" class="text-white pr-1 sm:px-3 py-2 rounded-md text-lg font-bold transition ease-in-out duration-500 decoration-2 underline">Projects</a>
-            <a href="#contact" class="text-white sm:px-3 py-2 rounded-md text-lg font-bold transition ease-in-out duration-500 decoration-2 underline">Contact</a>
+          <div class="mt-10 flex sm:flex-row flex-col sm:items-center sm:justify-start sm:space-x-16 ">
+            <a href="#main" class="text-white text-lg font-bold decoration-2 underline">Skills</a>
+            <a href="#projects" class="text-white text-lg font-bold decoration-2 underline">Projects</a>
+            <a href="#contact" class="text-white text-lg font-bold decoration-2 underline">Contact</a>
           </div>
         </div>
-  
-        <div class="flex flex-row justify-center w-1/2">
-          <div class="h-full px-4 py-2 border border-gray-300 sm:rounded-md bg-center text-center">
+
+        <div class="sm:flex justify-center sm:w-1/2 hidden">
+          <div class="h-full px-4 py-2 text-center">
             <form action="https://formsubmit.co/5961252586dcb6eba9f23a404c54883d" method="POST">
               <div class="flex flex-col text-base">
                 <div class="flex flex-row flex-auto h-full">
