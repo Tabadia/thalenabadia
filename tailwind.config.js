@@ -1,6 +1,6 @@
 module.exports = {
   content: [
-    ".\\public_html\\**\\**\\**"
+    ".\\public_html\\**\\*.{html,js}"
   ],
   darkMode: 'media', // or 'class'
   theme: {
@@ -80,8 +80,18 @@ module.exports = {
       rose: colors.rose,
       'bg': '#0D0014',
       'txt': '#ffffff',
-      'happier': '#DB0E60',
-      'genics': '#1A1A1A',
+      'accent': '#4B3458',
+      'btn': '#d74270',
+      'common': '#DDDDDD',
+      'uncommon': '#00CC00',
+      'rare': '#2087FF',
+      'epic': '#9537FF',
+      'legendary': '#FF8700',
+      'ctxt': '#626262',
+      'utxt': '#1B581B',
+      'rtxt': '#1351A1',
+      'etxt': '#2D1A7A',
+      'ltxt': '#AC5900',
     }),
     columns: {
       auto: 'auto',

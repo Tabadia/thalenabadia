@@ -1,0 +1,44 @@
+#wp-admin-bar-speedycache-toolbar-parent .ab-empty-item:hover{
+background-color: #262626;
+cursor:pointer;
+}
+
+.speedycache-loader {
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100vw;
+height:100vh;
+background-color: #FFFFFF40; /*hexa decimal opacity used here*/
+align-items:center;
+justify-content:center;
+z-index:9999;
+backdrop-filter: blur(2px);
+}
+
+.speedycache-loader span{
+font-size: 3.5rem;
+color:#3d5afe;
+}
+
+.speedycache-loader-circle {
+border: 0.5rem solid #f3f3f3;
+border-radius: 50%;
+border-top: 0.5rem solid #3d5afe;
+width: 3.5rem;
+height: 3.5rem;
+-webkit-animation: spin 3s cubic-bezier(0.39, 0.575, 0.565, 1) infinite; /* Safari */
+animation: spin 3s cubic-bezier(0.39, 0.575, 0.565, 1) infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+0% { -webkit-transform: rotate(0deg); }
+100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}

@@ -1,626 +1,662 @@
 <!--npx tailwindcss -i ./src/styles.css -o ./public/styles.css --watch-->
 <!DOCTYPE html>
 <html lang="en" class="bg-zinc-900 appearence-none font-helvetica">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Title" content="Thalen Abadia">
-    <meta name=”Description” content="Hi, I'm Thalen, a web developer.">
-    <meta name="Keywords" content="Thalen Abadia, Web Developer, Portfolio">
-    <title>Thalen Abadia</title>
-    <link rel="stylesheet" href=".\styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-</head>
-<body class="text-white">
-  <main class="">
-    <header class="font-bold min-h-screen sm:h-screen" id="top">
-      <h1 class="text-7xl sm:text-9xl py-12 sm:py-24 text-center">Hi, I'm Thalen.</h1>
-      <h1 class="text-3xl sm:text-5xl text-gray-300 px-0 text-center typewrite" data-period="2000" data-type='[ "Web Developer", "IB High School Student", "Game Developer", "Python Programmer", "Java Programmer", "WordPress Designer" ]'></h1>
-      <div class="flex flex-col items-center mt-12">
-        <a href="#main" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-gray-400 text-gray-400 text-md sm:text-xl leading-tight uppercase rounded shadow-md group">
-          <span class="absolute inset-0 flex items-center justify-center w-full h-full duration-300 -translate-y-full bg-zinc-900 group-hover:translate-y-0 ease">
-            <svg class="h-8 w-8"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <line x1="12" y1="5" x2="12" y2="19" />  <polyline points="19 12 12 19 5 12" /></svg>
-          </span>
-          <span class="absolute flex items-center justify-center w-full h-full text-gray-400 transition-all duration-300 transform group-hover:translate-y-full ease">Learn More</span>
-          <span class="relative invisible">View My Work</span>
-          </a>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="Title" content="Thalen Abadia">
+      <meta name=”Description” content="Hi, I'm Thalen, a web developer.">
+      <meta name="Keywords" content="Thalen Abadia, Web Developer, Portfolio">
+      <title>Thalen Abadia</title>
+      <link rel="stylesheet" href=".\styles.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   </head>
+   <div class="flex flex-row w-full">
+      <div class="h-screen fixed bg-zinc-800 flex flex-col items-start justify-between py-4 px-6">
+         <div class="space-y-6 flex flex-col">
+            <a href="#" id="titleNav" onclick="changeSide('front')" class="cubeNav text-white text-sm font-bold decoration-2">Thalen Abadia</a>
+            <a href="#" id="aboutNav" onclick="changeSide('right')" class="cubeNav text-white text-sm font-bold decoration-2">About</a>
+            <a href="#" id="skillsNav" onclick="changeSide('back')" class="cubeNav text-white text-sm font-bold decoration-2">Skills</a>
+            <a href="#" id="projectsNav" onclick="changeSide('left')" class="cubeNav text-white text-sm font-bold decoration-2">Projects</a>
+            <a href="#" id="contactNav" onclick="changeSide('bottom')" class="cubeNav text-white text-sm font-bold decoration-2">Contact</a>
+         </div>
+         <div class="space-y-4 flex flex-col">
+             <button class="bg-transparent font-semibold text-white inline-flex items-center space-x-1 rounded">
+                 <a href="https://github.com/Tabadia" target="_blank" rel="noopener noreferrer"><i class="devicon-github-original"></i></a>
+                 <a href="https://www.linkedin.com/in/thalenabadia/" target="_blank" rel="noopener noreferrer"><i class="devicon-linkedin-plain"></i></a>
+             </button>
+             <a href="#top" type="button" class="text-white transition ease-in-out delay-10 hover:scale-110 font-bold rounded-md text-sm">thalenabadia.com</a>
+         </div>
+      </div> 
+      <div class="flex justify-center items-center w-full h-screen">
+         <div class="stage flex justify-center items-center w-1/2 h-1/2">
+            <div class="cube">
+               <figure class="face front"></figure>
+               <figure class="face back"></figure>
+               <figure class="face right"></figure>
+               <figure class="face left"></figure>
+               <figure class="face top"></figure>
+               <figure class="face bottom"></figure>
+            </div>
+         </div>
       </div>
-    </header>
-    <section id="main"> 
-      <nav class="border-b-2 w-full sticky top-0 bg-zinc-900 flex items-center justify-between h-16 z-40">
-        <div class="flex-shrink items-center justify-start block ml-2 sm:ml-6 sm:space-x-8 space-x-4 py-2">
-          <a href="#main" id="skillsNav" class="text-white sm:px-3 text-sm font-bold decoration-2">Skills</a>
-          <a href="#projects" id="projectsNav" class="text-white sm:px-3 text-sm font-bold decoration-2">Projects</a>
-          <a href="#contact" id="contactNav" class="text-white sm:px-3 text-sm font-bold decoration-2">Contact</a>
-        </div>
-        <div class="absolute inset-y-0 right-0 flex items-center sm:pr-2 inset-auto">
-          <button class="bg-transparent sm:pr-4 font-semibold text-white inline-flex items-center sm:space-x-2 space-x-1 rounded">
-              <a href="https://github.com/Tabadia" target="_blank" rel="noopener noreferrer"><i class="devicon-github-original"></i></a>
-              <a href="https://www.linkedin.com/in/thalenabadia/" target="_blank" rel="noopener noreferrer"><i class="devicon-linkedin-plain"></i></a>
-          </button>
-          <a href="#top" type="button" class=" text-white transition ease-in-out delay-10 hover:scale-110 px-2 py-2 font-bold rounded-md text-sm">Thalen Abadia</a>
-        </div>
-      </nav>
-
-      <section class="w-full m-0 p-0 z-0" id="skills">
-        <h1 class="title">Skills</h1>
-        <div class="flex flex-wrap justify-center m-5 gap-x-16 gap-y-12">
-          <div class="w-full flex flex-row justify-center reveal">
-            <div class="bg-neutral-900 border border-slate-600 rounded-lg p-5">
-              <span class="mr-2 text-slate-400">
-                Experience Level:
-              </span>
-              <br class="sm:hidden">
-              <span class="text-yellow-500 mr-1 sm:mr-2">◉ Beginner</span>
-              <span class="text-amber-600 mr-1 sm:mr-2">◉ Intermediate</span>
-              <span class="text-red-500">◉ Advanced</span>
-            </div>
-          </div>
-          
-          <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600 reveal">
-            <div class="bg-neutral-800 text-slate-300 w-full pt-5 px-5 pb-3 rounded-t-lg text-xl font-bold">
-              Languages
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120"><path fill="#262626" fill-opacity="1" d="M0,32L80,26.7C160,21,320,11,480,32C640,53,800,107,960,106.7C1120,107,1280,53,1360,26.7L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
-            <div class="p-5 text-lg text-slate-400 w-full">
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-html5-plain mr-2 flex-auto"></span>HTML5 
-                </div>
-                <div class="item text-red-500 mr-2">◉</div> 
-              </div>
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-css3-plain mr-2 flex-auto"></span>CSS3  
-                </div>
-                <div class="item text-red-500 mr-2">◉</div>
-              </div>
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-javascript-plain mr-2 flex-auto"></span>JavaScript  
-                </div>
-                <div class="item text-red-500 mr-2">◉</div>
-              </div>
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-csharp-plain mr-2 flex-auto"></span>C#  
-                </div>
-                <div class="item text-red-500 mr-2">◉</div>
-              </div>
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-java-plain mr-2 flex-auto"></span>Java  
-                </div>
-                <div class="item text-amber-600 mr-2">◉</div>
-              </div>
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-python-plain mr-2 flex-auto"></span>Python 
-                </div>
-                <div class="item text-amber-600 mr-2">◉</div>
-              </div>
-            </div>
-          </div>
-  
-          <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600 reveal">
-            <div class="bg-neutral-800 text-slate-300 w-full pt-5 px-5 pb-3 rounded-t-lg text-xl font-bold">
-              Frameworks
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 75 1440 150"><path fill="#262626" fill-opacity="1" d="M0,96L48,96C96,96,192,96,288,112C384,128,480,160,576,165.3C672,171,768,149,864,149.3C960,149,1056,171,1152,170.7C1248,171,1344,149,1392,138.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
-            <div class="p-5 text-lg text-slate-400 w-full">
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-tailwindcss-plain mr-2 flex-auto"></span>TailwindCSS 
-                </div>
-                <div class="item text-red-500 mr-2">◉</div>
-              </div>
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-discordjs-plain mr-2 flex-auto"></span>Discord.py/.js  
-                </div>
-                <div class="item text-red-500 mr-2">◉</div>
-              </div>
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-nodejs-plain mr-2 flex-auto"></span>Node JS  
-                </div>
-                <div class="item text-red-500 mr-2">◉</div>
-              </div>
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-jquery-plain mr-2 flex-auto"></span>jQuery  
-                </div>
-                <div class="item text-amber-600 mr-2">◉</div>
-              </div>
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-angularjs-plain mr-2 flex-auto"></span>Angular  
-                </div>
-                <div class="item text-amber-600 mr-2">◉</div>
-              </div>
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-mongodb-plain mr-2 flex-auto"></span>MongoDB  
-                </div>
-                <div class="item text-amber-600 mr-2">◉</div>
-              </div>
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-react-plain mr-2 flex-auto"></span>React JS  
-                </div>
-                <div class="item text-yellow-500 mr-2">◉</div>
-              </div>
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-sass-plain mr-2 flex-auto"></span>Sass
-                </div>
-                <div class="item text-yellow-500 mr-2">◉</div>
-              </div>
-            </div>
-          </div>
-  
-          <div class="bg-neutral-900 rounded-lg w-80 text-lg border border-slate-600 reveal">
-            <div class="bg-neutral-800 w-full pt-5 px-5 rounded-t-lg text-xl font-bold">
-              Tools
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 1440 150"><path fill="#262626" fill-opacity="1" d="M0,128L48,117.3C96,107,192,85,288,90.7C384,96,480,128,576,117.3C672,107,768,53,864,74.7C960,96,1056,192,1152,208C1248,224,1344,160,1392,128L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
-            <div class="p-5 text-lg text-slate-400 w-full">
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-github-plain mr-2 flex-auto"></span>GitHub/Git 
-                </div>
-                <div class="item text-red-500 mr-2">◉</div>
-              </div>
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-unity-original mr-2 flex-auto"></span>Unity  
-                </div>
-                <div class="item text-red-500 mr-2">◉</div>
-              </div>
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-wordpress-plain mr-2 flex-auto"></span>WordPress  
-                </div>
-                <div class="item text-amber-600 mr-2">◉</div>
-              </div>
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-amazonwebservices-original mr-2 flex-auto"></span>AWS  
-                </div>
-                <div class="item text-amber-600 mr-2">◉</div>
-              </div>
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-firebase-plain mr-2 flex-auto"></span>Firebase  
-                </div>
-                <div class="item text-amber-600 mr-2">◉</div>
-              </div>
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-heroku-plain mr-2 flex-auto"></span>Heroku  
-                </div>
-                <div class="item text-amber-600 mr-2">◉</div>
-              </div>
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-photoshop-plain mr-2 flex-auto"></span>Photoshop  
-                </div>
-                <div class="item text-amber-600 mr-2">◉</div>
-              </div>
-              <div class="flex justify-center w-full">
-                <div class="item flex-auto">
-                  <span class="devicon-premierepro-plain mr-2 flex-auto"></span>Premiere Pro  
-                </div>
-                <div class="item text-yellow-500 mr-2">◉</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <h1 class="mt-11 sm:mt-20 mb-8 text-4xl font-bold text-center reveal">Soft Skills</h1>
-        <div class="flex flex-wrap justify-center m-5 gap-x-16 gap-y-12 reveal">
-          <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600">
-            <div class="h-14 mb-4">
-              <svg class="svgItem h-14 w-14 text-red-500 border-2 border-red-500 rounded-full p-2 m-4 absolute"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="5" y="11" width="14" height="10" rx="2"/><circle cx="12" cy="16" r="1"/><path d="M8 11v-5a4 4 0 0 1 8 0"/></svg>
-              <div class="flex justify-center h-20">
-                <span class="text-center text-3xl font-bold text-slate-300 mt-auto mb-auto">Accessible</span>
-              </div>
-            </div>
-            <p class="w-full flex flex-row justify-center p-5 text-slate-400 text-lg">
-              It is very important to me that I write my code to ensure that the content is compatible with accessibility features and standards.
-            </p>
-          </div>
-
-          <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600">
-            <div class="h-14 mb-4">
-                <svg class="svgItem h-14 w-14 text-red-500 border-2 border-red-500 rounded-full p-2 m-4 absolute" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15" /></svg>
-                <div class="flex justify-center h-20">
-                  <span class="text-center text-3xl font-bold text-slate-300 mt-auto mb-auto">Timely</span>
-                </div>
-              </div>
-              <p class="w-full flex flex-row justify-center p-5 text-slate-400 text-lg">
-                I will complete the requested work within the agreeable timeframe and can ensure that I will respond within 24 hours. 
-              </p>
-            </div>
-
-            <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600">
-              <div class="h-14 mb-4">
-              <svg class="svgItem h-14 w-14 text-red-500 border-2 border-red-500 rounded-full p-2 m-4 absolute" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="6" r="2"/><path d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3" /><path d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3"/></svg>
-              <div class="flex justify-center h-20">
-                <span class="text-center text-3xl font-bold text-slate-300 mt-auto mb-auto">Adaptable</span>
-              </div>
-            </div>
-            <p class="w-full flex flex-row justify-center p-5 text-slate-400 text-lg">
-              All of my work is easily adaptable and can be changed to fit the needs of the client. My code will also work on all browsers and devices.
-            </p>
-          </div>
-          
-        </div>
-
-      </section>
-        
-      <section class="w-full m-0 p-0 mt-24 md:mt-30" id="projects">
-        <h1 class="title reveal">Projects</h1>
-
-          <div class="p-4 flex flex-wrap m-auto justify-center gap-x-2 gap-y-4">
-            
-            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
-              <!--<div class="bg-white flex justify-center">
-                <img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/twitter.webp">
-              </div>-->
-              <div class=" px-5 pt-5">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  MACHINE LEARNING
-                </h2>
-                <h1 class="title-font text-lg font-semibold mb-3">
-                  Twitter Sentiment Analysis
-                </h1>
-                <p class="text-base mb-3">
-                  A python program that uses nltk Sentiment Analysis to see the sentiment in a user's past 500 tweets.
-                </p>
-              </div>
-              <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
-                <div class="text-sm rounded-md bg-purple-400 px-1 w-fit">Python</div>
-                <div class="flex flex-row justify-end items-end flex-auto text-xl text-gray-400 gap-x-2">
-                  <a href="https://github.com/Tabadia/twitter-account-sentiment-analysis" target="_blank">
-                    <span class="devicon-github-plain"></span>
-                  </a>
-                </div>
-              </div>
-              
-            </div>
-
-            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
-              <!--<img class="lg:h-36 md:h-24 w-full object-cover object-center" src="img/carboncalc.png">-->
-              <div class="px-5 pt-5">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  WEB DEVELOPMENT
-                </h2>
-                <h1 class="title-font text-lg font-semibold mb-3">
-                  Carbon Calculator
-                </h1>
-                <p class="text-base mb-3">
-                  A website for calculating your carbon footprint and offset. The winner for the Best Overall Program in a 24hr hackathon. 
-                </p>
-              </div>
-              <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
-                <div class="text-sm rounded-md bg-red-400 px-1 mr-1 w-fit">HTML</div>
-                <div class="text-sm rounded-md bg-blue-400 px-1 mr-1 w-fit">Tailwind</div>
-                <div class="text-sm rounded-md bg-yellow-400 px-1 mr-1 w-fit">JS</div>
-                <div class="flex flex-row justify-end items-end flex-auto text-xl text-gray-400 gap-x-2">
-                  <a href="https://github.com/Tabadia/CarbonCalculator" target="_blank">
-                    <span class="devicon-github-plain"></span>
-                  </a>
-                  <a href="https://tabadia.github.io/CarbonCalculator/public/" target="_blank">
-                    <svg class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"  stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"/>  <line x1="8" y1="12" x2="16" y2="12"/></svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
-              <!--<div class="bg-happier flex justify-center">
-                <img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/happierbot.png">
-              </div>-->
-              <div class="px-5 pt-5">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  PYTHON DEVELOPMENT
-                </h2>
-                <h1 class="title-font text-lg font-semibold mb-3">
-                  HappierBot
-                </h1>
-                <p class="text-base mb-3">
-                  A Discord Bot with an AI chatbot and mental health features. It was used by over 80,000 people in over 100 servers.
-                </p>
-              </div>
-              <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
-                <div class="text-sm rounded-md bg-purple-400 px-1 mr-1 w-fit">Python</div>
-                <div class="flex flex-row justify-end items-end flex-auto text-xl text-gray-400 gap-x-2">
-                  <a href="https://discordbotlist.com/bots/happierbot" target="_blank">
-                    <svg class="h-6 w-6" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3" />  <line x1="8" y1="12" x2="16" y2="12" /></svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
-              <!--<img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/recycleAid.jpg">-->
-              <div class="px-5 pt-5">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  MACHINE LEARNING
-                </h2>
-                <h1 class="title-font text-lg font-semibold mb-3">
-                  RecycleAid
-                </h1>
-                <p class="text-base mb-3">
-                  A web app where you can discover details regarding the recyclability of an item in a photo using machine learning. Winner in the HackTable 24hr hackathon.
-                </p>
-              </div>
-              <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
-                <div class="text-sm rounded-md bg-red-400 px-1 mr-1 w-fit">HTML</div>
-                <div class="text-sm rounded-md bg-orange-400 px-1 mr-1 w-fit">CSS</div>
-                <div class="text-sm rounded-md bg-purple-400 px-1 mr-1 w-fit">Python</div>
-                <div class="flex flex-row justify-end items-end flex-auto text-xl text-gray-400 gap-x-2">
-                  <a href="https://devpost.com/software/recycleaid" target="_blank">
-                    <svg class="h-6 w-6" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3" />  <line x1="8" y1="12" x2="16" y2="12" /></svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            
-            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
-              <!--<img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/openai.webp">-->
-              <div class="px-5 pt-5">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  NODE.JS DEVELOPMENT
-                </h2>
-                <h1 class="title-font text-lg font-semibold mb-3">
-                  OpenAi Image Generator 
-                </h1>
-                <p class="text-base mb-3">
-                  A website that uses node.js to request from OpenAI's image generation API to create images based on a description.
-                </p>
-              </div>
-              <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
-                <div class="text-sm rounded-md bg-red-400 px-1 mr-1 w-fit">HTML</div>
-                <div class="text-sm rounded-md bg-orange-400 px-1 mr-1 w-fit">CSS</div>
-                <div class="text-sm rounded-md bg-green-500 px-1 mr-1 w-fit">Node.js</div>
-                <div class="flex flex-row justify-end items-end flex-auto text-xl text-gray-400 gap-x-2">
-                  <a href="https://github.com/Tabadia/AI-Image-Generation" target="_blank">
-                    <span class="devicon-github-plain"></span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
-              <!--<div class="bg-genics flex justify-center">
-                <img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/genicsblog.webp">
-              </div>
-              <img class="lg:h-36 md:h-24 w-full object-cover object-center" src="img/genicsblog2.jpg">-->
-              <div class="px-5 pt-5">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  WEB DEVELOPMENT
-                </h2>
-                <h1 class="title-font text-lg font-semibold mb-3">
-                  Genics Blog
-                </h1>
-                <p class="text-base mb-3">
-                  An open source blog where you can find articles on technology and programming. I review and edit articles submitted by other authors.
-                </p>
-              </div>
-              <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
-                <div class="flex flex-row justify-end items-end flex-auto text-xl text-gray-400 gap-x-2">
-                  <a href="https://github.com/genicsblog/genicsblog.com" target="_blank">
-                    <span class="devicon-github-plain"></span>
-                  </a>
-                  <a href="https://genicsblog.com/" target="_blank">
-                    <svg class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"  stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"/>  <line x1="8" y1="12" x2="16" y2="12"/></svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
-              <!--<div class="bg-white flex justify-center">
-                <img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/mp3chapter.png">
-              </div>-->
-              <div class="px-5 pt-5">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  UNITY DEVELOPMENT
-                </h2>
-                <h1 class="title-font text-lg font-semibold mb-3">
-                  Hell's Arrow
-                </h1>
-                <p class="text-base mb-3">
-                  A Unity game developed in C# that won People's Choice and Best Art and Assets for the Oregon Game Project Challenge.
-                </p>
-              </div>
-              <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
-                <div class="text-sm rounded-md bg-slate-400 px-1 mr-1 w-fit">Unity</div>
-                <div class="text-sm rounded-md bg-teal-400 px-1 mr-1 w-fit">C#</div>
-                <div class="flex flex-row justify-end items-end flex-auto text-xl text-gray-400 gap-x-2">
-                <a href="https://tms.ogpc.info/Games/Details/df2bfeac-c075-43a0-819a-baa845261585" target="_blank">
-                  <svg class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"  stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"/>  <line x1="8" y1="12" x2="16" y2="12"/></svg>
-                </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
-              <div class="px-5 pt-5">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  WORDPRESS DEVELOPMENT
-                </h2>
-                <h1 class="title-font text-lg font-semibold mb-3">
-                  Olerai leadership
-                </h1>
-                <p class="text-base mb-3">
-                  Made updates and changes to the wordpress website, adding in new pages and features, as well as cleaning up parts of the website that had already been made.
-                </p>
-              </div>
-              <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
-                <div class="text-sm rounded-md bg-pink-400 px-1 mr-1 w-fit">Wordpress</div>
-                <div class="flex flex-row justify-end items-end flex-auto text-xl text-gray-400 gap-x-2">
-                  <!-- <a href="https://github.com/Tabadia/AI-Image-Generation" target="_blank">
-                    <span class="devicon-github-plain"></span>
-                  </a> -->
-                </div>
-              </div>
-            </div>
-            
-            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
-              <div class="px-5 pt-5">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  NODE.JS DEVELOPMENT
-                </h2>
-                <h1 class="title-font text-lg font-semibold mb-3">
-                  Spotify Statistics
-                </h1>
-                <p class="text-base mb-3">
-                  A website that uses node.js, express.js, and axios to request from Spotify's API to create a user's top artists and tracks.
-                </p>
-              </div>
-              <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
-                <div class="text-sm rounded-md bg-red-400 px-1 mr-1 w-fit">HTML</div>
-                <div class="text-sm rounded-md bg-orange-400 px-1 mr-1 w-fit">CSS</div>
-                <div class="text-sm rounded-md bg-green-500 px-1 mr-1 w-fit">Node.js</div>
-                <div class="flex flex-row justify-end items-end flex-auto text-xl text-gray-400 gap-x-2">
-                  <a href="https://github.com/Tabadia/spotify-statistics" target="_blank">
-                    <span class="devicon-github-plain"></span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
-              <div class="px-5 pt-5">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  DATABASE DEVELOPMENT
-                </h2>
-                <h1 class="title-font text-lg font-semibold mb-3">
-                  EmojiSwap Database
-                </h1>
-                <p class="text-base mb-3">
-                  Using a discord.js Discord bot, trades from the ios app EmojiSwap are read from a channel and then sent to a Firebase database. This program has read almost 800k messages.
-                </p>
-              </div>
-              <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
-                <div class="text-sm rounded-md bg-green-500 px-1 mr-1 w-fit">Node.js</div>
-                <div class="text-sm rounded-md bg-black px-1 mr-1 w-fit">Firebase</div>
-              </div>
-            </div>
-
-            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
-              <div class="px-5 pt-5">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  WEB DEVELOPMENT
-                </h2>
-                <h1 class="title-font text-lg font-semibold mb-3">
-                  EmojiSwap Database Analysis
-                </h1>
-                <p class="text-base mb-3">
-                  Using node.js and chart.js, the database explained in the previous project is analysed through graphs and comparisons, allowing users of the app to make the best trades they can.
-                </p>
-              </div>
-              <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
-                <div class="text-sm rounded-md bg-red-400 px-1 mr-1 w-fit">HTML</div>
-                <div class="text-sm rounded-md bg-blue-400 px-1 mr-1 w-fit">Tailwind</div>
-                <div class="text-sm rounded-md bg-green-500 px-1 mr-1 w-fit">Node.js</div>
-              </div>
-            </div>
-
-            <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
-              <div class="px-5 pt-5">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                  WEB DEVELOPMENT
-                </h2>
-                <h1 class="title-font text-lg font-semibold mb-3">
-                  EcoMap
-                </h1>
-                <p class="text-base mb-3">
-                  EcoMap is a website that visualizes energy consumption data for each state. It uses many API's, including the eia government energy usage API.</p>
-              </div>
-              <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
-                <div class="text-sm rounded-md bg-red-400 px-1 mr-1 w-fit">HTML</div>
-                <div class="text-sm rounded-md bg-blue-400 px-1 mr-1 w-fit">Tailwind</div>
-                <div class="text-sm rounded-md bg-green-500 px-1 mr-1 w-fit">Node.js</div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-    </section>
-
-    <footer class="w-full m-0 p-2 mt-16 sm:mt-48 bg-zinc-900" id="contact">
-      <div class="flex flex-row w-full">
-        <div class="flex sm:flex-col w-full align-bottom sm:justify-end pb-4 px-4">
-          <div class="flex flex-col justify-end w-1/2">
-            <h1 class="font-bold sm:text-5xl text-4xl">Contact</h1>
-            <div class="pt-6">
-              <a href="https://www.linkedin.com/in/thalenabadia/" target="_blank" class="sm:text-2xl text-lg">
-                <span class="devicon-linkedin-plain"></span>
-                <span class="">@<span class="underline">thalenabadia</span></span>
-              </a>
-            </div>
+   </div>
+   
+   <body class="text-white" id="">
+      <main class="z-10" id="">
+         <header class="font-bold min-h-screen sm:h-screen flex flex-row justify-evenly items-center" id="top">
             <div>
-              <a href="https://www.github.com/Tabadia" target="_blank" class="sm:text-2xl text-lg">
-                <span class="devicon-github-plain"></span>
-                <span class="">@<span class="underline">Tabadia</span></span>
-              </a>
-            </div>   
-          </div>
-        </div>
-
-        <div class="sm:flex justify-end sm:w-full hidden">
-          <div class="h-full px-4 pb-4 text-center">
-            <form action="https://formsubmit.co/5961252586dcb6eba9f23a404c54883d" method="POST">
-                <div class="flex flex-row flex-auto h-full">
-                  <div class="flex flex-col w-full mr-2 justify-center">
-                    <div class="mb-6">
-                      <label class="font-bold">Name</label>
-                      <input
-                        type="text" 
-                        name="name" 
-                        class="text-black border-2 block w-full mt-1 p-2 rounded-md " 
-                        placeholder="First Last"
-                      />
-                    </div>
-                    <div>
-                      <label class="font-bold">Email</label>
-                      <input
-                        name="email"
-                        type="email"
-                        class="text-black border-2 block w-full mt-1 p-2 rounded-md" 
-                        placeholder="email@example.com"
-                      />
-                    </div>
-                  </div>
-                  <div class="w-full ml-2 flex flex-col justify-center flex-start">
-                    <label class="mb-2 font-bold text-center">Message</label>
-                    <textarea name="message" class="text-black border-2 block w-full h-full p-2 rounded-md text-base" rows="2"placeholder="Tell me what you're thinking..."></textarea>
-                  </div>
-                </div>
-                <div class="mt-6">
-                  <button
-                    type="submit" class="text-black bg-white transition ease-in-out delay-10 hover:scale-110 px-4 py-2 font-bold rounded-md text-base">
-                    Contact Me
+               <h1 class="text-7xl sm:text-9xl py-12 sm:py-24 text-center">Hi, I'm Thalen.</h1>
+               <h1 class="text-3xl sm:text-5xl text-gray-300 px-0 text-center typewrite" data-period="2000" data-type='[ "Web Developer", "IB High School Student", "Game Developer", "Python Programmer", "Java Programmer", "WordPress Designer" ]'></h1>
+               <div class="flex flex-col items-center mt-12">
+                  <a href="#main" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-gray-400 text-gray-400 text-md sm:text-xl leading-tight uppercase rounded shadow-md group">
+                     <span class="absolute inset-0 flex items-center justify-center w-full h-full duration-300 -translate-y-full bg-zinc-900 group-hover:translate-y-0 ease">
+                        <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                           <line x1="12" y1="5" x2="12" y2="19" />
+                           <polyline points="19 12 12 19 5 12" />
+                        </svg>
+                     </span>
+                     <span class="absolute flex items-center justify-center w-full h-full text-gray-400 transition-all duration-300 transform group-hover:translate-y-full ease">Learn More</span>
+                     <span class="relative invisible">View My Work</span>
+                  </a>
+               </div>
+            </div>
+         </header>
+         <section id="main">
+            <nav class="border-b-2 w-full sticky top-0 bg-zinc-900 flex items-center justify-between h-16 z-40">
+               <div class="flex-shrink items-center justify-start block ml-2 sm:ml-6 sm:space-x-8 space-x-4 py-2">
+                  <a href="#main" id="skillsNav" class="text-white sm:px-3 text-sm font-bold decoration-2">Skills</a>
+                  <a href="#projects" id="projectsNav" class="text-white sm:px-3 text-sm font-bold decoration-2">Projects</a>
+                  <a href="#contact" id="contactNav" class="text-white sm:px-3 text-sm font-bold decoration-2">Contact</a>
+               </div>
+               <div class="absolute inset-y-0 right-0 flex items-center sm:pr-2 inset-auto">
+                  <button class="bg-transparent sm:pr-4 font-semibold text-white inline-flex items-center sm:space-x-2 space-x-1 rounded">
+                  <a href="https://github.com/Tabadia" target="_blank" rel="noopener noreferrer"><i class="devicon-github-original"></i></a>
+                  <a href="https://www.linkedin.com/in/thalenabadia/" target="_blank" rel="noopener noreferrer"><i class="devicon-linkedin-plain"></i></a>
                   </button>
-                </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      
-
-    </footer>
-    <script src="main.js"></script>
-  </main>
-</body>
+                  <a href="#top" type="button" class=" text-white transition ease-in-out delay-10 hover:scale-110 px-2 py-2 font-bold rounded-md text-sm">Thalen Abadia</a>
+               </div>
+            </nav>
+            <section class="w-full m-0 p-0 z-0" id="skills">
+               <h1 class="title">Skills</h1>
+               <div class="flex flex-wrap justify-center m-5 gap-x-16 gap-y-12">
+                  <div class="w-full flex flex-row justify-center reveal">
+                     <div class="bg-neutral-900 border border-slate-600 rounded-lg p-5">
+                        <span class="mr-2 text-slate-400">
+                        Experience Level:
+                        </span>
+                        <br class="sm:hidden">
+                        <span class="text-yellow-500 mr-1 sm:mr-2">◉ Beginner</span>
+                        <span class="text-amber-600 mr-1 sm:mr-2">◉ Intermediate</span>
+                        <span class="text-red-500">◉ Advanced</span>
+                     </div>
+                  </div>
+                  <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600 reveal">
+                     <div class="bg-neutral-800 text-slate-300 w-full pt-5 px-5 pb-3 rounded-t-lg text-xl font-bold">
+                        Languages
+                     </div>
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120">
+                        <path fill="#262626" fill-opacity="1" d="M0,32L80,26.7C160,21,320,11,480,32C640,53,800,107,960,106.7C1120,107,1280,53,1360,26.7L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+                     </svg>
+                     <div class="p-5 text-lg text-slate-400 w-full">
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-html5-plain mr-2 flex-auto"></span>HTML5 
+                           </div>
+                           <div class="item text-red-500 mr-2">◉</div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-css3-plain mr-2 flex-auto"></span>CSS3 
+                           </div>
+                           <div class="item text-red-500 mr-2">◉</div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-javascript-plain mr-2 flex-auto"></span>JavaScript 
+                           </div>
+                           <div class="item text-red-500 mr-2">◉</div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-csharp-plain mr-2 flex-auto"></span>C# 
+                           </div>
+                           <div class="item text-red-500 mr-2">◉</div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-java-plain mr-2 flex-auto"></span>Java 
+                           </div>
+                           <div class="item text-red-500 mr-2">◉</div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-python-plain mr-2 flex-auto"></span>Python 
+                           </div>
+                           <div class="item text-red-500 mr-2">◉</div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                          <div class="item flex-auto">
+                             <span class="devicon-php-plain mr-2 flex-auto"></span>PHP 
+                          </div>
+                          <div class="item text-yellow-500 mr-2">◉</div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                          <div class="item flex-auto">
+                             <span class="devicon-mysql-plain mr-2 flex-auto"></span>SQL 
+                          </div>
+                          <div class="item text-yellow-500 mr-2">◉</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600 reveal">
+                     <div class="bg-neutral-800 text-slate-300 w-full pt-5 px-5 pb-3 rounded-t-lg text-xl font-bold">
+                        Frameworks
+                     </div>
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 75 1440 150">
+                        <path fill="#262626" fill-opacity="1" d="M0,96L48,96C96,96,192,96,288,112C384,128,480,160,576,165.3C672,171,768,149,864,149.3C960,149,1056,171,1152,170.7C1248,171,1344,149,1392,138.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+                     </svg>
+                     <div class="p-5 text-lg text-slate-400 w-full">
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-tailwindcss-plain mr-2 flex-auto"></span>TailwindCSS 
+                           </div>
+                           <div class="item text-red-500 mr-2">◉</div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-discordjs-plain mr-2 flex-auto"></span>Discord.py/.js 
+                           </div>
+                           <div class="item text-red-500 mr-2">◉</div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-nodejs-plain mr-2 flex-auto"></span>Node JS 
+                           </div>
+                           <div class="item text-red-500 mr-2">◉</div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-jquery-plain mr-2 flex-auto"></span>jQuery 
+                           </div>
+                           <div class="item text-amber-600 mr-2">◉</div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-angularjs-plain mr-2 flex-auto"></span>Angular 
+                           </div>
+                           <div class="item text-amber-600 mr-2">◉</div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-mongodb-plain mr-2 flex-auto"></span>MongoDB 
+                           </div>
+                           <div class="item text-amber-600 mr-2">◉</div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-react-plain mr-2 flex-auto"></span>React JS 
+                           </div>
+                           <div class="item text-yellow-500 mr-2">◉</div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-sass-plain mr-2 flex-auto"></span>Sass
+                           </div>
+                           <div class="item text-yellow-500 mr-2">◉</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="bg-neutral-900 rounded-lg w-80 text-lg border border-slate-600 reveal">
+                     <div class="bg-neutral-800 w-full pt-5 px-5 rounded-t-lg text-xl font-bold">
+                        Tools
+                     </div>
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 1440 150">
+                        <path fill="#262626" fill-opacity="1" d="M0,128L48,117.3C96,107,192,85,288,90.7C384,96,480,128,576,117.3C672,107,768,53,864,74.7C960,96,1056,192,1152,208C1248,224,1344,160,1392,128L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+                     </svg>
+                     <div class="p-5 text-lg text-slate-400 w-full">
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-github-plain mr-2 flex-auto"></span>GitHub/Git 
+                           </div>
+                           <div class="item text-red-500 mr-2">◉</div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-unity-original mr-2 flex-auto"></span>Unity 
+                           </div>
+                           <div class="item text-red-500 mr-2">◉</div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-wordpress-plain mr-2 flex-auto"></span>WordPress 
+                           </div>
+                           <div class="item text-amber-600 mr-2">◉</div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-amazonwebservices-original mr-2 flex-auto"></span>AWS 
+                           </div>
+                           <div class="item text-amber-600 mr-2">◉</div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-firebase-plain mr-2 flex-auto"></span>Firebase 
+                           </div>
+                           <div class="item text-amber-600 mr-2">◉</div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-heroku-plain mr-2 flex-auto"></span>Heroku 
+                           </div>
+                           <div class="item text-amber-600 mr-2">◉</div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-photoshop-plain mr-2 flex-auto"></span>Photoshop 
+                           </div>
+                           <div class="item text-amber-600 mr-2">◉</div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                           <div class="item flex-auto">
+                              <span class="devicon-premierepro-plain mr-2 flex-auto"></span>Premiere Pro 
+                           </div>
+                           <div class="item text-yellow-500 mr-2">◉</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <h1 class="mt-11 sm:mt-20 mb-8 text-4xl font-bold text-center reveal">Soft Skills</h1>
+               <div class="flex flex-wrap justify-center m-5 gap-x-16 gap-y-12 reveal">
+                  <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600">
+                     <div class="h-14 mb-4">
+                        <svg class="svgItem h-14 w-14 text-red-500 border-2 border-red-500 rounded-full p-2 m-4 absolute" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                           <path stroke="none" d="M0 0h24v24H0z"/>
+                           <rect x="5" y="11" width="14" height="10" rx="2"/>
+                           <circle cx="12" cy="16" r="1"/>
+                           <path d="M8 11v-5a4 4 0 0 1 8 0"/>
+                        </svg>
+                        <div class="flex justify-center h-20">
+                           <span class="text-center text-3xl font-bold text-slate-300 mt-auto mb-auto">Accessible</span>
+                        </div>
+                     </div>
+                     <p class="w-full flex flex-row justify-center p-5 text-slate-400 text-lg">
+                        It is very important to me that I write my code to ensure that the content is compatible with accessibility features and standards.
+                     </p>
+                  </div>
+                  <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600">
+                     <div class="h-14 mb-4">
+                        <svg class="svgItem h-14 w-14 text-red-500 border-2 border-red-500 rounded-full p-2 m-4 absolute" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                           <path stroke="none" d="M0 0h24v24H0z"/>
+                           <circle cx="12" cy="12" r="9"/>
+                           <polyline points="12 7 12 12 15 15" />
+                        </svg>
+                        <div class="flex justify-center h-20">
+                           <span class="text-center text-3xl font-bold text-slate-300 mt-auto mb-auto">Timely</span>
+                        </div>
+                     </div>
+                     <p class="w-full flex flex-row justify-center p-5 text-slate-400 text-lg">
+                        I will complete the requested work within the agreeable timeframe and can ensure that I will respond within 24 hours. 
+                     </p>
+                  </div>
+                  <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600">
+                     <div class="h-14 mb-4">
+                        <svg class="svgItem h-14 w-14 text-red-500 border-2 border-red-500 rounded-full p-2 m-4 absolute" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                           <path stroke="none" d="M0 0h24v24H0z"/>
+                           <circle cx="5" cy="18" r="2"/>
+                           <circle cx="19" cy="6" r="2"/>
+                           <path d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3" />
+                           <path d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3"/>
+                        </svg>
+                        <div class="flex justify-center h-20">
+                           <span class="text-center text-3xl font-bold text-slate-300 mt-auto mb-auto">Adaptable</span>
+                        </div>
+                     </div>
+                     <p class="w-full flex flex-row justify-center p-5 text-slate-400 text-lg">
+                        All of my work is easily adaptable and can be changed to fit the needs of the client. My code will also work on all browsers and devices.
+                     </p>
+                  </div>
+               </div>
+            </section>
+            <section class="w-full m-0 p-0 mt-24 md:mt-30" id="projects">
+               <h1 class="title reveal">Projects</h1>
+               <div class="p-4 flex flex-wrap m-auto justify-center gap-x-2 gap-y-4">
+                  <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
+                     <!--<div class="bg-white flex justify-center">
+                        <img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/twitter.webp">
+                        </div>-->
+                     <div class=" px-5 pt-5">
+                        <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                           MACHINE LEARNING
+                        </h2>
+                        <h1 class="title-font text-lg font-semibold mb-3">
+                           Twitter Sentiment Analysis
+                        </h1>
+                        <p class="text-base mb-3">
+                           A python program that uses nltk Sentiment Analysis to see the sentiment in a user's past 500 tweets.
+                        </p>
+                     </div>
+                     <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
+                        <div class="text-sm rounded-md bg-purple-400 px-1 w-fit">Python</div>
+                        <div class="flex flex-row justify-end items-end flex-auto text-xl text-gray-400 gap-x-2">
+                           <a href="https://github.com/Tabadia/twitter-account-sentiment-analysis" target="_blank">
+                           <span class="devicon-github-plain"></span>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
+                     <!--<img class="lg:h-36 md:h-24 w-full object-cover object-center" src="img/carboncalc.png">-->
+                     <div class="px-5 pt-5">
+                        <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                           WEB DEVELOPMENT
+                        </h2>
+                        <h1 class="title-font text-lg font-semibold mb-3">
+                           Carbon Calculator
+                        </h1>
+                        <p class="text-base mb-3">
+                           A website for calculating your carbon footprint and offset. The winner for the Best Overall Program in a 24hr hackathon. 
+                        </p>
+                     </div>
+                     <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
+                        <div class="text-sm rounded-md bg-red-400 px-1 mr-1 w-fit">HTML</div>
+                        <div class="text-sm rounded-md bg-blue-400 px-1 mr-1 w-fit">Tailwind</div>
+                        <div class="text-sm rounded-md bg-yellow-400 px-1 mr-1 w-fit">JS</div>
+                        <div class="flex flex-row justify-end items-end flex-auto text-xl text-gray-400 gap-x-2">
+                           <a href="https://github.com/Tabadia/CarbonCalculator" target="_blank">
+                           <span class="devicon-github-plain"></span>
+                           </a>
+                           <a href="https://tabadia.github.io/CarbonCalculator/public/" target="_blank">
+                              <svg class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                 <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"/>
+                                 <line x1="8" y1="12" x2="16" y2="12"/>
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
+                     <!--<div class="bg-happier flex justify-center">
+                        <img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/happierbot.png">
+                        </div>-->
+                     <div class="px-5 pt-5">
+                        <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                           PYTHON DEVELOPMENT
+                        </h2>
+                        <h1 class="title-font text-lg font-semibold mb-3">
+                           HappierBot
+                        </h1>
+                        <p class="text-base mb-3">
+                           A Discord Bot with an AI chatbot and mental health features. It was used by over 80,000 people in over 100 servers.
+                        </p>
+                     </div>
+                     <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
+                        <div class="text-sm rounded-md bg-purple-400 px-1 mr-1 w-fit">Python</div>
+                        <div class="flex flex-row justify-end items-end flex-auto text-xl text-gray-400 gap-x-2">
+                           <a href="https://discordbotlist.com/bots/happierbot" target="_blank">
+                              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                 <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3" />
+                                 <line x1="8" y1="12" x2="16" y2="12" />
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
+                     <!--<img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/recycleAid.jpg">-->
+                     <div class="px-5 pt-5">
+                        <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                           MACHINE LEARNING
+                        </h2>
+                        <h1 class="title-font text-lg font-semibold mb-3">
+                           RecycleAid
+                        </h1>
+                        <p class="text-base mb-3">
+                           A web app where you can discover details regarding the recyclability of an item in a photo using machine learning. Winner in the HackTable 24hr hackathon.
+                        </p>
+                     </div>
+                     <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
+                        <div class="text-sm rounded-md bg-red-400 px-1 mr-1 w-fit">HTML</div>
+                        <div class="text-sm rounded-md bg-orange-400 px-1 mr-1 w-fit">CSS</div>
+                        <div class="text-sm rounded-md bg-purple-400 px-1 mr-1 w-fit">Python</div>
+                        <div class="flex flex-row justify-end items-end flex-auto text-xl text-gray-400 gap-x-2">
+                           <a href="https://devpost.com/software/recycleaid" target="_blank">
+                              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                 <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3" />
+                                 <line x1="8" y1="12" x2="16" y2="12" />
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
+                     <!--<img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/openai.webp">-->
+                     <div class="px-5 pt-5">
+                        <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                           NODE.JS DEVELOPMENT
+                        </h2>
+                        <h1 class="title-font text-lg font-semibold mb-3">
+                           OpenAi Image Generator 
+                        </h1>
+                        <p class="text-base mb-3">
+                           A website that uses node.js to request from OpenAI's image generation API to create images based on a description.
+                        </p>
+                     </div>
+                     <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
+                        <div class="text-sm rounded-md bg-red-400 px-1 mr-1 w-fit">HTML</div>
+                        <div class="text-sm rounded-md bg-orange-400 px-1 mr-1 w-fit">CSS</div>
+                        <div class="text-sm rounded-md bg-green-500 px-1 mr-1 w-fit">Node.js</div>
+                        <div class="flex flex-row justify-end items-end flex-auto text-xl text-gray-400 gap-x-2">
+                           <a href="https://github.com/Tabadia/AI-Image-Generation" target="_blank">
+                           <span class="devicon-github-plain"></span>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
+                     <!--<div class="bg-genics flex justify-center">
+                        <img class="lg:h-36 md:h-24 h-full object-cover object-center" src="img/genicsblog.webp">
+                        </div>
+                        <img class="lg:h-36 md:h-24 w-full object-cover object-center" src="img/genicsblog2.jpg">-->
+                     <div class="px-5 pt-5">
+                        <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                           WEB DEVELOPMENT
+                        </h2>
+                        <h1 class="title-font text-lg font-semibold mb-3">
+                           Genics Blog
+                        </h1>
+                        <p class="text-base mb-3">
+                           An open source blog where you can find articles on technology and programming. I review and edit articles submitted by other authors.
+                        </p>
+                     </div>
+                     <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
+                        <div class="flex flex-row justify-end items-end flex-auto text-xl text-gray-400 gap-x-2">
+                           <a href="https://github.com/genicsblog/genicsblog.com" target="_blank">
+                           <span class="devicon-github-plain"></span>
+                           </a>
+                           <a href="https://genicsblog.com/" target="_blank">
+                              <svg class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                 <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"/>
+                                 <line x1="8" y1="12" x2="16" y2="12"/>
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
+                     <div class="px-5 pt-5">
+                        <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1"> UNITY DEVELOPMENT </h2>
+                        <h1 class="title-font text-lg font-semibold mb-3"> Hell's Arrow </h1>
+                        <p class="text-base mb-3"> A Unity game developed in C# that won People's Choice and Best Art and Assets for the Oregon Game Project Challenge. </p>
+                     </div>
+                     <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
+                        <div class="text-sm rounded-md bg-slate-400 px-1 mr-1 w-fit">Unity</div>
+                        <div class="text-sm rounded-md bg-teal-400 px-1 mr-1 w-fit">C#</div>
+                        <div class="flex flex-row justify-end items-end flex-auto text-xl text-gray-400 gap-x-2">
+                           <a href="https://tms.ogpc.info/Games/Details/df2bfeac-c075-43a0-819a-baa845261585" target="_blank">
+                              <svg class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                 <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"/>
+                                 <line x1="8" y1="12" x2="16" y2="12"/>
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
+                    <div class="px-5 pt-5">
+                       <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1"> UNITY DEVELOPMENT </h2>
+                       <h1 class="title-font text-lg font-semibold mb-3"> Shadowfall </h1>
+                       <p class="text-base mb-3"> A game being developed in Unity C# for the 2024 season of Oregon Game Project Challenge. </p>
+                    </div>
+                    <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
+                       <div class="text-sm rounded-md bg-slate-400 px-1 mr-1 w-fit">Unity</div>
+                       <div class="text-sm rounded-md bg-teal-400 px-1 mr-1 w-fit">C#</div>
+                       <div class="flex flex-row justify-end items-end flex-auto text-xl text-gray-400 gap-x-2">
+                          <a href="https://tms.ogpc.info/Teams/Details/7adf4ced-f92f-4fe6-8f8a-b509e2bd6d7b" target="_blank">
+                             <svg class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"/>
+                                <line x1="8" y1="12" x2="16" y2="12"/>
+                             </svg>
+                          </a>
+                       </div>
+                    </div>
+                 </div>
+                  <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
+                     <div class="px-5 pt-5">
+                        <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                           WORDPRESS DEVELOPMENT
+                        </h2>
+                        <h1 class="title-font text-lg font-semibold mb-3">
+                           Olerai leadership
+                        </h1>
+                        <p class="text-base mb-3">
+                           Made updates and changes to the wordpress website, adding in new pages and features, as well as cleaning up parts of the website that had already been made.
+                        </p>
+                     </div>
+                     <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
+                        <div class="text-sm rounded-md bg-pink-400 px-1 mr-1 w-fit">Wordpress</div>
+                        <div class="flex flex-row justify-end items-end flex-auto text-xl text-gray-400 gap-x-2">
+                        </div>
+                        <div class="flex flex-row justify-end items-end flex-auto text-xl text-gray-400 gap-x-2">
+                          <a href="https://oleraileadership.com/" target="_blank">
+                             <svg class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"/>
+                                <line x1="8" y1="12" x2="16" y2="12"/>
+                             </svg>
+                          </a>
+                       </div>
+                     </div>
+                  </div>
+                  <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
+                     <div class="px-5 pt-5">
+                        <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                           NODE.JS DEVELOPMENT
+                        </h2>
+                        <h1 class="title-font text-lg font-semibold mb-3">
+                           Spotify Statistics
+                        </h1>
+                        <p class="text-base mb-3">
+                           A website that uses node.js, express.js, and axios to request from Spotify's API to create a user's top artists and tracks.
+                        </p>
+                     </div>
+                     <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
+                        <div class="text-sm rounded-md bg-red-400 px-1 mr-1 w-fit">HTML</div>
+                        <div class="text-sm rounded-md bg-orange-400 px-1 mr-1 w-fit">CSS</div>
+                        <div class="text-sm rounded-md bg-green-500 px-1 mr-1 w-fit">Node.js</div>
+                        <div class="flex flex-row justify-end items-end flex-auto text-xl text-gray-400 gap-x-2">
+                           <a href="https://github.com/Tabadia/spotify-statistics" target="_blank">
+                           <span class="devicon-github-plain"></span>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
+                     <div class="px-5 pt-5">
+                        <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                           DATABASE DEVELOPMENT
+                        </h2>
+                        <h1 class="title-font text-lg font-semibold mb-3">
+                           EmojiSwap Database
+                        </h1>
+                        <p class="text-base mb-3">
+                           Using a discord.js Discord bot, trades from the ios app EmojiSwap are read from a channel and then sent to a Firebase database. This program has read almost 800k messages.
+                        </p>
+                     </div>
+                     <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
+                        <div class="text-sm rounded-md bg-green-500 px-1 mr-1 w-fit">Node.js</div>
+                        <div class="text-sm rounded-md bg-black px-1 mr-1 w-fit">Firebase</div>
+                     </div>
+                  </div>
+                  <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
+                     <div class="px-5 pt-5">
+                        <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                           WEB DEVELOPMENT
+                        </h2>
+                        <h1 class="title-font text-lg font-semibold mb-3">
+                           EmojiSwap Database Analysis
+                        </h1>
+                        <p class="text-base mb-3">
+                           Using node.js and chart.js, the database explained in the previous project is analysed through graphs and comparisons, allowing users of the app to make the best trades they can.
+                        </p>
+                     </div>
+                     <div class="flex items-end flex-wrap flex-grow px-5 pb-5">
+                        <div class="text-sm rounded-md bg-red-400 px-1 mr-1 w-fit">HTML</div>
+                        <div class="text-sm rounded-md bg-blue-400 px-1 mr-1 w-fit">Tailwind</div>
+                        <div class="text-sm rounded-md bg-green-500 px-1 mr-1 w-fit">Node.js</div>
+                     </div>
+                  </div>
+               </div>
+               </div>
+            </section>
+            <!-- <section class="w-full m-0 p-0 mt-24 md:mt-30" id="projects">
+              <h1 class="title reveal">About Me</h1>
+              <div class="p-4 flex flex-wrap m-auto justify-center gap-x-2 gap-y-4 reveal">
+               <h1 class="text-3xl sm:text-5xl text-gray-300 px-0 text-center typing2">My name is Thalen Abadia</h1> 
+              </div>
+            </section> -->
+              
+         </section>
+         <footer class="w-full m-0 p-2 mt-16 sm:mt-48 bg-zinc-900" id="contact">
+            <div class="flex flex-row w-full">
+               <div class="flex sm:flex-col w-full align-bottom sm:justify-end pb-4 px-4">
+                  <div class="flex flex-col justify-end w-1/2">
+                     <h1 class="font-bold sm:text-5xl text-4xl">Contact</h1>
+                     <div class="pt-6">
+                        <a href="https://www.linkedin.com/in/thalenabadia/" target="_blank" class="sm:text-2xl text-lg">
+                        <span class="devicon-linkedin-plain"></span>
+                        <span class="">@<span class="underline">thalenabadia</span></span>
+                        </a>
+                     </div>
+                     <div>
+                        <a href="https://www.github.com/Tabadia" target="_blank" class="sm:text-2xl text-lg">
+                        <span class="devicon-github-plain"></span>
+                        <span class="">@<span class="underline">Tabadia</span></span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="sm:flex justify-end sm:w-full hidden">
+                  <div class="h-full px-4 pb-4 text-center">
+                     <form action="https://formsubmit.co/5961252586dcb6eba9f23a404c54883d" method="POST">
+                        <div class="flex flex-row flex-auto h-full">
+                           <div class="flex flex-col w-full mr-2 justify-center">
+                              <div class="mb-6"> <label class="font-bold">Name</label> <input type="text" name="name" class="text-black border-2 block w-full mt-1 p-2 rounded-md " placeholder="First Last" /> </div>
+                              <div> <label class="font-bold">Email</label> <input name="email" type="email" class="text-black border-2 block w-full mt-1 p-2 rounded-md" placeholder="email@example.com" /> </div>
+                              <div class="mt-6"> <button type="submit" class="text-black bg-white transition ease-in-out delay-10 hover:scale-110 px-4 py-2 font-bold rounded-md text-base w-full"> Contact Me </button> </div>
+                           </div>
+                           <div class="w-full ml-2 flex flex-col justify-center flex-start"> <label class="mb-2 font-bold text-center">Message</label> <textarea name="message" class="text-black border-2 block w-full h-full p-2 rounded-md text-base" rows="2"placeholder="Tell me what you're thinking..."></textarea> </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </footer>
+         <script src="main.js"></script>
+      </main>
+   </body>
 </html>

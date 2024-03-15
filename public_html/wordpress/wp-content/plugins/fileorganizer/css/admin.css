@@ -1,0 +1,647 @@
+:root {
+--fileorganizer-primary:#7256e7;
+--fileorganizer-white: #ffffff;
+--fileorganizer-black: #373737;
+--fileorganizer-blue: #2271b1;
+--fileorganizer-gray: #d4d4d4;
+--fileorganizer-gray-shade:#dfdfdf;
+}
+
+/*Grid*/
+.fileorganizer-row {
+box-sizing: border-box;
+display: flex;
+flex: 1 0 auto;
+flex-direction: row;
+flex-wrap: wrap;
+width: 100%;
+align-content: stretch;
+position: relative;
+}
+
+.fileorganizer-col-3{
+width: 25%;
+}
+
+.fileorganizer-col-9{
+width: 75%;
+}
+
+.fileorganizer-col-12{
+width: 100%;
+}
+
+/*Checkbox*/
+.fileorganizer-setting-content input[type="checkbox"]{
+padding: 8px !important;
+}
+
+.fileorganizer-setting-content input[type="checkbox"]:checked::before {
+content: "";
+margin: -0.60rem 0 0 -0.7rem;
+height: 1.313rem;
+background-color: var(--fileorganizer-primary);
+-webkit-mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2020%2020%27%3E%3Cpath%20d%3D%27M14.83%204.89l1.34.94-5.81%208.38H9.02L5.78%209.67l1.34-1.25%202.57%202.4z%27%20fill%3D%27%233582c4%27%2F%3E%3C%2Fsvg%3E");
+mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2020%2020%27%3E%3Cpath%20d%3D%27M14.83%204.89l1.34.94-5.81%208.38H9.02L5.78%209.67l1.34-1.25%202.57%202.4z%27%20fill%3D%27%233582c4%27%2F%3E%3C%2Fsvg%3E");
+width: 23px;
+}
+
+.fileorganizer-text-center{
+text-align: center;
+}
+
+.fileorganizer-mr20 {
+margin-right: 20px !important;
+}
+
+/*Toggle button*/
+.fileorganizer-switch {
+position: relative;
+display: inline-block;
+width: 40px;
+height: 18px;
+}
+
+.fileorganizer-switch input, .fileorganizer-switch input:disabled{ 
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.fileorganizer-switch input:checked ~ .fileorganizer-slider::before {
+left: -10px;
+background-color: var(--fileorganizer-primary);
+}
+
+.fileorganizer-slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: var(--fileorganizer-gray-shade);
+-webkit-transition: .4s;
+transition: .4s;
+box-shadow: 0px 0px 4px 0px #b1b1b1 inset;
+}
+
+.fileorganizer-slider::before {
+position: absolute;
+content: "";
+height: 24px;
+width: 24px;
+left: -1px;
+bottom: 3px;
+background-color: #c1c1c1;
+-webkit-transition: .4s;
+transition: .4s;
+top: -3px;
+}
+
+input:focus + .fileorganizer-slider {
+box-shadow: 0 0 1px var(--fileorganizer-primary);
+}
+
+input:checked + .fileorganizer-slider:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
+}
+
+input:disabled + .fileorganizer-slider{
+opacity: 0.5;
+}
+
+input:disabled + .fileorganizer-slider:before{
+background-color: #939393;
+}
+
+.fileorganizer-slider.fileorganizer-round {
+border-radius: 34px;
+}
+
+.fileorganizer-slider.fileorganizer-round:before {
+border-radius: 50%;
+}
+
+/*Common css*/
+.fileorganizer-borderless{
+border:none !important;
+}
+
+.fileorganizer-text-right{
+text-align: right;
+}
+
+/*Elfinder*/
+Toolbar
+.elfinder-toolbar .ui-widget-content {
+border-color: #c9c9c9 !important;
+}
+
+/*Context Menu*/
+.elfinder .elfinder-contextmenu-item {
+padding: 4px 32px !important;
+}
+
+.elfinder .elfinder-contextmenu, .elfinder .elfinder-contextmenu-sub {
+border: 1px solid #e1e1e1 !important;
+box-shadow: 0px 0px 9px -5px #7d7d7d !important;
+}
+
+.elfinder .elfinder-contextmenu-separator {
+border-top: 1px solid #d5d5d5 !important;
+margin: 4px 6px !important;
+}
+
+/*Table*/
+.elfinder-table-header-sticky table {
+border: none !important;
+}
+.elfinder .elfinder-cwd table thead td.ui-state-active{
+color: var(--fileorganizer-white);
+}
+
+/*Properties Dialog*/
+.elfinder-info-title {
+padding: 4px 0px 4px 0 !important;
+}
+
+.std42-dialog, .std42-dialog .ui-widget-content {
+background-color: #fbfbfb !important;
+}
+
+.elfinder-info-tb {
+border-top: 1px solid #d5d5d5 !important;
+margin: 14px 0;
+}
+
+.elfinder-info-tb td {
+padding: 4px 0 !important;
+}
+
+.elfinder-ltr .elfinder-info-tb tr td:first-child{
+text-align: left !important;
+}
+
+.elfinder-quicklook.elfinder-quicklook-fullscreen {
+width: 100% !important;
+height: 100% !important;
+top: 0 !important;
+position: absolute !important;
+left: 0 !important;
+}
+
+.elfinder.elfinder-ltr div.elfinder-bottomtray {
+position: absolute !important;
+margin: 0 0 5px 0 !important;
+}
+
+/*Setting*/
+.fileorganizer-notices{
+display: none;
+}
+
+.fileorganizer-settings-header{
+background: var(--fileorganizer-white);
+padding: 14px;
+box-shadow: 0px 0px 10px -2px var(--grey);
+}
+
+.fileorganizer-setting-content, 
+.fileorganizer-license-content {
+display: grid;
+grid-template-columns: auto 200px;
+}
+
+.fileorganizer-setting-content,
+.fileorganizer-settings-header{
+border-radius: 6px;
+}
+
+.fileorganizer-title h1 {
+margin: 10px 0 20px 0px;
+font-size: 18px;
+display: flex;
+}
+
+.fileorganizer-title label {
+margin: auto 4px;
+}
+
+.fileorganizer-title span {
+font-size: 21px;
+}
+
+.fileorganizer-title label,.fileorganizer-title span{
+color: #3e3e3e;
+}
+
+.fileorganizer-form-input input[type="text"], .fileorganizer-form-input input[type="number"], .fileorganizer-form-input select, .fileorganizer-dialog-desc select, .fileorganizer-dialog-desc input[type="text"], .fileorganizer-dialog-desc input[type="number"], .fileorganizer-dialog-desc textarea {
+border-color: #c2c2c2;
+padding: 2px 7px;
+width: 320px;
+}
+
+.fileorganizer-form-input code{
+background: #fff5be;
+}
+
+.button.fileorganizer-button-primary {
+padding: 3px 11px 6px 11px;
+background: var(--fileorganizer-primary);
+color: var(--fileorganizer-white);
+font-weight: 600;
+border-color: var(--fileorganizer-primary);
+}
+
+.button.fileorganizer-button-primary:hover,.button.fileorganizer-button-primary:focus,.button.fileorganizer-button-primary:active {
+background: #8264ff;
+color: var(--fileorganizer-white);
+border-color: #8264ff !important;
+}
+
+/*Header*/
+.fileorganizer-header {
+margin: 0 0 8px 0;
+}
+
+.fileorganizer_wrap {
+background: var(--fileorganizer-white);
+padding: 14px;
+margin: 10px 10px 10px -10px;
+border-radius: 6px;
+box-shadow: 0px 0px 10px -2px var(--grey);
+}
+
+.fileorganizer-td {
+display: flex;
+align-content: center;
+}
+
+.fileorganizer-td img {
+width: 46px;
+display: flex;
+}
+
+.fileorganizer-td .fileorganizer-heading {
+font-size: 22px;
+margin: auto 0;
+font-weight: 400;
+}
+
+.fileorganizer-td label {
+margin: auto 8px;
+font-size: 14px;
+font-weight: 600;
+}
+
+.fileorganizer-options .fileorganizer-td{
+justify-content: right;
+}
+
+#fileorganizer_elfinder {
+margin: 10px 0 0 0;
+}
+
+.fileorganizer_footer_wrap {
+text-align: right;
+padding: 10px 14px;
+font-weight: 600;
+font-size: 14px;
+}
+
+.fileorganizer_footer_wrap a {
+text-decoration: none;
+}
+
+/*Panel*/
+.fileorganizer-wrapper {
+padding: 20px 0 0 0 !important;
+}
+
+.fileorganizer-nav-tab:first-child {
+margin: 0;
+}
+
+.fileorganizer-disabled-panel .fileorganizer-tab-panel-wrap {
+filter: blur(1px);
+-webkit-filter: blur(1px);
+z-index: 0;
+}
+
+.fileorganizer-pro-overlay {
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+z-index: 1;
+display: flex;
+}
+
+.fileorganizer-lock-content {
+display: flex;
+margin: auto;
+background: var(--fileorganizer-black);
+padding: 20px;
+border-radius: 6px;
+align-content: center;
+flex-direction: column;
+}
+
+.fileorganizer-lock-icon {
+color: var(--fileorganizer-white);
+margin: auto;
+font-size: 60px;
+width: auto;
+height: auto;
+}
+
+.fileorganizer-lock-text {
+font-size: 16px;
+margin: 13px 0px 6px 0;
+color: var(--fileorganizer-white);
+}
+
+.fileorganizer-tab-panel {
+background: var(--fileorganizer-white);
+padding: 8px 20px;
+margin: -2px 0 0 0;
+display: none;
+position: relative;
+}
+
+.fileorganizer-tab-panel .form-table{
+margin: 0;
+}
+
+.fileorganizer-nav-tab.nav-tab-active {
+background: var(--fileorganizer-white) !important;
+border-color: var(--fileorganizer-white) !important;
+}
+
+/* Dialog box */
+.fileorganizer-dialog{
+position: fixed;
+width: 100%;
+height: 100%;
+background: #494949bf;
+top: 0;
+display: flex;
+overflow-x: auto;
+left: 0;
+display:none;
+}
+
+.fileorganizer-dialog-wrap {
+margin: 70px auto 94px auto;
+width: 50%;
+background: var(--fileorganizer-white);
+box-shadow: 0px 0px 17px -10px var(--fileorganizer-white);
+border-radius: 6px;
+height: min-content;
+}
+
+.fileorganizer-dialog-container{
+width: 100%;
+}
+
+.fileorganizer-dialog-header {
+width: 100%;
+background: var(--fileorganizer-primary);
+border-radius: 6px 6px 0 0;
+}
+
+.fileorganizer-dialog-title {
+font-size: 14px;
+font-weight: 600;
+color: var(--fileorganizer-white);
+}
+
+.fileorganizer-dialog-title span{
+margin: auto 0;
+}
+
+.fileorganizer-dialog .fileorganizer-status-icon i{
+margin: auto 10px auto auto;
+height: auto;
+font-size: 26px;
+}
+
+.fileorganizer-dialog-header-content{
+padding: 16px;
+position: relative;
+}
+
+.fileorganizer-dialog-close {
+position: absolute;
+right: 12px;
+top: 14px;
+cursor: pointer;
+background: none;
+border: none;
+color: var(--fileorganizer-white);
+}
+
+.fileorganizer-dialog-content{
+padding: 12px 18px;
+}
+
+.fileorganizer-dialog-content .fileorganizer-col{
+padding: 8px 0;
+font-size: 14px;
+overflow-wrap: anywhere;
+border-bottom: 1px solid var(--fileorganizer-gray-shade);
+}
+
+.fileorganizer-dialog-form label{
+font-weight: 600;
+margin-right: 9px;
+color: var(--fileorganizer-black);
+width: 100%;
+display: inline-block;
+margin: 8px 0;
+}
+
+.fileorganizer-dialog-desc select, .fileorganizer-dialog-desc input[type="text"], .fileorganizer-dialog-desc input[type="number"], .fileorganizer-dialog-desc textarea {
+max-width: 94% !important;
+width: 94% !important;
+}
+
+/*User role restrictions*/
+.fileorganizer-td span.dashicons {
+display: flex;
+margin: auto 4px;
+font-size: 32px;
+color: var(--fileorganizer-primary);
+height: auto;
+width: auto;
+}
+
+.fileorganizer-dialog-desc.fileorganizer-chkbox-group {
+display: grid;
+grid-template-columns: auto auto auto auto;
+}
+
+.fileorganizer-userrole-btnwrap {
+padding: 20px;
+display: flex;
+justify-content: right;
+}
+
+#fileorganizer-add-userrole-restriction, #fileorganizer-add-user-restriction {
+background: var(--fileorganizer-primary);
+color: var(--fileorganizer-white);
+padding: 9px;
+border: 1px solid var(--fileorganizer-primary);
+border-radius: 6px;
+display: flex;
+cursor: pointer;
+}
+
+#fileorganizer-add-userrole-restriction i, #fileorganizer-add-user-restriction i {
+font-size: 22px;
+margin: auto;
+}
+
+#fileorganizer-add-userrole-restriction span, #fileorganizer-add-user-restriction span {
+margin: auto 7px;
+font-weight: bold;
+}
+
+.fileorganizer-chkbox-wrap {
+margin: 3px 0;
+}
+
+.fileorganizer-table tr:first-child {
+background: var(--fileorganizer-primary);
+}
+
+.fileorganizer-table tr th:first-child {
+padding-left: 12px !important;
+} 
+
+.fileorganizer-table {
+box-shadow: 0px 0px 5px 2px var(--fileorganizer-gray-shade) !important;
+background: var(--fileorganizer-white);
+border-radius: 6px;
+border: none !important;
+overflow: hidden;
+}
+
+.fileorganizer-table th {
+color: var(--fileorganizer-white);
+font-weight: 600;
+border-bottom: 1px solid var(--fileorganizer-gray-shade);
+padding: 17px 8px;
+}
+
+.fileorganizer-table td {
+color: var(--fileorganizer-black);
+}
+
+.fileorganizer-table .fileorganizer-td {
+padding: 5px 0;
+}
+
+.fileorganizer-table th, .fileorganizer-table td {
+background: none;
+font-size: 14px;
+}
+
+.fileorganizer-table-actions button {
+margin-right: 6px;
+cursor: pointer;
+}
+
+.fileorganizer-delete, .fileorganizer-edit {
+border: 1px solid #af9ef6;
+color: var(--fileorganizer-primary);
+border-radius: 6px;
+font-size: 13px;
+display: flex;
+align-content: center;
+padding: 5px 14px 6px 6px;
+width: 32px;
+cursor: pointer;
+background: #f6f4ff;
+margin: auto;
+}
+
+.fileorganizer-delete {
+color: #ff5151;
+background: #fff7f7;
+border-color: #fbb;
+}
+
+.fileorganizer-table-actions {
+display: flex;
+}
+
+.fileorganizer-table-actions i {
+font-size: 18px;
+display: flex;
+}
+
+.fileorganizer-restrictions-wrap {
+display: flex;
+padding: 5px 0;
+color: var(--fileorganizer-primary);
+font-weight: 600;
+font-size: 13px !important;
+}
+
+.fileorganizer-restrictions-content{
+margin: 20px 0;
+}
+
+.fileorganizer-restrictions-wrap span {
+margin: auto 3px 0px 0;
+}
+
+.fileorganizer_invalid_path.dashicons.dashicons-info {
+font-size: 17px;
+margin: 3px 0;
+color: #ff6a66 !important;
+cursor: pointer;
+}
+
+.fileorganizer-path-error {
+color: #ee7e7e;
+}
+
+/*Editor*/
+.fileorganizer_wrap .CodeMirror.CodeMirror-wrap {
+height: 100% !important;
+}
+
+.fileorganizer_wrap .elfinder-dialog-edit.elfinder-dialog-active.elfinder-maximized {
+z-index: 9999 !important;
+padding-top: 4px;
+}
+
+/*License*/
+.fileorganizer-tab-group {
+background: #fff;
+padding: 10px 25px;
+box-sizing: border-box;
+border-radius: 6px;
+margin-top: 20px;
+height: max-content;
+}
+
+/*Promo*/
+.fileorganizer-promotion-content{
+margin-top: 54px;
+background: #fff;
+border: 1px solid #e3e3e3;
+padding: 10px 10px 20px 10px;
+border-radius: 6px;
+}
+
+.fileorganizer-promotion .fileorganizer-promotion-content:nth-child(2),
+.fileorganizer-license-content .fileorganizer-promotion .fileorganizer-promotion-content{
+margin-top: 20px !important;
+}
