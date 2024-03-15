@@ -94,7 +94,7 @@ var currentClass = '';
 
 function changeSide(showClass) {
     showClass = 'show-' + showClass;
-    console.log(showClass);
+    //console.log(showClass);
     if ( currentClass ) {
         cube.classList.remove( currentClass );
     }

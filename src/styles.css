@@ -111,11 +111,11 @@ html {
   }
 
   .cube {
-    width: 200px;
-    height: 200px;
+    width: var(--S);
+    height: var(--S);
     position: relative;
     transform-style: preserve-3d;
-    transform: translateZ( calc(var(--S) / 2));
+    transform: translateZ( calc(var(--S) / -2));
     transition: transform 1s;
   }
 
@@ -127,37 +127,43 @@ html {
   }
 
   :root {
-    --S: 200px;
+    --S: 600px;
   }
 
   .front{
     transform: rotateY(0deg) translateZ(calc(var(--S) / 2));
-    background: red;
+    border: 2px dashed #ffffff;
+    background: #18181b;
   }
   .right {
     transform: rotateY(90deg) translateZ(calc(var(--S) / 2));
-    background: orange;
+    border: 2px dashed #ffffff;
+    background: #18181b;
   }
   .back{
     transform: rotateY(180deg) translateZ(calc(var(--S) / 2));
-    background: yellow;
+    border: 2px dashed #ffffff;
+    background: #18181b;
   }
   .left {
     transform: rotateY(-90deg) translateZ(calc(var(--S) / 2));
-    background: green;
+    border: 2px dashed #ffffff;
+    background: #18181b;
   }
   .top {
     transform: rotateX(90deg) translateZ(calc(var(--S) / 2));
-    background: blue;
+    border: 2px dashed #ffffff;
+    background: #18181b;
   }
   .bottom {
     transform: rotateX(-90deg) translateZ(calc(var(--S) / 2));
-    background: purple;
+    border: 2px dashed #ffffff;
+    background: #18181b;
   }
 
-  .cube.show-front  { transform: translateZ(calc(var(--S) / 2)) rotateY(   0deg); }
-  .cube.show-right  { transform: translateZ( calc(var(--S) / 2)) rotateY( -90deg); }
-  .cube.show-back   { transform: translateZ( calc(var(--S) / 2)) rotateY(-180deg); }
-  .cube.show-left   { transform: translateZ( calc(var(--S) / 2)) rotateY(  90deg); }
-  .cube.show-top    { transform: translateZ( calc(var(--S) / 2)) rotateX( -90deg); }
-  .cube.show-bottom { transform: translateZ( calc(var(--S) / 2)) rotateX(  90deg); }
+  .cube.show-front  { transform: translateZ( calc(var(--S) / -2)) rotateY(   0deg); }
+  .cube.show-right  { transform: translateZ( calc(var(--S) / -2)) rotateY( -90deg); }
+  .cube.show-back   { transform: translateZ( calc(var(--S) / -2)) rotateY(-180deg); }
+  .cube.show-left   { transform: translateZ( calc(var(--S) / -2)) rotateY(  90deg); }
+  .cube.show-top    { transform: translateZ( calc(var(--S) / -2)) rotateX( -90deg); }
+  .cube.show-bottom { transform: translateZ( calc(var(--S) / -2)) rotateX(  90deg); }
