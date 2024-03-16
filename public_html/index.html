@@ -16,343 +16,190 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
    </head>
-   <div class="flex flex-row w-full">
-      <div class="h-screen bg-zinc-800 flex flex-col items-start justify-between py-4 px-6">
-         <div class="space-y-6 flex flex-col">
-            <a href="#" id="titleNav" onclick="changeSide('front')" class="cubeNav text-white text-sm font-bold decoration-2">Thalen Abadia</a>
-            <a href="#" id="aboutNav" onclick="changeSide('back')" class="cubeNav text-white text-sm font-bold decoration-2">About</a>
-            <a href="#" id="skillsNav" onclick="changeSide('bottom')" class="cubeNav text-white text-sm font-bold decoration-2">Skills</a>
-            <a href="#" id="projectsNav" onclick="changeSide('right')" class="cubeNav text-white text-sm font-bold decoration-2">Projects</a>
-            <a href="#" id="contactNav" onclick="changeSide('top')" class="cubeNav text-white text-sm font-bold decoration-2">Contact</a>
-         </div>
-         <div class="space-y-4 flex flex-col">
-             <button class="bg-transparent font-semibold text-white inline-flex items-center space-x-1 rounded">
-                 <a href="https://github.com/Tabadia" target="_blank" rel="noopener noreferrer"><i class="devicon-github-original"></i></a>
-                 <a href="https://www.linkedin.com/in/thalenabadia/" target="_blank" rel="noopener noreferrer"><i class="devicon-linkedin-plain"></i></a>
-             </button>
-             <a href="#top" type="button" class="text-white transition ease-in-out delay-10 hover:scale-110 font-bold rounded-md text-sm">thalenabadia.com</a>
-         </div>
-      </div> 
-      <div class="flex justify-center items-center w-full h-screen">
-         <div class="stage flex justify-center items-center w-full h-1/2">
-            <div class="cube">
-               <figure class="face front">
-                  <header class="font-bold h-full w-full flex flex-row justify-evenly items-center" id="top">
-                     <div>
-                        <h1 class="text-4xl sm:text-7xl py-6 sm:py-6 text-center font-bold">Hi, I'm Thalen.</h1>
-                        <h1 class="text-3xl sm:text-4xl text-gray-300 px-0 text-center typewrite" data-period="2000" data-type='[ "Web Developer", "IB High School Student", "Game Developer", "Python Programmer", "Java Programmer", "WordPress Designer" ]'></h1>
-                        <!-- <div class="flex flex-col items-center mt-12">
-                           <a href="#main" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-gray-400 text-gray-400 text-md sm:text-xl leading-tight uppercase rounded shadow-md group">
-                              <span class="absolute inset-0 flex items-center justify-center w-full h-full duration-300 -translate-y-full bg-zinc-900 group-hover:translate-y-0 ease">
-                                 <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="12" y1="5" x2="12" y2="19" />
-                                    <polyline points="19 12 12 19 5 12" />
-                                 </svg>
-                              </span>
-                              <span class="absolute flex items-center justify-center w-full h-full text-gray-400 transition-all duration-300 transform group-hover:translate-y-full ease">Learn More</span>
-                              <span class="relative invisible">View My Work</span>
-                           </a>
-                        </div> -->
-                     </div>
-                  </header>
-               </figure>
-               <figure class="face back">
-                  <h1 class="text-4xl sm:text-7xl py-6 sm:py-6 text-center font-bold">About Me</h1>
-               </figure>
-               <figure class="face right"></figure>
-               <figure class="face left"></figure>
-               <figure class="face top">
-                  <footer class="w-full m-0 p-2 mt-16 sm:mt-48 bg-zinc-900" id="contact">
-                     <div class="flex flex-row w-full">
-                        <div class="flex sm:flex-col w-full align-bottom sm:justify-end pb-4 px-4">
-                           <div class="flex flex-col justify-end w-1/2">
-                              <h1 class="font-bold sm:text-5xl text-4xl">Contact</h1>
-                              <div class="pt-6">
-                                 <a href="https://www.linkedin.com/in/thalenabadia/" target="_blank" class="sm:text-2xl text-lg">
-                                 <span class="devicon-linkedin-plain"></span>
-                                 <span class="">@<span class="underline">thalenabadia</span></span>
-                                 </a>
-                              </div>
-                              <div>
-                                 <a href="https://www.github.com/Tabadia" target="_blank" class="sm:text-2xl text-lg">
-                                 <span class="devicon-github-plain"></span>
-                                 <span class="">@<span class="underline">Tabadia</span></span>
-                                 </a>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="sm:flex justify-end sm:w-full hidden">
-                           <div class="h-full px-4 pb-4 text-center">
-                              <form action="https://formsubmit.co/5961252586dcb6eba9f23a404c54883d" method="POST">
-                                 <div class="flex flex-row flex-auto h-full">
-                                    <div class="flex flex-col w-full mr-2 justify-center">
-                                       <div class="mb-6"> <label class="font-bold">Name</label> <input type="text" name="name" class="text-black border-2 block w-full mt-1 p-2 rounded-md " placeholder="First Last" /> </div>
-                                       <div> <label class="font-bold">Email</label> <input name="email" type="email" class="text-black border-2 block w-full mt-1 p-2 rounded-md" placeholder="email@example.com" /> </div>
-                                       <div class="mt-6"> <button type="submit" class="text-black bg-white transition ease-in-out delay-10 hover:scale-110 px-4 py-2 font-bold rounded-md text-base w-full"> Contact Me </button> </div>
-                                    </div>
-                                    <div class="w-full ml-2 flex flex-col justify-center flex-start"> <label class="mb-2 font-bold text-center">Message</label> <textarea name="message" class="text-black border-2 block w-full h-full p-2 rounded-md text-base" rows="2"placeholder="Tell me what you're thinking..."></textarea> </div>
-                                 </div>
-                              </form>
-                           </div>
-                        </div>
-                     </div>
-                  </footer>
-               </figure>
-               <figure class="face bottom">
-                  <section class="w-full m-0 p-0 z-0" id="skills">
-                     <h1 class="title">Skills</h1>
-                     <div class="flex flex-wrap justify-center m-5 gap-x-16 gap-y-12">
-                        <div class="w-full flex flex-row justify-center reveal">
-                           <div class="bg-neutral-900 border border-slate-600 rounded-lg p-5">
-                              <span class="mr-2 text-slate-400">
-                              Experience Level:
-                              </span>
-                              <br class="sm:hidden">
-                              <span class="text-yellow-500 mr-1 sm:mr-2">◉ Beginner</span>
-                              <span class="text-amber-600 mr-1 sm:mr-2">◉ Intermediate</span>
-                              <span class="text-red-500">◉ Advanced</span>
-                           </div>
-                        </div>
-                        <div class="bg-neutral-900 rounded-lg w-30 border border-slate-600 reveal">
-                           <div class="bg-neutral-800 text-slate-300 w-full pt-5 px-5 pb-3 rounded-t-lg text-xl font-bold">
-                              Languages
-                           </div>
-                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120">
-                              <path fill="#262626" fill-opacity="1" d="M0,32L80,26.7C160,21,320,11,480,32C640,53,800,107,960,106.7C1120,107,1280,53,1360,26.7L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-                           </svg>
-                           <div class="p-5 text-lg text-slate-400 w-full">
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-html5-plain mr-2 flex-auto"></span>HTML5 
-                                 </div>
-                                 <div class="item text-red-500 mr-2">◉</div>
-                              </div>
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-css3-plain mr-2 flex-auto"></span>CSS3 
-                                 </div>
-                                 <div class="item text-red-500 mr-2">◉</div>
-                              </div>
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-javascript-plain mr-2 flex-auto"></span>JavaScript 
-                                 </div>
-                                 <div class="item text-red-500 mr-2">◉</div>
-                              </div>
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-csharp-plain mr-2 flex-auto"></span>C# 
-                                 </div>
-                                 <div class="item text-red-500 mr-2">◉</div>
-                              </div>
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-java-plain mr-2 flex-auto"></span>Java 
-                                 </div>
-                                 <div class="item text-red-500 mr-2">◉</div>
-                              </div>
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-python-plain mr-2 flex-auto"></span>Python 
-                                 </div>
-                                 <div class="item text-red-500 mr-2">◉</div>
-                              </div>
-                              <div class="flex justify-center w-full">
-                                <div class="item flex-auto">
-                                   <span class="devicon-php-plain mr-2 flex-auto"></span>PHP 
-                                </div>
-                                <div class="item text-yellow-500 mr-2">◉</div>
-                              </div>
-                              <div class="flex justify-center w-full">
-                                <div class="item flex-auto">
-                                   <span class="devicon-mysql-plain mr-2 flex-auto"></span>SQL 
-                                </div>
-                                <div class="item text-yellow-500 mr-2">◉</div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="bg-neutral-900 rounded-lg w-30 border border-slate-600 reveal">
-                           <div class="bg-neutral-800 text-slate-300 w-full pt-5 px-5 pb-3 rounded-t-lg text-xl font-bold">
-                              Frameworks
-                           </div>
-                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 75 1440 150">
-                              <path fill="#262626" fill-opacity="1" d="M0,96L48,96C96,96,192,96,288,112C384,128,480,160,576,165.3C672,171,768,149,864,149.3C960,149,1056,171,1152,170.7C1248,171,1344,149,1392,138.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
-                           </svg>
-                           <div class="p-5 text-lg text-slate-400 w-full">
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-tailwindcss-plain mr-2 flex-auto"></span>TailwindCSS 
-                                 </div>
-                                 <div class="item text-red-500 mr-2">◉</div>
-                              </div>
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-discordjs-plain mr-2 flex-auto"></span>Discord.py/.js 
-                                 </div>
-                                 <div class="item text-red-500 mr-2">◉</div>
-                              </div>
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-nodejs-plain mr-2 flex-auto"></span>Node JS 
-                                 </div>
-                                 <div class="item text-red-500 mr-2">◉</div>
-                              </div>
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-jquery-plain mr-2 flex-auto"></span>jQuery 
-                                 </div>
-                                 <div class="item text-amber-600 mr-2">◉</div>
-                              </div>
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-angularjs-plain mr-2 flex-auto"></span>Angular 
-                                 </div>
-                                 <div class="item text-amber-600 mr-2">◉</div>
-                              </div>
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-mongodb-plain mr-2 flex-auto"></span>MongoDB 
-                                 </div>
-                                 <div class="item text-amber-600 mr-2">◉</div>
-                              </div>
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-react-plain mr-2 flex-auto"></span>React JS 
-                                 </div>
-                                 <div class="item text-yellow-500 mr-2">◉</div>
-                              </div>
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-sass-plain mr-2 flex-auto"></span>Sass
-                                 </div>
-                                 <div class="item text-yellow-500 mr-2">◉</div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="bg-neutral-900 rounded-lg w-30 text-lg border border-slate-600 reveal">
-                           <div class="bg-neutral-800 w-full pt-5 px-5 rounded-t-lg text-xl font-bold">
-                              Tools
-                           </div>
-                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 1440 150">
-                              <path fill="#262626" fill-opacity="1" d="M0,128L48,117.3C96,107,192,85,288,90.7C384,96,480,128,576,117.3C672,107,768,53,864,74.7C960,96,1056,192,1152,208C1248,224,1344,160,1392,128L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
-                           </svg>
-                           <div class="p-5 text-lg text-slate-400 w-full">
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-github-plain mr-2 flex-auto"></span>GitHub/Git 
-                                 </div>
-                                 <div class="item text-red-500 mr-2">◉</div>
-                              </div>
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-unity-original mr-2 flex-auto"></span>Unity 
-                                 </div>
-                                 <div class="item text-red-500 mr-2">◉</div>
-                              </div>
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-wordpress-plain mr-2 flex-auto"></span>WordPress 
-                                 </div>
-                                 <div class="item text-amber-600 mr-2">◉</div>
-                              </div>
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-amazonwebservices-original mr-2 flex-auto"></span>AWS 
-                                 </div>
-                                 <div class="item text-amber-600 mr-2">◉</div>
-                              </div>
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-firebase-plain mr-2 flex-auto"></span>Firebase 
-                                 </div>
-                                 <div class="item text-amber-600 mr-2">◉</div>
-                              </div>
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-heroku-plain mr-2 flex-auto"></span>Heroku 
-                                 </div>
-                                 <div class="item text-amber-600 mr-2">◉</div>
-                              </div>
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-photoshop-plain mr-2 flex-auto"></span>Photoshop 
-                                 </div>
-                                 <div class="item text-amber-600 mr-2">◉</div>
-                              </div>
-                              <div class="flex justify-center w-full">
-                                 <div class="item flex-auto">
-                                    <span class="devicon-premierepro-plain mr-2 flex-auto"></span>Premiere Pro 
-                                 </div>
-                                 <div class="item text-yellow-500 mr-2">◉</div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <!-- <h1 class="mt-11 sm:mt-20 mb-8 text-4xl font-bold text-center reveal">Soft Skills</h1>
-                     <div class="flex flex-wrap justify-center m-5 gap-x-16 gap-y-12 reveal">
-                        <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600">
-                           <div class="h-14 mb-4">
-                              <svg class="svgItem h-14 w-14 text-red-500 border-2 border-red-500 rounded-full p-2 m-4 absolute" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                 <path stroke="none" d="M0 0h24v24H0z"/>
-                                 <rect x="5" y="11" width="14" height="10" rx="2"/>
-                                 <circle cx="12" cy="16" r="1"/>
-                                 <path d="M8 11v-5a4 4 0 0 1 8 0"/>
-                              </svg>
-                              <div class="flex justify-center h-20">
-                                 <span class="text-center text-3xl font-bold text-slate-300 mt-auto mb-auto">Accessible</span>
-                              </div>
-                           </div>
-                           <p class="w-full flex flex-row justify-center p-5 text-slate-400 text-lg">
-                              It is very important to me that I write my code to ensure that the content is compatible with accessibility features and standards.
-                           </p>
-                        </div>
-                        <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600">
-                           <div class="h-14 mb-4">
-                              <svg class="svgItem h-14 w-14 text-red-500 border-2 border-red-500 rounded-full p-2 m-4 absolute" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                 <path stroke="none" d="M0 0h24v24H0z"/>
-                                 <circle cx="12" cy="12" r="9"/>
-                                 <polyline points="12 7 12 12 15 15" />
-                              </svg>
-                              <div class="flex justify-center h-20">
-                                 <span class="text-center text-3xl font-bold text-slate-300 mt-auto mb-auto">Timely</span>
-                              </div>
-                           </div>
-                           <p class="w-full flex flex-row justify-center p-5 text-slate-400 text-lg">
-                              I will complete the requested work within the agreeable timeframe and can ensure that I will respond within 24 hours. 
-                           </p>
-                        </div>
-                        <div class="bg-neutral-900 rounded-lg w-80 border border-slate-600">
-                           <div class="h-14 mb-4">
-                              <svg class="svgItem h-14 w-14 text-red-500 border-2 border-red-500 rounded-full p-2 m-4 absolute" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                 <path stroke="none" d="M0 0h24v24H0z"/>
-                                 <circle cx="5" cy="18" r="2"/>
-                                 <circle cx="19" cy="6" r="2"/>
-                                 <path d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3" />
-                                 <path d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3"/>
-                              </svg>
-                              <div class="flex justify-center h-20">
-                                 <span class="text-center text-3xl font-bold text-slate-300 mt-auto mb-auto">Adaptable</span>
-                              </div>
-                           </div>
-                           <p class="w-full flex flex-row justify-center p-5 text-slate-400 text-lg">
-                              All of my work is easily adaptable and can be changed to fit the needs of the client. My code will also work on all browsers and devices.
-                           </p>
-                        </div>
-                     </div> -->
-                  </section>
-               </figure>
-            </div>
-         </div>
-      </div>
-   </div>
-   
    <body class="text-white" id="">
-      <main class="z-10" id="">
-         <header class="font-bold min-h-screen sm:h-screen flex flex-row justify-evenly items-center" id="top">
+
+      <div class="flex flex-row w-full">
+         <div id="sideNav" class="h-screen fixed bg-zinc-800 flex flex-col items-start justify-start px-4 py-4">
+            <div class="h-full flex justify-center items-center align middle">
+               <div class="flex flex-col">
+                  <div class="navLine">
+                  </div>
+                  <div class="navDot titleNavDot px-2">
+                     <a href="#title" id="titleNav" onclick="changeSide('front')" class="cubeNav text-white text-sm font-bold decoration-2">Thalen Abadia</a>
+                  </div>
+                  <div class="navLine">
+                  </div>
+                  <div class="navDot skillsNavDot px-2">
+                     <a href="#skills" id="skillsNav" onclick="changeSide('bottom')" class="cubeNav text-white text-sm font-bold decoration-2">Skills</a>
+                  </div>
+                  <div class="navLine">
+                  </div>
+                  <div class="navDot projectsNavDot px-2">
+                     <a href="#projects" id="projectsNav" onclick="changeSide('right')" class="cubeNav text-white text-sm font-bold decoration-2">Projects</a>
+                  </div>
+                  <div class="navLine">
+                  </div>
+                  <div class="navDot aboutNavDot px-2">
+                     <a href="#about" id="aboutNav" onclick="changeSide('back')" class="cubeNav text-white text-sm font-bold decoration-2">About</a>
+                  </div>
+                  <div class="navLine">
+                  </div>
+                  <div class="navDot contactNavDot px-2">
+                     <a href="#contact" id="contactNav" onclick="changeSide('top')" class="cubeNav text-white text-sm font-bold decoration-2">Contact</a>
+                  </div>
+                  <div class="navLine">
+                  </div>
+               </div>
+            </div>
+
+
+            <div class="space-y-4 flex flex-col justify-end">
+               <button class="bg-transparent font-semibold text-white inline-flex items-center space-x-1 rounded">
+                  <a href="https://github.com/Tabadia" target="_blank" rel="noopener noreferrer"><i class="devicon-github-original"></i></a>
+                  <a href="https://www.linkedin.com/in/thalenabadia/" target="_blank" rel="noopener noreferrer"><i class="devicon-linkedin-plain"></i></a>
+               </button>
+               <a href="#top" type="button" class="text-white transition ease-in-out delay-10 hover:scale-110 font-bold rounded-md text-sm">thalenabadia.com</a>
+            </div>
+         </div> 
+      </div>
+   
+      <main class="z-10" id="page">
+         <header id="title" class="font-bold min-h-screen sm:h-screen flex flex-row justify-evenly items-center" id="top">
             <div>
                <h1 class="text-7xl sm:text-9xl py-12 sm:py-24 text-center">Hi, I'm Thalen.</h1>
-               <h1 class="text-3xl sm:text-5xl text-gray-300 px-0 text-center typewrite" data-period="2000" data-type='[ "Web Developer", "IB High School Student", "Game Developer", "Python Programmer", "Java Programmer", "WordPress Designer" ]'></h1>
-               <div class="flex flex-col items-center mt-12">
+               <h1 class="text-3xl sm:text-5xl pb-12 text-gray-300 px-0 text-center typewrite" data-period="2000" data-type='[ "Web Developer", "IB High School Student", "Game Developer", "Python Programmer", "Java Programmer", "WordPress Designer" ]'></h1>
+            </div>
+            <!-- <div class="stage grid grid-cols-4 grid-rows-4 gap-2 justify-end items-center py-10">
+               <div class="cube">
+                  <figure class="face front"></figure>
+                  <figure class="face back"></figure>
+                  <figure class="face right"></figure>
+                  <figure class="face left"></figure>
+                  <figure class="face top"></figure>
+                  <figure class="face bottom"></figure>
+               </div>
+               <div class="cube">
+                  <figure class="face front"></figure>
+                  <figure class="face back"></figure>
+                  <figure class="face right"></figure>
+                  <figure class="face left"></figure>
+                  <figure class="face top"></figure>
+                  <figure class="face bottom"></figure>
+               </div>
+               <div class="cube">
+                  <figure class="face front"></figure>
+                  <figure class="face back"></figure>
+                  <figure class="face right"></figure>
+                  <figure class="face left"></figure>
+                  <figure class="face top"></figure>
+                  <figure class="face bottom"></figure>
+               </div>
+               <div class="cube">
+                  <figure class="face front"></figure>
+                  <figure class="face back"></figure>
+                  <figure class="face right"></figure>
+                  <figure class="face left"></figure>
+                  <figure class="face top"></figure>
+                  <figure class="face bottom"></figure>
+               </div>
+               <div class="cube">
+                  <figure class="face front"></figure>
+                  <figure class="face back"></figure>
+                  <figure class="face right"></figure>
+                  <figure class="face left"></figure>
+                  <figure class="face top"></figure>
+                  <figure class="face bottom"></figure>
+               </div>
+               <div class="cube">
+                  <figure class="face front"></figure>
+                  <figure class="face back"></figure>
+                  <figure class="face right"></figure>
+                  <figure class="face left"></figure>
+                  <figure class="face top"></figure>
+                  <figure class="face bottom"></figure>
+               </div>
+               <div class="cube">
+                  <figure class="face front"></figure>
+                  <figure class="face back"></figure>
+                  <figure class="face right"></figure>
+                  <figure class="face left"></figure>
+                  <figure class="face top"></figure>
+                  <figure class="face bottom"></figure>
+               </div>
+               <div class="cube">
+                  <figure class="face front"></figure>
+                  <figure class="face back"></figure>
+                  <figure class="face right"></figure>
+                  <figure class="face left"></figure>
+                  <figure class="face top"></figure>
+                  <figure class="face bottom"></figure>
+               </div>
+               <div class="cube">
+                  <figure class="face front"></figure>
+                  <figure class="face back"></figure>
+                  <figure class="face right"></figure>
+                  <figure class="face left"></figure>
+                  <figure class="face top"></figure>
+                  <figure class="face bottom"></figure>
+               </div>
+               <div class="cube">
+                  <figure class="face front"></figure>
+                  <figure class="face back"></figure>
+                  <figure class="face right"></figure>
+                  <figure class="face left"></figure>
+                  <figure class="face top"></figure>
+                  <figure class="face bottom"></figure>
+               </div>
+               <div class="cube">
+                  <figure class="face front"></figure>
+                  <figure class="face back"></figure>
+                  <figure class="face right"></figure>
+                  <figure class="face left"></figure>
+                  <figure class="face top"></figure>
+                  <figure class="face bottom"></figure>
+               </div>
+               <div class="cube">
+                  <figure class="face front"></figure>
+                  <figure class="face back"></figure>
+                  <figure class="face right"></figure>
+                  <figure class="face left"></figure>
+                  <figure class="face top"></figure>
+                  <figure class="face bottom"></figure>
+               </div>
+               <div class="cube">
+                  <figure class="face front"></figure>
+                  <figure class="face back"></figure>
+                  <figure class="face right"></figure>
+                  <figure class="face left"></figure>
+                  <figure class="face top"></figure>
+                  <figure class="face bottom"></figure>
+               </div>
+               <div class="cube">
+                  <figure class="face front"></figure>
+                  <figure class="face back"></figure>
+                  <figure class="face right"></figure>
+                  <figure class="face left"></figure>
+                  <figure class="face top"></figure>
+                  <figure class="face bottom"></figure>
+               </div>
+               <div class="cube">
+                  <figure class="face front"></figure>
+                  <figure class="face back"></figure>
+                  <figure class="face right"></figure>
+                  <figure class="face left"></figure>
+                  <figure class="face top"></figure>
+                  <figure class="face bottom"></figure>
+               </div>
+               <div class="cube">
+                  <figure class="face front"></figure>
+                  <figure class="face back"></figure>
+                  <figure class="face right"></figure>
+                  <figure class="face left"></figure>
+                  <figure class="face top"></figure>
+                  <figure class="face bottom"></figure>
+               </div>
+            </div> -->
+               <!-- <div class="flex flex-col items-center mt-12">
                   <a href="#main" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-gray-400 text-gray-400 text-md sm:text-xl leading-tight uppercase rounded shadow-md group">
                      <span class="absolute inset-0 flex items-center justify-center w-full h-full duration-300 -translate-y-full bg-zinc-900 group-hover:translate-y-0 ease">
                         <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -361,13 +208,13 @@
                         </svg>
                      </span>
                      <span class="absolute flex items-center justify-center w-full h-full text-gray-400 transition-all duration-300 transform group-hover:translate-y-full ease">Learn More</span>
-                     <span class="relative invisible">View My Work</span>
+                     <span class="relative invisible">Learn More</span>
                   </a>
-               </div>
-            </div>
-         </header>
-         <section id="main">
-            <nav class="border-b-2 w-full sticky top-0 bg-zinc-900 flex items-center justify-between h-16 z-40">
+               </div> -->
+               <!-- <div class="dashed-grid"></div> -->
+            </header>
+         <section>
+            <!-- <nav class="border-b-2 w-full sticky top-0 bg-zinc-900 flex items-center justify-between h-16 z-40">
                <div class="flex-shrink items-center justify-start block ml-2 sm:ml-6 sm:space-x-8 space-x-4 py-2">
                   <a href="#main" id="skillsNav" class="text-white sm:px-3 text-sm font-bold decoration-2">Skills</a>
                   <a href="#projects" id="projectsNav" class="text-white sm:px-3 text-sm font-bold decoration-2">Projects</a>
@@ -380,7 +227,7 @@
                   </button>
                   <a href="#top" type="button" class=" text-white transition ease-in-out delay-10 hover:scale-110 px-2 py-2 font-bold rounded-md text-sm">Thalen Abadia</a>
                </div>
-            </nav>
+            </nav> -->
             <section class="w-full m-0 p-0 z-0" id="skills">
                <h1 class="title">Skills</h1>
                <div class="flex flex-wrap justify-center m-5 gap-x-16 gap-y-12">
@@ -622,7 +469,7 @@
                   </div>
                </div>
             </section>
-            <section class="w-full m-0 p-0 mt-24 md:mt-30" id="projects">
+            <section class="w-full m-0 p-0 mt-24 md:mt-30 z-0" id="projects">
                <h1 class="title reveal">Projects</h1>
                <div class="p-4 flex flex-wrap m-auto justify-center gap-x-2 gap-y-4">
                   <div class="w-72 border-2 border-slate-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col reveal">
@@ -912,12 +759,9 @@
                </div>
                </div>
             </section>
-            <!-- <section class="w-full m-0 p-0 mt-24 md:mt-30" id="projects">
+            <section class="w-full m-0 p-0 mt-24 md:mt-30" id="about">
               <h1 class="title reveal">About Me</h1>
-              <div class="p-4 flex flex-wrap m-auto justify-center gap-x-2 gap-y-4 reveal">
-               <h1 class="text-3xl sm:text-5xl text-gray-300 px-0 text-center typing2">My name is Thalen Abadia</h1> 
-              </div>
-            </section> -->
+            </section>
               
          </section>
          <footer class="w-full m-0 p-2 mt-16 sm:mt-48 bg-zinc-900" id="contact">

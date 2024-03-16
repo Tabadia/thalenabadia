@@ -36,6 +36,12 @@ typing.prototype.tick = function() {
 	}, delta);
 };
 window.onload = function() {
+
+	$('#titleNav').css('text-decoration', 'underline');
+	$('.titleNavDot').css('border-width', '4px');
+
+	var sideNavWidth = document.getElementById('sideNav').offsetWidth;
+	document.getElementById('page').style.paddingLeft = `${sideNavWidth}px`;
 	var elements = document.getElementsByClassName('typewrite');
 	for (var i = 0; i < elements.length; i++) {
 		var toRotate = elements[i].getAttribute('data-type');
@@ -49,6 +55,13 @@ window.onload = function() {
 	css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #D1D5DB}";
 	document.body.appendChild(css);
 };
+$("section[id^='title']:visible").mouseover(function() {
+	$("a[id^='titleNav'").addClass("underline");
+	$("a[id^='skillsNav'").removeClass("underline");
+	$("a[id^='projectsNav'").removeClass("underline");
+	$("a[id^='contactNav'").removeClass("underline");
+
+});
 $("section[id^='skills']:visible").mouseover(function() {
 	$("a[id^='skillsNav'").addClass("underline");
 	$("a[id^='projectsNav'").removeClass("underline");
@@ -87,22 +100,118 @@ window.addEventListener("scroll", reveal);
 
 reveal();
 
-var cube = document.querySelector('.cube');
-var cubeNav = document.querySelector('.cube-nav');
-// var radioGroup = document.querySelector('.radio-group');
-var currentClass = '';
+// var cube = document.querySelector('.cube');
+// var cubeNav = document.querySelector('.cube-nav');
+// // var radioGroup = document.querySelector('.radio-group');
+// var currentClass = '';
 
-function changeSide(showClass) {
-    showClass = 'show-' + showClass;
-    //console.log(showClass);
-    if ( currentClass ) {
-        cube.classList.remove( currentClass );
-    }
-    cube.classList.add( showClass );
-    currentClass = showClass;
-}
-// set initial side
-changeSide();
+// function changeSide(showClass) {
+//     showClass = 'show-' + showClass;
+//     //console.log(showClass);
+//     if ( currentClass ) {
+//         cube.classList.remove( currentClass );
+//     }
+//     cube.classList.add( showClass );
+//     currentClass = showClass;
+// }
+// // set initial side
+// changeSide();
 
 // radioGroup.addEventListener( 'change', changeSide );
 // cubeNav.addEventListener('click', changeSide);
+
+$(document).ready(function() {
+	$(window).on('scroll', function() {
+	  var scrollPos = $(document).scrollTop();
+	  var windowHeight = $(window).height();
+  
+	  // Adjusted scroll positions for accurate detection
+	  var titlePos = $('#title').offset().top - 50;
+	  var aboutPos = $('#about').offset().top - 50;
+	  var skillsPos = $('#skills').offset().top - 50;
+	  var projectsPos = $('#projects').offset().top - 50;
+	  var contactPos = $('#contact').offset().top - windowHeight + 50;
+  
+	  if (scrollPos >= contactPos) {
+		// Underline "Contact" in sidebar
+		$('.cubeNav').css('text-decoration', 'none'); // Remove underline from all sidebar items
+		$('.navDot').css('border-width', '2px');
+		$('#contactNav').css('text-decoration', 'underline');
+		$('.contactNavDot').css('border-width', '4px');
+	  } else if (scrollPos >= projectsPos) {
+		// Underline "Projects" in sidebar
+		$('.cubeNav').css('text-decoration', 'none'); // Remove underline from all sidebar items
+		$('.navDot').css('border-width', '2px');
+		$('#projectsNav').css('text-decoration', 'underline');
+		$('.projectsNavDot').css('border-width', '4px');
+	  } else if (scrollPos >= skillsPos) {
+		// Underline "Skills" in sidebar
+		$('.cubeNav').css('text-decoration', 'none'); // Remove underline from all sidebar items
+		$('.navDot').css('border-width', '2px');
+		$('#skillsNav').css('text-decoration', 'underline');
+		$('.skillsNavDot').css('border-width', '4px');
+	  } else if (scrollPos >= aboutPos) {
+		// Underline "About" in sidebar
+		$('.cubeNav').css('text-decoration', 'none'); // Remove underline from all sidebar items
+		$('.navDot').css('border-width', '2px');
+		$('#aboutNav').css('text-decoration', 'underline');
+		$('.aboutNavDot').css('border-width', '4px');
+	  } else {
+		// Underline "Title" in sidebar by default when at the top
+		$('.cubeNav').css('text-decoration', 'none'); // Remove underline from all sidebar items
+		$('.navDot').css('border-width', '2px');
+		$('#titleNav').css('text-decoration', 'underline');
+		$('.titleNavDot').css('border-width', '4px');
+	  }
+	});
+  }
+);
+  
+function createDashedBorderDiv() {
+	// Create new div and add dashed-border class
+	var div = document.createElement('div');
+	div.className = 'dashed-border';
+
+	// Get the body's dimensions
+	var body = document.body;
+	var bodyRect = body.getBoundingClientRect();
+	var sideNavWidth = document.getElementById('sideNav').offsetWidth;
+
+	// Set random size and position within the body
+	div.style.width = Math.random() * 100 + 'px'; // Shorter average grid size
+	div.style.height = Math.random() * 100 + 'px'; // Shorter average grid size
+	div.style.right = Math.random() * (bodyRect.width - 100 - sideNavWidth) + 'px'; // Within body width
+	div.style.top = Math.random() * (bodyRect.height - 100) + 'px'; // Within body height
+
+	// Set random border
+	var borders = [['borderLeft', 'borderTop'], ['borderTop', 'borderRight'], ['borderRight', 'borderBottom'], ['borderBottom', 'borderLeft']];
+	var borderPair = borders[Math.floor(Math.random() * borders.length)];
+	var borderCount = Math.random() > 0.75 ? 2 : 1; // Mostly one border, sometimes two
+	for (var i = 0; i < borderCount; i++) {
+		div.style[borderPair[i]] = '1px dashed #fff';
+	}
+
+	div.style.zIndex = -1;
+
+	// Add to body
+	body.appendChild(div);
+
+	// Fade in
+	setTimeout(function() {
+		div.style.opacity = 1;
+	}, 0);
+
+	// Fade out and remove after 1 second
+	setTimeout(function() {
+		div.style.opacity = 0;
+		setTimeout(function() {
+			body.removeChild(div);
+		}, 750); // Shorter fade out time
+	}, 2000); // Shorter lifespan
+
+	// Create a new div more frequently
+	setTimeout(createDashedBorderDiv, 100); // Quarter second delay
+}
+
+// Start the process
+createDashedBorderDiv();
