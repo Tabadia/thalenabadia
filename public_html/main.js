@@ -100,22 +100,23 @@ window.addEventListener("scroll", reveal);
 
 reveal();
 
-// var cube = document.querySelector('.cube');
-// var cubeNav = document.querySelector('.cube-nav');
-// // var radioGroup = document.querySelector('.radio-group');
-// var currentClass = '';
+var cubes = document.querySelectorAll('.cube');
 
-// function changeSide(showClass) {
-//     showClass = 'show-' + showClass;
-//     //console.log(showClass);
-//     if ( currentClass ) {
-//         cube.classList.remove( currentClass );
-//     }
-//     cube.classList.add( showClass );
-//     currentClass = showClass;
-// }
-// // set initial side
-// changeSide();
+var currentClass = '';
+
+function changeSide(showClass) {
+	showClass = 'show-' + showClass;
+	if (currentClass) {
+		cubes.forEach(cube => {
+			cube.classList.remove(currentClass);
+		});
+	}
+	cubes.forEach(cube => {
+		cube.classList.add(showClass);
+	});
+	currentClass = showClass;
+}
+changeSide();
 
 // radioGroup.addEventListener( 'change', changeSide );
 // cubeNav.addEventListener('click', changeSide);
@@ -127,7 +128,7 @@ $(document).ready(function() {
   
 	  // Adjusted scroll positions for accurate detection
 	  var titlePos = $('#title').offset().top - 50;
-	  var aboutPos = $('#about').offset().top - 50;
+	//   var aboutPos = $('#about').offset().top - 50;
 	  var skillsPos = $('#skills').offset().top - 50;
 	  var projectsPos = $('#projects').offset().top - 50;
 	  var contactPos = $('#contact').offset().top - windowHeight + 50;
@@ -138,30 +139,34 @@ $(document).ready(function() {
 		$('.navDot').css('border-width', '2px');
 		$('#contactNav').css('text-decoration', 'underline');
 		$('.contactNavDot').css('border-width', '4px');
+		changeSide('top') 
 	  } else if (scrollPos >= projectsPos) {
 		// Underline "Projects" in sidebar
 		$('.cubeNav').css('text-decoration', 'none'); // Remove underline from all sidebar items
 		$('.navDot').css('border-width', '2px');
 		$('#projectsNav').css('text-decoration', 'underline');
 		$('.projectsNavDot').css('border-width', '4px');
+		changeSide('right') 
 	  } else if (scrollPos >= skillsPos) {
 		// Underline "Skills" in sidebar
 		$('.cubeNav').css('text-decoration', 'none'); // Remove underline from all sidebar items
 		$('.navDot').css('border-width', '2px');
 		$('#skillsNav').css('text-decoration', 'underline');
 		$('.skillsNavDot').css('border-width', '4px');
-	  } else if (scrollPos >= aboutPos) {
-		// Underline "About" in sidebar
-		$('.cubeNav').css('text-decoration', 'none'); // Remove underline from all sidebar items
-		$('.navDot').css('border-width', '2px');
-		$('#aboutNav').css('text-decoration', 'underline');
-		$('.aboutNavDot').css('border-width', '4px');
+		changeSide('bottom') 
+	//   } else if (scrollPos >= aboutPos) {
+	// 	// Underline "About" in sidebar
+	// 	$('.cubeNav').css('text-decoration', 'none'); // Remove underline from all sidebar items
+	// 	$('.navDot').css('border-width', '2px');
+	// 	$('#aboutNav').css('text-decoration', 'underline');
+	// 	$('.aboutNavDot').css('border-width', '4px');
 	  } else {
 		// Underline "Title" in sidebar by default when at the top
 		$('.cubeNav').css('text-decoration', 'none'); // Remove underline from all sidebar items
 		$('.navDot').css('border-width', '2px');
 		$('#titleNav').css('text-decoration', 'underline');
 		$('.titleNavDot').css('border-width', '4px');
+		changeSide('front') 
 	  }
 	});
   }
