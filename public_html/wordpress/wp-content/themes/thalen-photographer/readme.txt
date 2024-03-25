@@ -1,1 +1,0 @@
-Created by Thalen Abadia
