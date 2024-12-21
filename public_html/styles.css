@@ -168,9 +168,9 @@ a:hover {
 
 /* Buttons */
 .btn {
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
   border: none;
-  background: none;
+  /* background: none; */
   font-size: 1.25rem;
   cursor: pointer;
 }
@@ -278,7 +278,7 @@ h3 {
 
 .skill:hover {
   /* background-color: var(--body-bg); */
-  background-color: rgba(0, 0, 0, 0);
+  background: none;
 }
 
 .skill-group {
@@ -485,18 +485,12 @@ h3 {
 
 /* Footer */
 .footer {
-  /* background: var(--body-bg); */
   padding: 40px 0;
   text-align: center;
-  color: var(--body-color);
 }
 
 .footer a {
   color: var(--primary-color);
-}
-
-.footer a:hover {
-  color: var(--link-hover-color);
 }
 
 /* Paragraphs */
