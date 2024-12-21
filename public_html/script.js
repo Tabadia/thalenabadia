@@ -1,7 +1,4 @@
 
-
-// script to make skills slide one at a time offset on screen when in view (on desktop only)
-
 const sendButton = document.getElementById('send-button');
 if (sendButton) {
     sendButton.addEventListener('click', sendMessage);
