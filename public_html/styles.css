@@ -228,6 +228,13 @@ a:hover {
 .head-subtitle {
   font-size: 1.75rem;
 }
+.head-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+}
 
 h1 {
   font-size: 4rem;
