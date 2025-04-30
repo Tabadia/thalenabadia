@@ -1,46 +1,49 @@
-
-const sendButton = document.getElementById('send-button');
-if (sendButton) {
-    sendButton.addEventListener('click', sendMessage);
-}
-
+// Chat window functionality
+const chatWindow = document.getElementById('chat-window');
+const minimizeBtn = document.getElementById('minimize-chat');
 const chatInput = document.getElementById('chat-input');
-if (chatInput) {
-    chatInput.addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-            sendMessage();
-        }
-    });
-}
+const sendBtn = document.getElementById('send-message');
+const chatMessages = document.querySelector('.chat-messages');
+
+// Minimize/maximize chat window
+minimizeBtn.addEventListener('click', () => {
+  chatWindow.classList.toggle('minimized');
+  minimizeBtn.querySelector('i').classList.toggle('fa-minus');
+  minimizeBtn.querySelector('i').classList.toggle('fa-plus');
+});
+
+// Send message on button click
+sendBtn.addEventListener('click', sendMessage);
+
+// Send message on Enter key
+chatInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    sendMessage();
+  }
+});
 
 function sendMessage() {
-const input = document.getElementById('chat-input');
-const message = input.value.trim();
-if (message === '') return;
-
-appendMessage('user', message);
-input.value = '';
-
-// Simulate bot response for demonstration purposes
-setTimeout(() => {
-    appendMessage('bot', 'This is a simulated response.');
-}, 1000);
+  const message = chatInput.value.trim();
+  if (message) {
+    // Add user message
+    addMessage(message, 'user');
+    chatInput.value = '';
+    
+    // TODO: Add your AWS Bedrock integration here
+    // For now, just echo a response
+    setTimeout(() => {
+      addMessage("I'm sorry, I'm not connected to AWS Bedrock yet. This is just a placeholder response.", 'bot');
+    }, 1000);
+  }
 }
 
-function appendMessage(sender, message) {
-const chatWindow = document.getElementById('chat-window');
-const messageElement = document.createElement('div');
-messageElement.classList.add('chat-message', sender);
-messageElement.innerHTML = `<p>${message}</p>`;
-chatWindow.appendChild(messageElement);
-chatWindow.scrollTop = chatWindow.scrollHeight;
+function addMessage(text, sender) {
+  const messageDiv = document.createElement('div');
+  messageDiv.className = `message ${sender}`;
+  messageDiv.innerHTML = `<p>${text}</p>`;
+  chatMessages.appendChild(messageDiv);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
 }
-
-
-
-
-
-
 
 // ! function () {
 //     "use strict";
