@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thalen Abadia - Software Engineer & Game Developer</title>
-    <meta name="description" content="Thalen Abadia - Software Engineer and Game Developer specializing in full-stack development, game development, and AI/ML solutions.">
-    <meta name="keywords" content="Thalen Abadia, Software Engineer, Game Developer, Full Stack Developer, AI/ML, Unity, Web Development">
+    <title>Thalen Abadia</title>
+    <meta name="description" content="Freshman CS student with experience in full-stack software development and VR research. Interest in the intersection between philosophy and computer science.">
+    <meta name="keywords" content="Thalen Abadia, Software Engineer, Game Developer, Full Stack Developer, AI/ML, Unity, Web Development, Virtual Reality, Porftolio, Computer Science">
     <meta name="author" content="Thalen Abadia">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Thalen Abadia - Software Engineer & Game Developer">
-    <meta property="og:description" content="Portfolio showcasing software engineering and game development projects.">
+    <meta property="og:title" content="Thalen Abadia">
+    <meta property="og:description" content="Portfolio">
     <meta property="og:image" content="https://thalenabadia.com/assets/img/profile.jpg">
     <meta property="og:url" content="https://thalenabadia.com">
     <link rel="canonical" href="https://thalenabadia.com">
@@ -244,9 +244,9 @@
                   <div class="skill-item">
                     <span class="devicon-mongodb-plain"></span>MongoDB
                   </div>
-                  <div class="skill-item">
+                  <!-- <div class="skill-item">
                     <span class="devicon-docker-plain"></span>Docker
-                  </div>
+                  </div> -->
                   <div class="skill-item">
                     <span class="devicon-postman-plain"></span>Postman
                   </div>
@@ -347,11 +347,17 @@
       </div>
       <div class="chat-messages">
         <div class="message bot">
-          <p>Hi! I'm an AI assistant that knows about Thalen. Ask me anything about his projects, skills, or experience!</p>
+          <p>Hi! I'm Thalen's AI assistant. Ask me anything about his projects, skills, or experience!</p>
+        </div>
+      </div>
+      <div class="suggestions-container">
+        <div class="suggestions-label">Try asking about:</div>
+        <div class="suggestion-text" id="cycling-suggestion">
+          <span class="suggestion-content">AI/ML Projects</span>
         </div>
       </div>
       <div class="chat-input-container">
-        <input type="text" id="chat-input" placeholder="Type your message..." />
+        <textarea id="chat-input" placeholder="Ask me anything..." rows="2"></textarea>
         <button id="send-message">
           <i class="fa fa-paper-plane"></i>
         </button>
