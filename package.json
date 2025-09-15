@@ -4,11 +4,14 @@
   "description": "Personal portfolio website",
   "scripts": {
     "build": "tailwindcss -i ./input.css -o ./public_html/styles.css",
-    "watch": "tailwindcss -i ./input.css -o ./public_html/styles.css --watch"
+    "watch": "tailwindcss -i ./input.css -o ./public_html/styles.css --watch",
+    "dev": "http-server public_html -p 8000 -o",
+    "start": "npm run build && npm run dev"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.1",
     "autoprefixer": "^10.4.17",
-    "postcss": "^8.4.35"
+    "postcss": "^8.4.35",
+    "http-server": "^14.1.1"
   }
 }

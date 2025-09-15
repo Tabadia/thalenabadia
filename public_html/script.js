@@ -4,71 +4,35 @@ const minimizeBtn = document.getElementById('minimize-chat');
 const chatInput = document.getElementById('chat-input');
 const sendBtn = document.getElementById('send-message');
 const chatMessages = document.querySelector('.chat-messages');
-const suggestionContent = document.querySelector('.suggestion-content');
+const charCount = document.getElementById('char-count');
 
-const suggestions = [
-  "AI/ML Projects",
-  "Game Dev",
-  "AWS Experience",
-  "Research",
-  "Full Stack"
-];
+let conversationHistory = [];
 
-const questions = {
-  'AI/ML Projects': "What projects have you worked on with AI/ML?",
-  'Game Dev': "Tell me about your game development experience",
-  'AWS Experience': "What's your experience with AWS and cloud services?",
-  'Research': "What are your current research interests?",
-  'Full Stack': "What technologies do you use for full-stack development?"
-};
 
-let currentIndex = 0;
-
-function applyWaveGlow(text) {
-  // Clear previous content
-  suggestionContent.textContent = '';
+// Function to update character count
+function updateCharCount() {
+  const currentLength = chatInput.value.length;
+  charCount.textContent = currentLength;
   
-  // Create spans for each letter
-  text.split('').forEach((letter, index) => {
-    const span = document.createElement('span');
-    span.textContent = letter;
-    span.className = 'glow-letter';
-    span.style.animationDelay = `${index * 0.05}s`;
-    // Add proper spacing for space characters
-    if (letter === ' ') {
-      span.style.width = '0.25em';
-      span.style.display = 'inline-block';
-      span.style.verticalAlign = 'bottom';
-    }
-    suggestionContent.appendChild(span);
-  });
-}
-
-function cycleSuggestion() {
-  // Update text with wave glow
-  currentIndex = (currentIndex + 1) % suggestions.length;
-  applyWaveGlow(suggestions[currentIndex]);
-}
-
-// Start cycling suggestions
-setInterval(cycleSuggestion, 3000);
-
-// Add click handler to suggestion
-document.getElementById('cycling-suggestion').addEventListener('click', () => {
-  const question = questions[suggestions[currentIndex]];
-  if (question) {
-    chatInput.value = question;
-    chatInput.style.height = 'auto';
-    chatInput.style.height = (chatInput.scrollHeight) + 'px';
-    chatInput.focus();
+  // Add visual feedback for character limit
+  if (currentLength >= 450) {
+    charCount.style.color = '#ff6b6b'; // Red when approaching limit
+  } else if (currentLength >= 400) {
+    charCount.style.color = '#ffa726'; // Orange when getting close
+  } else {
+    charCount.style.color = '#666'; // Default gray
   }
-});
+}
 
-// Auto-resize textarea
+// Auto-resize textarea and update character count
 chatInput.addEventListener('input', function() {
   this.style.height = 'auto';
   this.style.height = (this.scrollHeight) + 'px';
+  updateCharCount();
 });
+
+// Initialize character count on page load
+updateCharCount();
 
 // Minimize/maximize chat window
 minimizeBtn.addEventListener('click', () => {
@@ -90,17 +54,23 @@ chatInput.addEventListener('keydown', (e) => {
 
 async function sendMessage() {
   const message = chatInput.value.trim();
+  
+  // Check character limit
+  if (message.length > 500) {
+    addMessage("Message is too long. Please keep it under 500 characters.", 'bot');
+    return;
+  }
+  
   if (message) {
-    // Add user message
+    // Add user message to conversation history
+    conversationHistory.push({ role: 'user', content: message });
+    
+    // Add user message to UI
     addMessage(message, 'user');
     chatInput.value = '';
     chatInput.style.height = 'auto';
+    updateCharCount(); // Reset character count
     
-    // Hide suggestions after first message
-    const suggestionsContainer = document.querySelector('.suggestions-container');
-    if (suggestionsContainer) {
-      suggestionsContainer.style.display = 'none';
-    }
     
     try {
       const response = await fetch('https://portfolio-backend-ruddy-phi.vercel.app/api/chat', {
@@ -108,7 +78,10 @@ async function sendMessage() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ message }),
+        body: JSON.stringify({ 
+          message,
+          conversationHistory: conversationHistory.slice(-10) // Keep last 10 exchanges for context
+        }),
       });
 
       if (!response.ok) {
@@ -116,6 +89,11 @@ async function sendMessage() {
       }
 
       const data = await response.json();
+      
+      // Add bot response to conversation history
+      conversationHistory.push({ role: 'assistant', content: data.response });
+      
+      // Add bot message to UI
       addMessage(data.response, 'bot');
     } catch (error) {
       console.error('Error:', error);
@@ -132,41 +110,6 @@ function addMessage(text, sender) {
   chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
-// Suggested questions cycling
-function cycleQuestions() {
-  const questions = document.querySelectorAll('.question-slide');
-  let currentIndex = 0;
-
-  function showNextQuestion() {
-    questions[currentIndex].classList.remove('active');
-    currentIndex = (currentIndex + 1) % questions.length;
-    questions[currentIndex].classList.add('active');
-  }
-
-  // Change question every 3 seconds
-  setInterval(showNextQuestion, 3000);
-
-  // Add click handlers to questions
-  questions.forEach(question => {
-    question.addEventListener('click', () => {
-      document.getElementById('chat-input').value = question.textContent;
-      document.getElementById('chat-input').focus();
-    });
-  });
-}
-
-// Initialize question cycling when chat is opened
-document.getElementById('minimize-chat').addEventListener('click', () => {
-  const chatWindow = document.getElementById('chat-window');
-  if (chatWindow.classList.contains('minimized')) {
-    cycleQuestions();
-  }
-});
-
-// Initial cycle if chat is not minimized
-if (!document.getElementById('chat-window').classList.contains('minimized')) {
-  cycleQuestions();
-}
 
 // ! function () {
 //     "use strict";

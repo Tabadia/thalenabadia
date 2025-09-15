@@ -1197,6 +1197,14 @@ a:hover {
   background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1));
 }
 
+.char-counter {
+  font-size: 0.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+  margin-right: 0.5rem;
+  transition: color 0.2s ease;
+}
+
 .chat-bubble.minimized .chat-messages,
   .chat-bubble.minimized .chat-input-container,
   .chat-bubble.minimized .suggestions-container {
