@@ -48,6 +48,20 @@
   </head>
   <body id="page-top">
     <!-- <div id="particles"></div> -->
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobile-nav">
+      <div class="mobile-nav-content">
+        <a href="#header" class="nav-link">Home</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+      </div>
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+    
     <div class="container">
       <section class="section header-container" id="header">
         <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.38/build/spline-viewer.js"></script> -->
@@ -58,7 +72,7 @@
               shadowRoot.querySelector('#logo').remove();
           }
         </script> -->
-        <div class="top-div">
+        <div class="top-div fade-in-up">
           <img src="assets/img/profile.jpg" alt="Thalen Abadia - Software Engineer and Game Developer" class="head-img" loading="lazy">
           <h1 class="head-title">Thalen Abadía</h1>
           <h2 class="head-subtitle">CS @ SCU | CTO @ Clara</h2>
@@ -73,18 +87,9 @@
       </section>
       <section id="projects" class="section">
          <div class="container">
-           <h2 class="section-head">Recent Projects</h2>
-           <div class="card-group">
-            <div class="card" onclick="window.open('https://github.com/Tabadia/shelter-finder', '_blank')">
-              <img class="card-img-top" src="assets/img/sheltrthumbnail.png" alt="Sheltr - Homeless Shelter Finder Project" loading="lazy">
-              <div class="card-body card-body-sm">
-                <div class="card-head">
-                  <h4 class="card-title">sheltr</h4>
-                  <a class="btn" role="button" href="https://github.com/Tabadia/shelter-finder" target="_blank"><i class="fa fa-github fa-fw"></i></a>
-                </div>
-                <p class="card-text">A FastAPI website and H4H best freshman winner. Allows displaced people to find shelter and organizations to post their shelters. Uses DynamoDB and EC2.</p>
-              </div>
-            </div>
+           <!-- Current Projects Section -->
+           <h2 class="section-head">Current Projects</h2>
+           <div class="card-group current-projects">
             <div class="card" onclick="window.open('https://clara.eco', '_blank')">
               <img class="card-img-top" src="assets/img/clarathumbnail.png" alt="Clara - AI-Powered Sustainability Platform" loading="lazy">
               <div class="card-body card-body-sm">
@@ -93,6 +98,11 @@
                   <a class="btn" role="button" href="https://clara.eco" target="_blank"><i class="fa fa-link fa-fw"></i></a>
                 </div>
                 <p class="card-text">CTO & Cofounder of Clara, an AI-powered sustainability platform. Building LLM content extraction pipelines and serverless AWS infrastructure for sustainable fashion brands.</p>
+                <div class="tech-stack">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">AWS</span>
+                  <span class="tech-tag">LangChain</span>
+                </div>
               </div>
             </div>
             <div class="card" onclick="window.open('https://www.parkd.io/', '_blank')">
@@ -100,11 +110,36 @@
               <div class="card-body card-body-sm">
                 <div class="card-head">
                   <h4 class="card-title">Parkd</h4>
-                  <a class="btn" role="button" href="https://https://www.parkd.io/" target="_blank"><i class="fa fa-link fa-fw"></i></a>
+                  <a class="btn" role="button" href="https://www.parkd.io/" target="_blank"><i class="fa fa-link fa-fw"></i></a>
                 </div>
                 <p class="card-text">Technical Lead at Parkd, managing 5,000+ users with React Native, AWS DynamoDB, and Stripe. Built admin dashboard with LPR camera integration for real-time vehicle tracking.</p>
+                <div class="tech-stack">
+                  <span class="tech-tag">React Native</span>
+                  <span class="tech-tag">AWS</span>
+                  <span class="tech-tag">Stripe</span>
+                </div>
               </div>
             </div>
+           </div>
+
+           <!-- Past Side Projects Section -->
+           <h2 class="section-head past-projects-head">Past Side Projects</h2>
+           <div class="card-group past-projects">
+             <div class="card" onclick="window.open('https://github.com/Tabadia/shelter-finder', '_blank')">
+               <img class="card-img-top" src="assets/img/sheltrthumbnail.png" alt="Sheltr - Homeless Shelter Finder Project" loading="lazy">
+               <div class="card-body card-body-sm">
+                 <div class="card-head">
+                   <h4 class="card-title">sheltr</h4>
+                   <a class="btn" role="button" href="https://github.com/Tabadia/shelter-finder" target="_blank"><i class="fa fa-github fa-fw"></i></a>
+                 </div>
+                 <p class="card-text">A FastAPI website and H4H best freshman winner. Allows displaced people to find shelter and organizations to post their shelters.</p>
+                 <div class="tech-stack">
+                   <span class="tech-tag">FastAPI</span>
+                   <span class="tech-tag">AWS</span>
+                   <span class="tech-tag">Python</span>
+                 </div>
+               </div>
+             </div>
              <div class="card" onclick="window.open('https://github.com/berkvakar/safemapsj', '_blank')">
                <img class="card-img-top" src="assets/img/safemapthumbnail.jpg" alt="SafeMap SJ - Neighborhood Safety Mapping Project" loading="lazy">
                <div class="card-body card-body-sm">
@@ -113,6 +148,11 @@
                    <a class="btn" role="button" href="https://github.com/berkvakar/safemapsj" target="_blank"><i class="fa fa-github fa-fw"></i></a>
                  </div>
                  <p class="card-text">An interactive, color-coded map that depicts safety scores associated with the neighborhoods in San Jose. Uses AWS Bedrock and S3.</p>
+                 <div class="tech-stack">
+                   <span class="tech-tag">AWS Bedrock</span>
+                   <span class="tech-tag">S3</span>
+                   <span class="tech-tag">JavaScript</span>
+                 </div>
                </div>
              </div>
              <div class="card" onclick="window.open('https://github.com/RecycleAid/RecycleAid', '_blank')">
@@ -123,6 +163,11 @@
                    <a class="btn" role="button" href="https://github.com/RecycleAid/RecycleAid" target="_blank"><i class="fa fa-github fa-fw"></i></a>
                  </div>
                  <p class="card-text">A web app where you can discover details regarding the recyclability of an item in a photo using machine learning image classification.</p>
+                 <div class="tech-stack">
+                   <span class="tech-tag">Python</span>
+                   <span class="tech-tag">PyTorch</span>
+                   <span class="tech-tag">Flask</span>
+                 </div>
                </div>
              </div>
              <div class="card" onclick="window.open('https://github.com/Tabadia/twitter-account-sentiment-analysis', '_blank')">
@@ -133,6 +178,11 @@
                    <a class="btn" role="button" href="https://github.com/Tabadia/twitter-account-sentiment-analysis" target="_blank"><i class="fa fa-github fa-fw"></i></a>
                  </div>
                  <p class="card-text"> A python program that uses nltk Sentiment Analysis to see the sentiment in a user's past 500 tweets. </p>
+                 <div class="tech-stack">
+                   <span class="tech-tag">Python</span>
+                   <span class="tech-tag">NLTK</span>
+                   <span class="tech-tag">Pandas</span>
+                 </div>
                </div>
              </div>
              <div class="card" onclick="window.open('https://top.gg/bot/926039007484334141', '_blank')">
@@ -143,6 +193,11 @@
                    <a class="btn" role="button" href="https://top.gg/bot/926039007484334141" target="_blank"><i class="fa fa-link fa-fw"></i></a>
                  </div>
                  <p class="card-text">A Discord Bot with an AI chatbot and mental health features. It was used by over 80,000 people in over 100 servers.</p>
+                 <div class="tech-stack">
+                   <span class="tech-tag">Python</span>
+                   <span class="tech-tag">Discord.py</span>
+                   <span class="tech-tag">OpenAI API</span>
+                 </div>
                </div>
              </div>
              <div class="card" onclick="window.open('https://github.com/Tabadia/spotify-statistics', '_blank')">
@@ -153,6 +208,11 @@
                    <a class="btn" role="button" href="https://github.com/Tabadia/spotify-statistics" target="_blank"><i class="fa fa-github fa-fw"></i></a>
                  </div>
                  <p class="card-text">A website that uses node.js, express.js, and axios to request from Spotify's API to create a user's top artists and tracks. </p>
+                 <div class="tech-stack">
+                   <span class="tech-tag">Node.js</span>
+                   <span class="tech-tag">Express</span>
+                   <span class="tech-tag">JavaScript</span>
+                 </div>
                </div>
              </div>
              <div class="card" onclick="window.open('https://github.com/Tabadia/hells-arrow', '_blank')">
@@ -163,6 +223,11 @@
                    <a class="btn" role="button" href="https://github.com/Tabadia/hells-arrow" target="_blank"><i class="fa fa-github fa-fw"></i></a>
                  </div>
                  <p class="card-text"> A 3D Unity roguelike video game developed in C# that won People's Choice and Best Art and Assets for the Oregon Game Project Challenge. </p>
+                 <div class="tech-stack">
+                   <span class="tech-tag">Unity</span>
+                   <span class="tech-tag">C#</span>
+                   <span class="tech-tag">Blender</span>
+                 </div>
                </div>
              </div>
              <div class="card" onclick="window.open('https://github.com/Tabadia/NeonSkies', '_blank')">
@@ -174,6 +239,10 @@
                    <!-- <a class="btn" role="button" href="https://super-pastelito-ec6fa4.netlify.app/" target="_blank"><i class="fa fa-link fa-fw"></i></a> -->
                  </div>
                  <p class="card-text">A fast paced bullet hell 2D dog-fighting game fusing neon and arcade asethetics. Developed in Unity for an OSU BeaverHacks hackathon.</p>
+                 <div class="tech-stack">
+                   <span class="tech-tag">Unity</span>
+                   <span class="tech-tag">C#</span>
+                 </div>
                </div>
              </div>
              <div class="card" onclick="window.open('https://github.com/Tabadia/shadowfall', '_blank')">
@@ -184,6 +253,11 @@
                    <a class="btn" role="button" href="https://github.com/Tabadia/shadowfall" target="_blank"><i class="fa fa-github fa-fw"></i></a>
                  </div>
                  <p class="card-text">A 3D survival horror game developed in Unity C# that won Judge's Choice for the Oregon Game Project Challenge.</p>
+                 <div class="tech-stack">
+                   <span class="tech-tag">Unity</span>
+                   <span class="tech-tag">C#</span>
+                   <span class="tech-tag">Blender</span>
+                 </div>
                </div>
              </div>
            </div>
@@ -191,116 +265,139 @@
        </section>
       <section class="section" id="skills">
         <h1 class="section-head">Skills</h1>
-        <div class="section-content" style="flex-grow: 1;">
-          <div class="skill-group">
-            <div class="skill">
-              <div class="skill-header"><i class="fa fa-code"></i>Languages</div>
-              <div class="skill-body">
-                <div class="skill-center">
-                  <div class="skill-item">
-                    <span class="devicon-javascript-plain"></span>JavaScript
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-c-plain"></span>C
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-csharp-plain"></span>C#
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-java-plain"></span>Java
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-python-plain"></span>Python
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-typescript-plain"></span>TypeScript
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-html5-plain"></span>HTML/CSS
-                  </div>
+        <div class="skills-container">
+          <div class="skills-grid">
+            <div class="skill-category">
+              <div class="skill-category-header">
+                <i class="fa fa-code"></i>
+                <h3>Languages</h3>
+              </div>
+              <div class="skill-items">
+                <div class="skill-item">
+                  <span class="devicon-javascript-plain"></span>
+                  <span>JavaScript</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-python-plain"></span>
+                  <span>Python</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-typescript-plain"></span>
+                  <span>TypeScript</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-csharp-plain"></span>
+                  <span>C#</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-java-plain"></span>
+                  <span>Java</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-c-plain"></span>
+                  <span>C</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-html5-plain"></span>
+                  <span>HTML/CSS</span>
                 </div>
               </div>
             </div>
-            <div class="skill">
-              <div class="skill-header"><i class="fa fa-gear"></i>Frameworks</div>
-              <div class="skill-body">
-                <div class="skill-center">
-                  <div class="skill-item">
-                    <span class="devicon-react-plain"></span>React
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-angularjs-plain"></span>Angular
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-nodejs-plain"></span>Node.js
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-express-original"></span>Express.js
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-flask-original"></span>Flask
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-fastapi-plain"></span>FastAPI
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-tailwindcss-plain"></span>Tailwind
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-pytorch-plain"></span>PyTorch
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-mongodb-plain"></span>MongoDB
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-langchain-plain"></span>LangChain
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-react-plain"></span>React Native
-                  </div>
+
+            <div class="skill-category">
+              <div class="skill-category-header">
+                <i class="fa fa-gear"></i>
+                <h3>Frameworks & Libraries</h3>
+              </div>
+              <div class="skill-items">
+                <div class="skill-item">
+                  <span class="devicon-react-plain"></span>
+                  <span>React</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-react-plain"></span>
+                  <span>React Native</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-nodejs-plain"></span>
+                  <span>Node.js</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-express-original"></span>
+                  <span>Express.js</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-fastapi-plain"></span>
+                  <span>FastAPI</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-flask-original"></span>
+                  <span>Flask</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-tailwindcss-plain"></span>
+                  <span>Tailwind CSS</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-pytorch-plain"></span>
+                  <span>PyTorch</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-langchain-plain"></span>
+                  <span>LangChain</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-angularjs-plain"></span>
+                  <span>Angular</span>
                 </div>
               </div>
             </div>
-            <div class="skill">
-              <div class="skill-header"><i class="fa fa-wrench"></i>Tools</div>
-              <div class="skill-body">
-                <div class="skill-center">
-                  <div class="skill-item">
-                    <span class="devicon-github-plain"></span>Git
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-unity-plain"></span>Unity
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-amazonwebservices-plain-wordmark"></span>AWS
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-firebase-plain"></span>Firebase
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-mongodb-plain"></span>MongoDB
-                  </div>
-                  <!-- <div class="skill-item">
-                    <span class="devicon-docker-plain"></span>Docker
-                  </div> -->
-                  <div class="skill-item">
-                    <span class="devicon-postman-plain"></span>Postman
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-figma-plain"></span>Figma
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-wordpress-plain"></span>WordPress
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-jira-plain"></span>Jira
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-vercel-plain"></span>Vercel
-                  </div>
-                  <div class="skill-item">
-                    <span class="devicon-stripe-plain"></span>Stripe
-                  </div>
+
+            <div class="skill-category">
+              <div class="skill-category-header">
+                <i class="fa fa-cloud"></i>
+                <h3>Cloud & Tools</h3>
+              </div>
+              <div class="skill-items">
+                <div class="skill-item">
+                  <span class="devicon-amazonwebservices-plain-wordmark"></span>
+                  <span>AWS</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-mongodb-plain"></span>
+                  <span>MongoDB</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-firebase-plain"></span>
+                  <span>Firebase</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-github-plain"></span>
+                  <span>Git</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-unity-plain"></span>
+                  <span>Unity</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-vercel-plain"></span>
+                  <span>Vercel</span>
+                </div>
+                <div class="skill-item">
+                  <span class="fa fa-credit-card"></span>
+                  <span>Stripe</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-figma-plain"></span>
+                  <span>Figma</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-postman-plain"></span>
+                  <span>Postman</span>
+                </div>
+                <div class="skill-item">
+                  <span class="devicon-jira-plain"></span>
+                  <span>Jira</span>
                 </div>
               </div>
             </div>
@@ -380,26 +477,50 @@
         </div>
       </section> -->
     </div>
-    <div id="chat-window" class="chat-bubble minimized">
-      <div class="chat-header" id="minimize-chat">
-        <span>Ask about me...</span>
-        <button id="" class="minimize-btn">
-          <i class="fa fa-caret-up"></i>
-        </button>
-      </div>
-      <div class="chat-messages">
-        <div class="message bot">
-          <p>Hi! I'm Thalen's AI assistant. Ask me anything about his projects, skills, or experience!</p>
+    <!-- Chat Widget -->
+    <div id="chat-widget" class="chat-widget">
+      <!-- Collapsed State -->
+      <div class="chat-toggle" id="chat-toggle">
+        <div class="chat-toggle-content">
+          <span class="chat-toggle-text">Ask about me</span>
+          <div class="chat-toggle-icon">
+            <i class="fa fa-comment"></i>
+          </div>
         </div>
       </div>
-      <div class="chat-input-container">
-        <textarea id="chat-input" placeholder="Ask me anything..." rows="2" maxlength="500"></textarea>
-        <div class="char-counter">
-          <span id="char-count">0</span>/500
+      
+      <!-- Expanded Chat Window -->
+      <div class="chat-window" id="chat-window">
+        <div class="chat-header">
+          <div class="chat-header-content">
+            <span class="chat-title">Ask about me</span>
+            <button class="chat-close" id="chat-close">
+              <i class="fa fa-times"></i>
+            </button>
+          </div>
         </div>
-        <button id="send-message">
-          <i class="fa fa-paper-plane"></i>
-        </button>
+        
+        <div class="chat-body">
+          <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message">
+              <div class="message-content">
+                <p>Hi! I'm Thalen's AI assistant. Ask me anything about his projects, skills, or experience!</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="chat-input-area">
+            <div class="chat-input-wrapper">
+              <textarea id="chat-input" placeholder="Type your question..." rows="1" maxlength="500"></textarea>
+              <button class="chat-send" id="chat-send">
+                <i class="fa fa-paper-plane"></i>
+              </button>
+            </div>
+            <div class="chat-char-count">
+              <span id="char-count">0</span>/500
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

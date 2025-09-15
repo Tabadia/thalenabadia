@@ -1,13 +1,41 @@
-// Chat window functionality
+// Mobile Navigation functionality
+const mobileNav = document.getElementById('mobile-nav');
+const mobileNavToggle = document.getElementById('mobile-nav-toggle');
+
+// Toggle mobile navigation
+mobileNavToggle.addEventListener('click', () => {
+  mobileNav.classList.toggle('active');
+  mobileNavToggle.classList.toggle('active');
+});
+
+// Close mobile nav when clicking on a link
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileNav.classList.remove('active');
+    mobileNavToggle.classList.remove('active');
+  });
+});
+
+// Close mobile nav when clicking outside
+document.addEventListener('click', (e) => {
+  if (!mobileNav.contains(e.target) && !mobileNavToggle.contains(e.target)) {
+    mobileNav.classList.remove('active');
+    mobileNavToggle.classList.remove('active');
+  }
+});
+
+// Chat widget functionality
+const chatWidget = document.getElementById('chat-widget');
+const chatToggle = document.getElementById('chat-toggle');
 const chatWindow = document.getElementById('chat-window');
-const minimizeBtn = document.getElementById('minimize-chat');
+const chatClose = document.getElementById('chat-close');
 const chatInput = document.getElementById('chat-input');
-const sendBtn = document.getElementById('send-message');
-const chatMessages = document.querySelector('.chat-messages');
+const chatSend = document.getElementById('chat-send');
+const chatMessages = document.getElementById('chat-messages');
 const charCount = document.getElementById('char-count');
 
 let conversationHistory = [];
-
+let isChatOpen = false;
 
 // Function to update character count
 function updateCharCount() {
@@ -20,29 +48,34 @@ function updateCharCount() {
   } else if (currentLength >= 400) {
     charCount.style.color = '#ffa726'; // Orange when getting close
   } else {
-    charCount.style.color = '#666'; // Default gray
+    charCount.style.color = '#888888'; // Default gray
   }
 }
 
 // Auto-resize textarea and update character count
 chatInput.addEventListener('input', function() {
   this.style.height = 'auto';
-  this.style.height = (this.scrollHeight) + 'px';
+  this.style.height = Math.min(this.scrollHeight, 100) + 'px';
   updateCharCount();
 });
 
 // Initialize character count on page load
 updateCharCount();
 
-// Minimize/maximize chat window
-minimizeBtn.addEventListener('click', () => {
-  chatWindow.classList.toggle('minimized');
-  minimizeBtn.querySelector('i').classList.toggle('fa-caret-up');
-  minimizeBtn.querySelector('i').classList.toggle('fa-caret-down');
+// Toggle chat window
+chatToggle.addEventListener('click', () => {
+  if (!isChatOpen) {
+    openChat();
+  }
+});
+
+// Close chat window
+chatClose.addEventListener('click', () => {
+  closeChat();
 });
 
 // Send message on button click
-sendBtn.addEventListener('click', sendMessage);
+chatSend.addEventListener('click', sendMessage);
 
 // Send message on Enter key (but allow Shift+Enter for new line)
 chatInput.addEventListener('keydown', (e) => {
@@ -51,6 +84,19 @@ chatInput.addEventListener('keydown', (e) => {
     sendMessage();
   }
 });
+
+// Open chat function
+function openChat() {
+  chatWindow.classList.add('active');
+  isChatOpen = true;
+  chatInput.focus();
+}
+
+// Close chat function
+function closeChat() {
+  chatWindow.classList.remove('active');
+  isChatOpen = false;
+}
 
 async function sendMessage() {
   const message = chatInput.value.trim();
@@ -104,8 +150,13 @@ async function sendMessage() {
 
 function addMessage(text, sender) {
   const messageDiv = document.createElement('div');
-  messageDiv.className = `message ${sender}`;
-  messageDiv.innerHTML = `<p>${text}</p>`;
+  messageDiv.className = `message ${sender}-message`;
+  
+  const messageContent = document.createElement('div');
+  messageContent.className = 'message-content';
+  messageContent.innerHTML = `<p>${text}</p>`;
+  
+  messageDiv.appendChild(messageContent);
   chatMessages.appendChild(messageDiv);
   chatMessages.scrollTop = chatMessages.scrollHeight;
 }
